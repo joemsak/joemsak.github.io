@@ -23,6 +23,12 @@ jobs:
         docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
         docker build . --file Dockerfile --tag joemsak/joesak.com:$GIT_SHA
         docker push joemsak/joesak.com:$GIT_SHA
+        
+    - uses: danielr1996/kubectl-action@1.0.0
+      name: Deploy
+      with:
+        kubeconfig: ${{ secrets.KUBECONFIG }}
+        args: taint -f .kubernetes/deployment.yaml
 
     - uses: danielr1996/kubectl-action@1.0.0
       name: Deploy
