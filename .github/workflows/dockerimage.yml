@@ -25,13 +25,13 @@ jobs:
         docker push joemsak/joesak.com:$GIT_SHA
         
     - uses: danielr1996/kubectl-action@1.0.0
-      name: Deploy
+      name: Taint the deployment for changes to dockerfile but not k8s
       with:
         kubeconfig: ${{ secrets.KUBECONFIG }}
         args: taint -f .kubernetes/deployment.yaml
 
     - uses: danielr1996/kubectl-action@1.0.0
-      name: Deploy
+      name: Deploy k8s infra
       with:
         kubeconfig: ${{ secrets.KUBECONFIG }}
         args: apply -k .kubernetes
