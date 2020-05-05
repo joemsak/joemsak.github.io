@@ -25,10 +25,10 @@ jobs:
         docker push joemsak/joesak.com:$GIT_SHA
         
     - uses: danielr1996/kubectl-action@1.0.0
-      name: Taint the deployment for changes to dockerfile but not k8s
+      name: Delete the deployment to force changes to dockerfile when there's none in k8s
       with:
         kubeconfig: ${{ secrets.KUBECONFIG }}
-        args: taint -f .kubernetes/deployment.yaml
+        args: delete -f .kubernetes/deployment.yaml
 
     - uses: danielr1996/kubectl-action@1.0.0
       name: Deploy k8s infra
