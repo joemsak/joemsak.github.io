@@ -4,12 +4,12 @@ metadata:
   name: web
   annotations:
     kubernetes.io/ingress.class: "nginx"
-    cert-manager.io/cluster-issuer: letsencrypt-staging  # Specifies the Cluster Issuer to use
 spec:
   tls:
   - hosts:
     - joesak.com
-    secretName: tls-web  # Secret name is used to dynamically generate the secret
+    - www.joesak.com
+    secretName: web-tls
   rules:
   - host: joesak.com
     http:
