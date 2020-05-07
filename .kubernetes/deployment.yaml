@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: web
-        image: odytrice/joesak.com
+        image: joemsak/joesak.com
         ports:
         - containerPort: 80
         resources:
