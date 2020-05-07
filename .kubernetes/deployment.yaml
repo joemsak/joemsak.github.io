@@ -16,40 +16,11 @@ spec:
     spec:
       containers:
       - name: web
-        image: joemsak/joesak.com
+        image: odytrice/joesak.com
         ports:
         - containerPort: 80
-      - name: tunnel
-        image: docker.io/crazymax/cloudflared:latest
-        imagePullPolicy: Always
-        command: ["cloudflared", "tunnel"]
-        args:
-        - --url=http://127.0.0.1:8080
-        - --hostname=joesak.com
-        - --origincert=/etc/ssl/certs/joesak.com.pem
-        - --no-autoupdate
-        env:
-        - name: POD_NAME
-          valueFrom:
-            fieldRef:
-              fieldPath: metadata.name
-        - name: POD_NAMESPACE
-          valueFrom:
-            fieldRef:
-              fieldPath: metadata.namespace
         resources:
           limits:
-            cpu: 10m
-            memory: 20Mi
-          requests:
-            cpu: 10m
-            memory: 20Mi
-        volumeMounts:
-        - mountPath: /etc/cloudflared
-          name: tunnel-secret
-          readOnly: true
+            cpu: 100m
+            memory: 200Mi
       terminationGracePeriodSeconds: 60
-      volumes:
-      - name: tunnel-secret
-        secret:
-          secretName: web-tls
