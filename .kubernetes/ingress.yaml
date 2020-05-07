@@ -8,7 +8,6 @@ spec:
   tls:
   - hosts:
     - joesak.com
-    - www.joesak.com
     secretName: web-tls
   rules:
   - host: joesak.com
