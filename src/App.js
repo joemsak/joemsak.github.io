@@ -20,8 +20,8 @@ function App() {
 
         <ul>
           <li>15+ years of full stack web development &amp; project management</li>
-          <li>Professionl experience with hundreds of clients for a variety of business needs &amp; industries</li>
-          <li>Fundamental, veteran, ongoing production with: Ruby, Rails, HTML, CSS, Javascript</li>
+          <li>Professional experience with hundreds of clients for a variety of business needs &amp; industries</li>
+          <li>Fundamental knowledge and usage of Ruby, OOP, Rails, HTML, CSS, Javascript</li>
           <li>Proactive collaborator in UI/UX prototyping, project management, ideation, &amp; requirements gathering</li>
           <li>Proficient infrastructure support in linux, cloud engineering, kubernetes, docker, SQL, TCP/IP, SSL, DNS, et. al</li>
           <li>Never done learning</li>
