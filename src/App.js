@@ -17,13 +17,15 @@ function App() {
 
       <main>
         <p>A professional, seasoned web developer who hates every cover letter and web copy he's ever tried to write about himself.</p>
+
         <ul>
-          <li>15+ years of experience with hundreds of clients in many industries</li>
-          <li>Ruby, Rails, HTML, CSS, Javascript (vanilla or frameworks)</li>
-          <li>UI/UX prototyping, project management, ideation &amp; requirements gathering</li>
-          <li>Linux, cloud engineering, kubernetes, docker, SQL, networking, et. al</li>
+          <li>15+ years of full stack web development &amp; project management</li>
+          <li>Professionl experience with hundreds of clients for a variety of business needs &amp; industries</li>
+          <li>Fundamental, veteran, ongoing production with: Ruby, Rails, HTML, CSS, Javascript</li>
+          <li>Proactive collaborator in UI/UX prototyping, project management, ideation, &amp; requirements gathering</li>
+          <li>Proficient infrastructure support in linux, cloud engineering, kubernetes, docker, SQL, TCP/IP, SSL, DNS, et. al</li>
           <li>Never done learning</li>
-          <li>Oh and I need a favicon but I don't know how to design a good one</li>
+          <li>Oh, and I need a favicon, but I don't know how to design a good one</li>
         </ul>
 
         <p>
