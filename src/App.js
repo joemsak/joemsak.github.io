@@ -16,7 +16,7 @@ function App() {
       </header>
 
       <main>
-        <p>A professional, seasoned web developer who hates every cover letter and web copy he's ever tried to write to describe himself.</p>
+        <p>A professional, seasoned web developer who hates every cover letter and web copy he's ever tried to write about himself.</p>
         <ul>
           <li>15+ years of experience with hundreds of clients in many industries</li>
           <li>Ruby, Rails, HTML, CSS, Javascript (vanilla or frameworks)</li>
