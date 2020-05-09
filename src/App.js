@@ -23,6 +23,7 @@ function App() {
           <li>UI/UX prototyping, project management, ideation &amp; requirements gathering</li>
           <li>Linux, cloud engineering, kubernetes, docker, SQL, networking, et. al</li>
           <li>Never done learning</li>
+          <li>Oh and I need a favicon but I don't know how to design a good one</li>
         </ul>
 
         <p>
