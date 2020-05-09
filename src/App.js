@@ -26,11 +26,15 @@ function App() {
         </ul>
 
         <p>
-          <a href="mailto:joe@joesak.com">joe@joesak.com</a>
+          <a href="mailto:joe@joesak.com">email/joe@joesak.com</a>
         </p>
 
         <p>
-          <a href="//linkedin.com/in/joemsak">LinkedIn/joemsak</a>
+          <a href="//github.com/joemsak">github/joemsak</a>
+        </p>
+
+        <p>
+          <a href="//linkedin.com/in/joemsak">linkedin/joemsak</a>
         </p>
 
         <p>
