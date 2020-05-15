@@ -7,7 +7,7 @@ function App() {
     <>
       <header>
         <h1>Joseph M. Sak</h1>
-        <h2>Cloud &amp; Application Engineer at <a href="http://kadenze.com">Kadenze</a></h2>
+        <h2>Cloud &amp; Applications Engineer at <a href="http://kadenze.com">Kadenze</a></h2>
 
         <img
           src={headshot}
