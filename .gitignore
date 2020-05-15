@@ -2,4 +2,5 @@ build
 node_modules
 certs
 .kubernetes/secret*
+.kubernetes/cluster-issuers*
 
