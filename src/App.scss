@@ -231,3 +231,48 @@ main {
     opacity: 1;
   }
 }
+
+.cryptedmail:after {
+  content: "email/" attr(data-name) "@" attr(data-domain) "." attr(data-tld);
+}
+
+.bg-none {
+  background: none;
+}
+
+.b-0 {
+  border: 0;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.p-0 {
+  padding: 0;
+}
+
+.color-inherit {
+   color: inherit;
+}
+
+.txt-dec-underline {
+  text-decoration: underline;
+}
+
+.hover-pointer {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.button-as-link {
+  @extend .color-inherit;
+  @extend .txt-dec-underline;
+  @extend .bg-none;
+  @extend .b-0;
+  @extend .p-0;
+  @extend .m-0;
+  @extend .hover-pointer;
+}
+

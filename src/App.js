@@ -1,8 +1,19 @@
 import React from 'react';
 import headshot from './headshot.jpg';
-import './App.css';
+import './App.scss';
 
 function App() {
+  const openMail = evt => {
+    window.location.href = 'mailto:' +
+      evt.target.dataset.name +
+      '@' +
+      evt.target.dataset.domain +
+      '.' +
+      evt.target.dataset.tld;
+
+    return false;
+  }
+
   return (
     <>
       <header>
@@ -29,7 +40,13 @@ function App() {
         </ul>
 
         <p>
-          <a href="mailto:joe@joesak.com">email/joe@joesak.com</a>
+          <button
+            className="cryptedmail button-as-link"
+            data-name="joe"
+            data-domain="joesak"
+            data-tld="com"
+            onClick={openMail}
+          ></button>
         </p>
 
         <p>
