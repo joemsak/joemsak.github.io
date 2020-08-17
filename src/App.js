@@ -30,12 +30,12 @@ function App() {
         <p>Joe Sak is a software writer living in Guadalajara, Mexico with his wife Cristina and their two cats, Fuji &amp; Bizen.</p>
 
         <ul>
-          <li>20 years of full stack web development, project management, &amp; professional growth experience</li>
-          <li>Hundreds of past clients from a variety of business sizes, goals, &amp; industries</li>
-          <li>Fundamental and continuous learning of Ruby, OOP, Rails, HTML, CSS, Javascript</li>
-          <li>Proactive collaborator in UI/UX prototyping and dynamic, iterative project development</li>
-          <li>Proficient devops chops in linux, cloud engineering, kubernetes, docker, SQL, TCP/IP, SSL, DNS, et. al</li>
-          <li>Never done pushing myself</li>
+          <li>20 years of full stack web development, project management, professional &amp; personal development</li>
+          <li>Hundreds of design agency clients from a variety of business sizes, goals, &amp; industries</li>
+          <li>Fundamental continuous learning of Ruby, OOP, Rails, HTML, CSS, Javascript, DevOps</li>
+          <li>Proactive collaborator dynamic, iterative project development and prototyping</li>
+          <li>Proficient-ish DevOps chops in linux, cloud engineering, kubernetes, docker, SQL, TCP/IP, SSL, DNS, et. al</li>
+          <li>Never done pushing myself, always starting another class or book</li>
         </ul>
 
         <p>
