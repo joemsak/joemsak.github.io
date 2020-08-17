@@ -179,7 +179,7 @@ function Code() {
         I am still proud of this code because I architected the routes, controllers,
         and views such that each user-audience (mentors, students, ambassadors,
         judges, and admins) are guaranteed to the developer that the correct role
-        has been authenticated. The code never needs to mix concerns and switch
+        has been authenticated. The code never needs to mix concerns or add switch
         cases for the differing roles. If an audience name is in your file's
         subdirectory hierarchy (such as  `app/views/judges/resource/show.html.erb`)
         you are guaranteed the current_user is of that role, and that role's code
