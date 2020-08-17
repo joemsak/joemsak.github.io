@@ -34,7 +34,7 @@ function App() {
             Cristina
           </a>
           &nbsp;and their&nbsp;
-          <a href="//www.youtube.com/watch?v=Y1KSUBvHzx8" target="_blank">
+          <a href="//www.youtube.com/watch?v=Y1KSUBvHzx8&t=78" target="_blank">
             two cats, Fuji &amp; Bizen
           </a>
           .
