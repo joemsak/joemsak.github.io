@@ -98,7 +98,7 @@ function Code() {
       />
 
       <p>
-        The relevant bits above are a legacy hardoced special case for
+        The relevant bits above are the legacy hardcoded special cases for
         Stanford/Princeton that we will visit again in the next group.
       </p>
 
