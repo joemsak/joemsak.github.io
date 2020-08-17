@@ -79,8 +79,6 @@ select {
 
 body {
   font-family: Helvetica Neue, Verdana, Arial, sans-serif;
-  color: rgba(28, 28, 28, 1);
-  background-color: rgba(255, 255, 255, 0.8);
   padding: 3rem;
   padding-top: 1rem;
 }
@@ -94,7 +92,31 @@ body {
   a {
     color: rgba(255, 255, 255, 0.8);
   }
+
+  main {
+    &.full {
+      h3 {
+        border-top-color: rgba(255, 255, 255, 0.8);
+      }
+    }
+  }
 }
+
+@media (prefers-color-scheme: light) {
+  body {
+    color: rgba(28, 28, 28, 1);
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+  main {
+    &.full {
+      h3 {
+        border-top-color: black;
+      }
+    }
+  }
+}
+
 
 h2,
 h3,
@@ -155,7 +177,7 @@ main {
   &.full {
     h3 {
       padding-top: 1rem;
-      border-top: 2px solid white;
+      border-top: 2px solid;
     }
 
     p {

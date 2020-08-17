@@ -30,11 +30,19 @@ function App() {
         <p>
           Joe Sak is a software writer living in Guadalajara, Mexico with his
           wife&nbsp;
-          <a href="//www.youtube.com/watch?v=-RAN5l4Q0rw" target="_blank">
+          <a
+            href="//www.youtube.com/watch?v=-RAN5l4Q0rw"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Cristina
           </a>
           &nbsp;and their&nbsp;
-          <a href="//www.youtube.com/watch?v=Y1KSUBvHzx8&t=78" target="_blank">
+          <a
+            href="//www.youtube.com/watch?v=Y1KSUBvHzx8&t=78"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             two cats, Fuji &amp; Bizen
           </a>
           .

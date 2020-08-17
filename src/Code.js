@@ -28,9 +28,15 @@ function Code() {
     <main className="full">
       <h1>Hey Basecamp!</h1>
       <h2>
-        I made this page for you to take a brief tour of
-        &nbsp;<a href="//github.com/joemsak" target="_blank">my code</a>&nbsp;
-        samples
+        I made this page for you to take a brief tour of&nbsp;
+        <a
+          href="//github.com/joemsak"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          my code
+        </a>
+        &nbsp;samples
       </h2>
 
       <h2>Current work example</h2>
@@ -41,7 +47,16 @@ function Code() {
         old, <em>very legacy</em>, Rails 4.2 app that powers both <a
           href="//kadenze.com"
           target="_blank"
-        >Kadenze</a> and <a href="//kannu.com" target="_blank">Kannu</a> (and
+          rel="noopener noreferrer"
+        >Kadenze</a> and&nbsp;
+        <a
+          href="//kannu.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Kannu
+        </a>
+        &nbsp;(and
         Kannu has multi-tenancy). The original developers have been gone
         since before my time, and I've been working effectively on my own since
         January 2019.
@@ -166,10 +181,21 @@ function Code() {
 
       <p>
         These screenshots are from&nbsp;
-        <a href="//github.com/Iridescent-CM/technovation-app" target="_blank">
+        <a
+          href="//github.com/Iridescent-CM/technovation-app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           the open source code
         </a>
-        &nbsp;of <a href="//my.technovationchallenge.org" target="_blank">Technovation</a>,
+        &nbsp;of&nbsp;
+        <a
+          href="//my.technovationchallenge.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Technovation
+        </a>,
         a team building &amp; competition platform for girls of underserved
         communities all around the world to participate and learn application
         development and entrepreneurship.
