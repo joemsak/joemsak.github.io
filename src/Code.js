@@ -151,9 +151,8 @@ function Code() {
 
       <p>
         Seen above, it should be a lot easier for devs to follow and continue
-        to improve the settings code for this model. Fewer details of how the
-        logic works are leaking into the wild, hopefully relieving developers of
-        cognitive load.
+        to improve the settings code for this model. Fewer details are leaking
+        out of the model now, hopefully relieving developers of cognitive load.
       </p>
 
       <h2>Previous work example</h2>
