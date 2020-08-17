@@ -27,16 +27,15 @@ function App() {
       </header>
 
       <main>
-        <p>A professional, seasoned web developer who hates every cover letter and web copy he's ever tried to write about himself.</p>
+        <p>Joe Sak is a software writer living in Guadalajara, Mexico with his wife Cristina and their two cats, Fuji &amp; Bizen.</p>
 
         <ul>
-          <li>15+ years of full stack web development &amp; project management</li>
-          <li>Professional experience with hundreds of clients for a variety of business needs &amp; industries</li>
-          <li>Fundamental knowledge and usage of Ruby, OOP, Rails, HTML, CSS, Javascript</li>
-          <li>Proactive collaborator in UI/UX prototyping, project management, ideation, &amp; requirements gathering</li>
-          <li>Proficient infrastructure support in linux, cloud engineering, kubernetes, docker, SQL, TCP/IP, SSL, DNS, et. al</li>
-          <li>Never done learning</li>
-          <li>Oh, and I need a favicon, but I don't know how to design a good one</li>
+          <li>20 years of full stack web development, project management, &amp; professional growth experience</li>
+          <li>Hundreds of past clients from a variety of business sizes, goals, &amp; industries</li>
+          <li>Fundamental and continuous learning of Ruby, OOP, Rails, HTML, CSS, Javascript</li>
+          <li>Proactive collaborator in UI/UX prototyping and dynamic, iterative project development</li>
+          <li>Proficient devops chops in linux, cloud engineering, kubernetes, docker, SQL, TCP/IP, SSL, DNS, et. al</li>
+          <li>Never done pushing myself</li>
         </ul>
 
         <p>
