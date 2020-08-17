@@ -27,7 +27,18 @@ function App() {
       </header>
 
       <main>
-        <p>Joe Sak is a software writer living in Guadalajara, Mexico with his wife Cristina and their two cats, Fuji &amp; Bizen.</p>
+        <p>
+          Joe Sak is a software writer living in Guadalajara, Mexico with his
+          wife&nbsp;
+          <a href="//www.youtube.com/watch?v=Xmd1uwZyVB0" target="_blank">
+            Cristina
+          </a>
+          &nbsp;and their&nbsp;
+          <a href="//www.youtube.com/watch?v=Y1KSUBvHzx8" target="_blank">
+            two cats, Fuji &amp; Bizen
+          </a>
+          .
+        </p>
 
         <ul>
           <li>20 years of full stack web development, project management, professional &amp; personal development</li>
