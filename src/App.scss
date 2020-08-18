@@ -175,6 +175,9 @@ main {
   animation-fill-mode: forwards;
 
   &.full {
+    margin: 1rem auto;
+    width: 70%;
+
     h3 {
       padding-top: 1rem;
       border-top: 2px solid;
@@ -183,6 +186,36 @@ main {
     p {
       margin-bottom: 2rem;
     }
+
+    img {
+      margin: 1rem auto;
+    }
+  }
+}
+
+nav {
+  display: flex;
+
+  h2 {
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    opacity: 0.8;
+    padding: 0.5rem 1rem;
+    margin-right: 1rem;
+    transition: opacity 0.2s, background 0.2s;
+
+    &:hover, &.active {
+      opacity: 1;
+      background: rgba(255, 255, 255, 0.2);
+    }
+  }
+}
+
+.panel {
+  display: none;
+
+  &.show {
+    display: block;
   }
 }
 
