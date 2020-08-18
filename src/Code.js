@@ -11,13 +11,13 @@ import relationshipScopes from './img/relationship-scopes.png';
 import naming1 from './img/naming-1.png';
 import naming2 from './img/naming-2.png';
 import naming3 from './img/naming-3.png';
+import naming4 from './img/naming-4.png';
 
 import settings0 from './img/settings-0.png';
 import settings1 from './img/settings-1.png';
 import settings2 from './img/settings-2.png';
 import settings3 from './img/settings-3.png';
 import settings4 from './img/settings-4.png';
-import settings5 from './img/settings-5.png';
 
 import profileControllerConcern from './img/profile-controller-concern.png';
 import profileControllerStudent from './img/profile-controller-student.png';
@@ -75,11 +75,11 @@ function Code() {
       />
 
       <p>
-        Since `Institution.current` is a known global, I call an existing method
-        that avoids needing it as an argument in the wild. Similarly, there is
+        Since `Institution.current` is a known global, I can call an existing method
+        that avoids requiring it as an argument in the wild. Similarly, there is
         already a scope for the inner-workings of `Institution.from_courses`. I
-        also see that there's a duplicated bit in these two screenshots to cleanup
-        in my next round of work!
+        can also just now see that there's a duplicated bit in these two
+        screenshots to cleanup in my next round of work!
       </p>
 
       <h3>Clear up duplication inside some association extensions</h3>
@@ -144,11 +144,6 @@ function Code() {
         alt="Code sample of replacing complex code with simpler code"
       />
 
-      <p>
-        Mixed in here we see delegation added to an association, both with and
-        without using a prefix (screenshot cuts off the `prefix: false` line)
-      </p>
-
       <img
         src={ settings4 }
         alt="Code sample of replacing complex code with simpler code"
@@ -158,11 +153,6 @@ function Code() {
         It looks like `#allows_archive?` can now be re-written even simpler
         during my next round of work!
       </p>
-
-      <img
-        src={ settings5 }
-        alt="Code sample of replacing complex code with simpler code"
-      />
 
       <p>
         Seen above, it should be a lot easier for devs to follow and continue
@@ -206,11 +196,15 @@ function Code() {
         and views such that each user-audience (mentors, students, ambassadors,
         judges, and admins) are guaranteed to the developer that the correct role
         has been authenticated. The code never needs to mix concerns or add switch
-        cases for the differing roles. If an audience name is in your file's
-        subdirectory hierarchy (such as  `app/views/judges/resource/show.html.erb`)
-        you are guaranteed the current_user is of that role, and that role's code
-        features will work. Most duplicate templates and logic are shared via
-        DRY OOP extension.
+        cases for the differing roles.
+      </p>
+
+      <p>
+        As a big believer in conventions, I set it up so that if an audience role
+        is in your file's subdirectory hierarchy (such as
+        `app/views/judges/resource/show.html.erb`) you are guaranteed the
+        current_user is of that role, and that role's code features will work.
+        Most duplicate templates and logic are shared via DRY, OOP extension.
       </p>
 
       <p>
