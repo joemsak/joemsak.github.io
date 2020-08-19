@@ -17,7 +17,7 @@ function App() {
   return (
     <>
       <header>
-        <h1>Joseph M. Sak</h1>
+        <h1>Joe Sak</h1>
         <h2>Cloud &amp; Applications Engineer at <a href="http://kadenze.com">Kadenze</a></h2>
 
         <img
@@ -49,12 +49,29 @@ function App() {
         </p>
 
         <ul>
-          <li>20 years of full stack web development, project management, professional &amp; personal development</li>
-          <li>Hundreds of design agency clients from a variety of business sizes, goals, &amp; industries</li>
-          <li>Fundamental continuous learning of Ruby, OOP, Rails, HTML, CSS, Javascript, DevOps</li>
-          <li>Proactive collaborator dynamic, iterative project development and prototyping</li>
-          <li>Proficient-ish DevOps chops in linux, cloud engineering, kubernetes, docker, SQL, TCP/IP, SSL, DNS, et. al</li>
-          <li>Never done pushing myself, always starting another class or book</li>
+          <li>
+            20 years of full stack web development, project management,
+            professional &amp; personal development
+          </li>
+
+          <li>
+            Hundreds of design agency clients from a variety of business sizes,
+            goals, &amp; industries
+          </li>
+
+          <li>Empathy and human-centered design, work philosophy</li>
+
+          <li>
+            Fundamental skill and continuous sharpening in Ruby, OOP, Rails,
+            HTML, CSS, Javascript, DevOps
+          </li>
+
+          <li>
+            Proactive collaborator in iterative project development and
+            prototyping
+          </li>
+
+          <li>Never done growing, always striving to do better</li>
         </ul>
 
         <p>
@@ -76,7 +93,21 @@ function App() {
         </p>
 
         <p>
-          <a href="//instagram.com/dosgatoscreative">instagram/@dosgatoscreative</a>
+          <a href="//instagram.com/dosgatoscreative">
+            instagram/@dosgatoscreative
+          </a>
+        </p>
+
+        <p>
+          <a href="//www.youtube.com/channel/UCXeY9RpLlwONYgc2Ah-1rGA">
+            youtube/Dos Gatos Creative
+          </a>
+        </p>
+
+        <p>
+          <a href="https://www.youtube.com/channel/UCDT9dBvD53u2UlO0NVrLMmQ">
+            youtube/Joe Sak
+          </a>
         </p>
       </main>
     </>

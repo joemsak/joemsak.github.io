@@ -98,6 +98,10 @@ main {
       border-top-color: black;
     }
   }
+
+  p:first-child {
+    margin-top: 0;
+  }
 }
 
 nav {
@@ -165,44 +169,45 @@ h2 {
   font-size: 1.2rem;
 }
 
-header img {
-  display: block;
-  margin: 1rem;
-  margin-left: 0;
-  margin-top: 0;
-  box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.2);
-  border-radius: 0.2rem;
-  width: 400px;
-
-  opacity: 0;
-  animation-name: fadeInFromBelow;
-  animation-duration: 2s;
-  animation-delay: 250ms;
-  animation-fill-mode: forwards;
+#root {
+  display: flex;
 }
 
 header {
-  position: fixed;
-
   opacity: 0;
   animation-name: fadeInFromTop;
   animation-duration: 2s;
   animation-delay: 250ms;
   animation-fill-mode: forwards;
+
+  img {
+    display: block;
+    margin: 1rem;
+    margin-left: 0;
+    margin-top: 0;
+    box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.2);
+    border-radius: 0.2rem;
+    width: 300px;
+
+    opacity: 0;
+    animation-name: fadeInFromBelow;
+    animation-duration: 2s;
+    animation-delay: 250ms;
+    animation-fill-mode: forwards;
+  }
 }
 
 main {
-  &:not(.full) {
-    margin-left: 450px;
-  }
-
   opacity: 0;
   animation-name: fadeInFromRight;
   animation-duration: 2s;
   animation-delay: 250ms;
   animation-fill-mode: forwards;
 
+  padding-left: 1rem;
+
   &.full {
+    padding: 0;
     margin: 1rem auto;
     width: 70%;
 
@@ -253,7 +258,7 @@ button {
   text-decoration: underline;
 }
 
-@media only screen and (max-width:400px) {
+@media only screen and (max-width:600px) {
   body {
     padding: 1rem;
   }
@@ -277,15 +282,23 @@ button {
   }
 
   header {
-    position: relative;
+    img {
+      width: 100%;
+    }
   }
 
-  main {
-    margin: 0;
+  #root {
+    display: block;
+  }
+}
+
+@media only screen and (max-width:768px) {
+  h1 {
+    font-size: 1.4rem;
   }
 
-  img {
-    width: 100%;
+  h2 {
+    font-size: 1.1rem;
   }
 }
 
@@ -391,4 +404,3 @@ button {
     opacity: 1;
   }
 }
-
