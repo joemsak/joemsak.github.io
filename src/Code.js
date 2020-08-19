@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Gist from 'react-gist';
 
 import './App.scss';
@@ -25,8 +25,19 @@ import profileControllerMentor from './img/profile-controller-mentor.png';
 
 function Code() {
   const [showPanel, setShowPanel] = useState('current');
+  const [scrollTop, setScrollTop] = useState(false);
 
-  const setActivePanel = (evt) => {
+  useEffect(
+    () => {
+      if (scrollTop)
+        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+      setScrollTop(false)
+    },
+    [scrollTop, setScrollTop]
+  )
+
+  const setActivePanel = evt => {
+    setScrollTop(evt.target.dataset.scrollTop === "true")
     setShowPanel(evt.target.dataset.panel)
   }
 
@@ -46,8 +57,10 @@ function Code() {
     return showPanel === 'previous' ? 'active' : ''
   }
 
-  const gistId = () => {
-    return showPanel === 'previous' ? '871cd16d04200ab6c16cfa95a52954e0' : ''
+  const gistEmbed = () => {
+    return showPanel === 'previous' ?
+      <Gist id='871cd16d04200ab6c16cfa95a52954e0' /> :
+      ''
   }
 
   return (
@@ -73,7 +86,7 @@ function Code() {
           onClick={setActivePanel}
           data-panel='current'
         >
-          Current work example
+          Current work sample
         </h2>
 
         <h2
@@ -81,30 +94,25 @@ function Code() {
           onClick={setActivePanel}
           data-panel='previous'
         >
-          Previous work example
+          Previous work sample
         </h2>
       </nav>
 
       <div className={`panel ${currentPanelCss()}`}>
         <p>
           First up, here is some code re-writing that I'm presently branched on
-          while trying to pass failing specs on our CI. Samples shown are from a 6-year
-          old, <em>very legacy</em>, Rails 4.2 app that powers both <a
-            href="//kadenze.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >Kadenze</a> and&nbsp;
-          <a
-            href="//kannu.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          while trying to pass failing specs on our CI. Samples shown are from a
+          6-year old, <em>very legacy</em>, Rails 4.2 app that powers both&nbsp;
+          <a href="//kadenze.com" target="_blank" rel="noopener noreferrer">
+            Kadenze
+          </a>
+          &nbsp;and&nbsp;
+          <a href="//kannu.com" target="_blank" rel="noopener noreferrer">
             Kannu
           </a>
-          &nbsp;(and
-          Kannu has multi-tenancy). The original developers have been gone
-          since before my time, and I've been working effectively on my own since
-          January 2019.
+          &nbsp;(Kannu has sub-domain multi-tenancy). The original developers
+          have been gone since before my time, so I've had to explore and learn
+          this codebase on my own since January 2019.
         </p>
 
         <h3>Packing known globals and terse details into convenience methods</h3>
@@ -120,11 +128,12 @@ function Code() {
         />
 
         <p>
-          Since `Institution.current` is a known global, I can call an existing method
-          that avoids requiring it as an argument in the wild. Similarly, there is
-          already a scope for the inner-workings of `Institution.from_courses`. I
-          can also just now see that there's a duplicated bit in these two
-          screenshots to cleanup in my next round of work!
+          Since `Institution.current` is a known global, I can call an existing
+          method that avoids requiring it as an argument in the wild. Similarly,
+          there is already a scope for the inner-workings of
+          `Institution.from_courses`. And while preparing this tour, I now see
+          another clean up opportunity between these two screenshots for my next
+          round of work!
         </p>
 
         <h3>Clear up duplication inside some association extensions</h3>
@@ -134,7 +143,10 @@ function Code() {
           alt="Code sample of duplication cleanup"
         />
 
-        <h3>Improving readability and reminders of legacy hard-coded logic with naming</h3>
+        <h3>
+          Improving readability and reminders of legacy hard-coded logic with
+          naming
+        </h3>
 
         <img
           src={ naming1 }
@@ -143,8 +155,9 @@ function Code() {
 
         <p>
           The policy files are rife with duplication and it's going to be quite a
-          patient slow burn to get to the point where all policies have been consolidated
-          and tidied up nicely, so I just try to clean them up as I run into them.
+          patient slow burn to get to the point where all policies have been
+          consolidated and tidied up nicely, so I just try to clean them up as
+          I run into them.
         </p>
 
         <img
@@ -164,10 +177,15 @@ function Code() {
 
         <p>
           The relevant bits above are the legacy hardcoded special cases for
-          Stanford/Princeton. It took the co-founder a minute to realize what the original code was for, so I baked it into the new naming. We will see the old "in the wild" calls among the next group of changes.
+          Stanford/Princeton. It took the co-founder a minute to realize what the
+          original code was for, so I baked it into the new naming. We will see
+          the old "in the wild" calls among the next group of changes.
         </p>
 
-        <h3>Replacing a complicated concern with plain code in new convenience methods</h3>
+        <h3>
+          Replacing a complicated concern with plain code in new convenience
+          methods
+        </h3>
 
         <img
           src={ settings0 }
@@ -176,7 +194,10 @@ function Code() {
 
         <p>
           Unfortunately, despite good intentions, this concern was hard to follow.
-          To boot, the code required for use in the wild was not convenient.
+          To boot, the code required for use in the wild was not convenient. In
+          the following examples, you will hopefully note the removal of the
+          dynamically created `get_setting` and `add_setting` methods in favor
+          of plain old boring ruby hash access.
         </p>
 
         <img
@@ -205,18 +226,31 @@ function Code() {
         />
 
         <p>
-          Seen above, it should be a lot easier for devs to follow and continue
-          to improve the settings code for this model. Fewer details are leaking
-          out of the model now, hopefully relieving developers of cognitive load.
+          I hope this has made it easier for developers to follow and continue
+          to improve the settings code for this model. And in case you're 
+          wondering, it turns out there was only one other model which included
+          `ModelSettings` and wasn't even using it as much. Some code has been
+          left duplicated between the two models as a result, but I'm okay with
+          that for now.
         </p>
+
+        <button
+          type="button"
+          onClick={setActivePanel}
+          data-panel="previous"
+          data-scroll-top="true"
+        >
+          See the next sample &uarr;
+        </button>
       </div>
 
       <div className={`panel ${previousPanelCss()}`}>
         <p>
-          In another quick sample, I'd like to demonstrate code from my last greenfield
-          project that still has my name on most of the lines of code two years later.
-          At a glance of various changes since I left, I can see that other devs
-          were able to follow my intentions pretty well, which feels good.
+          In another quick sample, I'd like to demonstrate code from my last
+          greenfield project that still has my name on most of the lines of code
+          two years later. At a glance of various changes since I left, I can see
+          that other devs were able to follow my intentions pretty well, which
+          feels good.
         </p>
 
         <p>
@@ -242,16 +276,16 @@ function Code() {
         </p>
 
         <p>
-          I am still proud of this code because I architected the routes, controllers,
-          and views such that each user-audience (mentors, students, ambassadors,
-          judges, and admins) are guaranteed to the developer that the correct role
-          has been authenticated. The code never needs to mix concerns or add switch
-          cases for the differing roles.
+          I am still proud of this code because I architected the routes,
+          controllers, and views such that each user-audience (mentors, students,
+          ambassadors, judges, and admins) are guaranteed to the developer that
+          the correct role has been authenticated. The code never needs to mix
+          concerns or add switch cases for the differing roles.
         </p>
 
         <p>
-          As a big believer in conventions, I set it up so that if an audience role
-          is in your file's subdirectory hierarchy (such as
+          As a big believer in naming conventions, I set it up so that if an
+          audience role is in your file's subdirectory hierarchy (such as
           `app/views/judges/resource/show.html.erb`) you are guaranteed the
           current_user is of that role, and that role's code features will work.
           Most duplicate templates and logic are shared via DRY, OOP extension.
@@ -286,7 +320,7 @@ function Code() {
 
         <img
           src={ profileControllerConcern }
-          alt="Sample of an automagically-scoped shared profile controller concern"
+          alt="Sample of an automagic profile controller concern"
         />
 
         <p>
@@ -297,7 +331,7 @@ function Code() {
           might begin those changes below.
         </p>
 
-        <Gist id={gistId()} />
+        { gistEmbed() }
 
         <p>
           Of course, given that this is a first draft, I'd discuss where it's

@@ -5,13 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#333333" />
 
-    <title>Joseph M. Sak &bull; Creative Technology Consultant, Software Writer, Web Production Strategy</title>
+    <title>
+      Joe Sak &bull; Creative Technology Consultant, Software Writer,
+      Web Production Strategy
+    </title>
 
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
 
     <meta
       name="description"
-      content="A seasoned technical consultant and web application director who has worked with an expansive array of clients and industries."
+      content="
+        A seasoned technical consultant and web application director who
+        has worked with an expansive array of clients and industries.
+      "
     />
 
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
@@ -32,16 +38,70 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <button id="toggle-mode" onclick="toggleDarkMode()">
+      <i class="fas fa-moon"></i>
+    </button>
+
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+    <script src="https://kit.fontawesome.com/b40bcfed01.js" crossorigin="anonymous"></script>
+    <script>
+      (() => {
+        const matchMedia = window.matchMedia &&
+          window.matchMedia('(prefers-color-scheme: dark)')
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+        if ((matchMedia && matchMedia).matches) {
+          setColorScheme('dark')
+        } else {
+          setColorScheme('light')
+        }
+
+        if (matchMedia && matchMedia.addEventListener)
+          matchMedia.addEventListener('change', e => {
+            window.colorScheme = e.matches ? "dark" : "light";
+            toggleDarkMode()
+          })
+      })()
+
+      function toggleDarkMode() {
+        if (window.colorScheme === "dark") {
+          setColorScheme('light')
+        } else {
+          setColorScheme('dark')
+        }
+      }
+
+      function setColorScheme(mode) {
+        window.colorScheme = mode
+        updateBody()
+        updateToggleBtn()
+      }
+
+      function updateBody() {
+        if (isDarkMode()) {
+          document.querySelector('body').classList.add('dark')
+        } else {
+          document.querySelector('body').classList.remove('dark')
+        }
+      }
+
+      function updateToggleBtn() {
+        const icon = document.getElementById('toggle-mode')
+          .querySelector('i')
+
+        const removeClass = isDarkMode() ? 'fas' : 'far'
+        const addClass = isDarkMode() ? 'far' : 'fas'
+
+        icon.classList.remove(removeClass)
+        icon.classList.add(addClass)
+
+        icon.innerHTML = `&nbsp;${window.colorScheme} mode`
+      }
+
+      function isDarkMode() {
+        return window.colorScheme === 'dark'
+      }
+    </script>
   </body>
 </html>
