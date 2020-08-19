@@ -65,7 +65,7 @@ function Code() {
 
   return (
     <main className="full">
-      <h1>Hey there, Basecamp!</h1>
+      <h1>HEY there, Basecamp!</h1>
 
       <h2>
         I made this page for you to take a brief tour of&nbsp;

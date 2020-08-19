@@ -8,7 +8,6 @@ import {
 } from "react-router-dom";
 
 import App from './App';
-import Code from './Code';
 
 import * as serviceWorker from './serviceWorker';
 
@@ -16,7 +15,6 @@ ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Switch>
-        <Route path="/code"><Code /></Route>
         <Route path="/"><App /></Route>
       </Switch>
     </Router>
