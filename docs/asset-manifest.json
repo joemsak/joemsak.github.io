@@ -1,38 +1,23 @@
 {
   "files": {
     "main.css": "/static/css/main.722fcbe0.chunk.css",
-    "main.js": "/static/js/main.7c600f36.chunk.js",
-    "main.js.map": "/static/js/main.7c600f36.chunk.js.map",
+    "main.js": "/static/js/main.761dd592.chunk.js",
+    "main.js.map": "/static/js/main.761dd592.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.ba31bc1d.js",
     "runtime-main.js.map": "/static/js/runtime-main.ba31bc1d.js.map",
-    "static/js/2.5744d334.chunk.js": "/static/js/2.5744d334.chunk.js",
-    "static/js/2.5744d334.chunk.js.map": "/static/js/2.5744d334.chunk.js.map",
+    "static/js/2.e06cfb89.chunk.js": "/static/js/2.e06cfb89.chunk.js",
+    "static/js/2.e06cfb89.chunk.js.map": "/static/js/2.e06cfb89.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.785a559f44ff73d7f221792e4661323d.js": "/precache-manifest.785a559f44ff73d7f221792e4661323d.js",
+    "precache-manifest.4da0103c7dd51f936b43aed31fcd4126.js": "/precache-manifest.4da0103c7dd51f936b43aed31fcd4126.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.722fcbe0.chunk.css.map": "/static/css/main.722fcbe0.chunk.css.map",
-    "static/js/2.5744d334.chunk.js.LICENSE.txt": "/static/js/2.5744d334.chunk.js.LICENSE.txt",
-    "static/media/convenience-1.png": "/static/media/convenience-1.8f95405d.png",
-    "static/media/convenience-2.png": "/static/media/convenience-2.253810bf.png",
-    "static/media/headshot.jpg": "/static/media/headshot.43979e73.jpg",
-    "static/media/naming-1.png": "/static/media/naming-1.03a630ad.png",
-    "static/media/naming-2.png": "/static/media/naming-2.11b2ef98.png",
-    "static/media/naming-3.png": "/static/media/naming-3.8e6756f3.png",
-    "static/media/naming-4.png": "/static/media/naming-4.471f6b74.png",
-    "static/media/profile-controller-concern.png": "/static/media/profile-controller-concern.0d2caf0c.png",
-    "static/media/profile-controller-mentor.png": "/static/media/profile-controller-mentor.d4d0e1df.png",
-    "static/media/profile-controller-student.png": "/static/media/profile-controller-student.5cf01928.png",
-    "static/media/relationship-scopes.png": "/static/media/relationship-scopes.058080c7.png",
-    "static/media/settings-0.png": "/static/media/settings-0.d50f68f0.png",
-    "static/media/settings-1.png": "/static/media/settings-1.7c9ba842.png",
-    "static/media/settings-2.png": "/static/media/settings-2.1aa2bc21.png",
-    "static/media/settings-3.png": "/static/media/settings-3.344b01e0.png",
-    "static/media/settings-4.png": "/static/media/settings-4.1289e4f7.png"
+    "static/js/2.e06cfb89.chunk.js.LICENSE.txt": "/static/js/2.e06cfb89.chunk.js.LICENSE.txt",
+    "static/media/headshot.jpg": "/static/media/headshot.43979e73.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.ba31bc1d.js",
-    "static/js/2.5744d334.chunk.js",
+    "static/js/2.e06cfb89.chunk.js",
     "static/css/main.722fcbe0.chunk.css",
-    "static/js/main.7c600f36.chunk.js"
+    "static/js/main.761dd592.chunk.js"
   ]
 }
