@@ -47,9 +47,14 @@
 
     <script src="https://kit.fontawesome.com/b40bcfed01.js" crossorigin="anonymous"></script>
     <script>
+      const DARK = 'dark'
+      const LIGHT = 'light'
+      const DARK_ICON_CLASS = 'far'
+      const LIGHT_ICON_CLASS = 'fas'
+
       (() => {
         const matchMedia = window.matchMedia &&
-          window.matchMedia('(prefers-color-scheme: dark)')
+          window.matchMedia(`(prefers-color-scheme: ${DARK})`)
 
         decideColorScheme(matchMedia)
 
@@ -58,12 +63,12 @@
       })()
 
       function decideColorScheme(media) {
-        const mode = media && media.matches ? 'dark' : 'light'
+        const mode = media && media.matches ? DARK : LIGHT
         setColorScheme(mode)
       }
 
       function toggleDarkMode() {
-        const mode = isDarkMode() ? 'light' : 'dark'
+        const mode = isDarkMode() ? LIGHT : DARK
         setColorScheme(mode)
       }
 
@@ -75,7 +80,7 @@
 
       function updateBody() {
         const action = isDarkMode() ? 'add' : 'remove'
-        document.querySelector('body').classList[action]('dark')
+        document.querySelector('body').classList[action](DARK)
       }
 
       function updateToggleBtn() {
@@ -90,15 +95,15 @@
       }
 
       function removeIconClass() {
-        return isDarkMode() ? 'fas' : 'far'
+        return isDarkMode() ? LIGHT_ICON_CLASS : DARK_ICON_CLASS
       }
 
       function addIconClass() {
-        return isDarkMode() ? 'far' : 'fas'
+        return isDarkMode() ? DARK_ICON_CLASS : LIGHT_ICON_CLASS
       }
 
       function isDarkMode() {
-        return window.colorScheme === 'dark'
+        return window.colorScheme === DARK
       }
     </script>
   </body>
