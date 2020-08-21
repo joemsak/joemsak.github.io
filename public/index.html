@@ -51,25 +51,20 @@
         const matchMedia = window.matchMedia &&
           window.matchMedia('(prefers-color-scheme: dark)')
 
-        if ((matchMedia && matchMedia).matches) {
-          setColorScheme('dark')
-        } else {
-          setColorScheme('light')
-        }
+        decideColorScheme(matchMedia)
 
         if (matchMedia && matchMedia.addEventListener)
-          matchMedia.addEventListener('change', e => {
-            window.colorScheme = e.matches ? "dark" : "light";
-            toggleDarkMode()
-          })
+          matchMedia.addEventListener('change', e => decideColorScheme(e))
       })()
 
+      function decideColorScheme(media) {
+        const mode = media && media.matches ? 'dark' : 'light'
+        setColorScheme(mode)
+      }
+
       function toggleDarkMode() {
-        if (window.colorScheme === "dark") {
-          setColorScheme('light')
-        } else {
-          setColorScheme('dark')
-        }
+        const mode = isDarkMode() ? 'light' : 'dark'
+        setColorScheme(mode)
       }
 
       function setColorScheme(mode) {
@@ -79,24 +74,27 @@
       }
 
       function updateBody() {
-        if (isDarkMode()) {
-          document.querySelector('body').classList.add('dark')
-        } else {
-          document.querySelector('body').classList.remove('dark')
-        }
+        const action = isDarkMode() ? 'add' : 'remove'
+        document.querySelector('body').classList[action]('dark')
       }
 
       function updateToggleBtn() {
-        const icon = document.getElementById('toggle-mode')
-          .querySelector('i')
-
-        const removeClass = isDarkMode() ? 'fas' : 'far'
-        const addClass = isDarkMode() ? 'far' : 'fas'
-
-        icon.classList.remove(removeClass)
-        icon.classList.add(addClass)
-
+        const icon = getIcon()
+        icon.classList.remove(removeIconClass())
+        icon.classList.add(addIconClass())
         icon.innerHTML = `&nbsp;${window.colorScheme} mode`
+      }
+
+      function getIcon() {
+        return document.getElementById('toggle-mode').querySelector('i')
+      }
+
+      function removeIconClass() {
+        return isDarkMode() ? 'fas' : 'far'
+      }
+
+      function addIconClass() {
+        return isDarkMode() ? 'far' : 'fas'
       }
 
       function isDarkMode() {
