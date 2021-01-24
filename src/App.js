@@ -93,8 +93,8 @@ function App() {
         </p>
 
         <p>
-          <a href="//instagram.com/dosgatoscreative">
-            instagram/@dosgatoscreative
+          <a href="//instagram.com/joe_sak_from_tv">
+            instagram/@joe_sak_from_tv
           </a>
         </p>
 
