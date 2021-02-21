@@ -1,7 +1,7 @@
 (() => {
   document.addEventListener('DOMContentLoaded', () => {
-    initHomeGreeting()
     indicateJSEnabled()
+    initHomeGreeting()
   })
 
   const indicateJSEnabled = () => {
@@ -11,10 +11,8 @@
   const initHomeGreeting = () => {
     const homeGreetingEl = document.querySelector('#home #greeting h1')
 
-    if (homeGreetingEl) {
-      homeGreetingEl.style.color = 'inherit'
+    if (homeGreetingEl)
       homeGreetingEl.innerText = getGreeting()
-    }
   }
 
   const getGreeting = () => {
