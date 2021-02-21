@@ -19,13 +19,15 @@ body {
   margin-bottom: 2.5rem;
 }
 
-#greeting h2 {
+#home #greeting h2,
+#skills #greeting h1 {
   font-size: 6rem;
   margin: 3rem 0 1rem;
   font-weight: 800;
 }
 
-#greeting h1 {
+#home #greeting h1,
+#skills #greeting h2 {
   font-size: 1.5rem;
   font-weight: normal;
 }
