@@ -1,10 +1,10 @@
 (() => {
   document.addEventListener('DOMContentLoaded', () => {
-    initJS()
     initHomeGreeting()
+    indicateJSEnabled()
   })
 
-  const initJS = () => {
+  const indicateJSEnabled = () => {
     document.querySelector('.no-js').classList.remove('no-js')
   }
 
