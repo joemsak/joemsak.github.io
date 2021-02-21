@@ -7,6 +7,7 @@ td, footer, header, menu, nav, section, video {
   list-style: none;
   border: 0;
   font-family: 'Assistant', Trebuchet MS, arial, sans-serif;
+  line-height: 1.2;
 }
 
 body {
@@ -14,14 +15,31 @@ body {
   text-align: center;
 }
 
-h1 {
+#greeting {
+  margin-bottom: 5rem;
+}
+
+#greeting h1 {
   font-size: 6rem;
-  display: block;
-  margin: 10rem 0 1rem;
+  margin: 3rem 0 1rem;
   font-weight: 800;
 }
 
-h2 {
+#greeting h2 {
   font-size: 1.5rem;
   font-weight: normal;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+p {
+  margin: 1rem 0;
+}
+
+.selling-point {
+  max-width: 600px;
+  margin: 3rem auto 0;
 }
