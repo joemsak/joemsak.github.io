@@ -1,14 +1,30 @@
 (() => {
   document.addEventListener('DOMContentLoaded', () => {
-    document.querySelector('#greeting h1').innerText = `${getGreeting()}.`
+    initJS()
+    initHomeGreeting()
   })
 
+  const initJS = () => {
+    document.querySelector('.no-js').classList.remove('no-js')
+  }
+
+  const initHomeGreeting = () => {
+    const homeGreetingEl = document.querySelector('#home #greeting h1')
+
+    if (homeGreetingEl)
+      homeGreetingEl.innerText = getGreeting()
+  }
+
   const getGreeting = () => {
+    let greeting
+
     if (getOddNumberAtRandom()) {
-      return timeGreeting()
+      greeting = timeGreeting()
     } else {
-      return dayGreeting()
+      greeting = dayGreeting()
     }
+
+    return `${greeting}.`
   }
 
   const timeGreeting = () => {

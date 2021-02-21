@@ -15,6 +15,10 @@ body {
   text-align: center;
 }
 
+.text-left {
+  text-align: left;
+}
+
 #greeting {
   margin-bottom: 5rem;
 }
