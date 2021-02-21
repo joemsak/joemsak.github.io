@@ -11,8 +11,10 @@
   const initHomeGreeting = () => {
     const homeGreetingEl = document.querySelector('#home #greeting h1')
 
-    if (homeGreetingEl)
+    if (homeGreetingEl) {
+      homeGreetingEl.style.color = 'inherit'
       homeGreetingEl.innerText = getGreeting()
+    }
   }
 
   const getGreeting = () => {
