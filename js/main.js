@@ -5,7 +5,8 @@
   })
 
   const indicateJSEnabled = () => {
-    document.querySelector('.no-js').classList.remove('no-js')
+    const NO_JS = 'no-js'
+    document.querySelectorAll(`.${NO_JS}`).classList.remove(NO_JS)
   }
 
   const initHomeGreeting = () => {
@@ -16,15 +17,11 @@
   }
 
   const getGreeting = () => {
-    let greeting
+    const randomNum = Math.floor(Math.random() * 100) % 2
 
-    if (getOddNumberAtRandom()) {
-      greeting = timeGreeting()
-    } else {
-      greeting = dayGreeting()
-    }
-
-    return `${greeting}.`
+    return randomNum === 0 ?
+      `${timeGreeting()}.` :
+      `${dayGreeting()}.`
   }
 
   const timeGreeting = () => {
@@ -56,10 +53,6 @@
 
     const weekday = weekdays[new Date().getDay()]
 
-    const greeting = weekday === MONDAY ? 'Welcome back to' : 'Happy'
-
-    return `${greeting} ${weekday}`
+    return `${weekday === MONDAY ? 'Welcome back to' : 'Happy'} ${weekday}`
   }
-
-  const getOddNumberAtRandom = () => Math.floor(Math.random() * 100) % 2
 })()
