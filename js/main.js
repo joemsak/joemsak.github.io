@@ -9,7 +9,7 @@
   }
 
   const initHomeGreeting = () => {
-    const homeGreetingEl = document.querySelector('#home #greeting h1')
+    const homeGreetingEl = document.querySelector('#surprise')
 
     if (homeGreetingEl)
       homeGreetingEl.innerText = getGreeting()
