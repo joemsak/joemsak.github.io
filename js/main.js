@@ -6,7 +6,9 @@
 
   const indicateJSEnabled = () => {
     const NO_JS = 'no-js'
-    document.querySelectorAll(`.${NO_JS}`).classList.remove(NO_JS)
+    const selector = `.${NO_JS}`
+
+    document.querySelectorAll(selector).forEach(el => el.classList.remove(NO_JS))
   }
 
   const initHomeGreeting = () => {
