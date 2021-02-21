@@ -43,3 +43,21 @@ p {
   max-width: 600px;
   margin: 3rem auto 0;
 }
+
+ @media only screen and (max-width: 600px) {
+   #greeting {
+     margin-bottom: 1rem;
+   }
+
+   #greeting h1 {
+     font-size: 2rem;
+   }
+
+   #greeting h2 {
+     font-size: 1.3rem;
+   }
+
+   h1 {
+     font-size: 1.25rem;
+   }
+ }
