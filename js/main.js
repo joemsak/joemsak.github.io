@@ -91,8 +91,11 @@
     }
 
     const prefersDarkMode = () => {
-      return matchMedia('(prefers-color-scheme: dark)').matches ||
-        localStorage.getItem(LOCAL_STORAGE_KEY) === DARK
+      if (matchMedia('(prefers-color-scheme: dark)').matches) {
+        return localStorage.getItem(LOCAL_STORAGE_KEY) != LIGHT
+      } else {
+        return localStorage.getItem(LOCAL_STORAGE_KEY) === DARK
+      }
     }
 
     document
