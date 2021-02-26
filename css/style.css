@@ -10,12 +10,12 @@ td, footer, header, menu, nav, section, video {
   line-height: 1.2;
 }
 
-.no-js,
-.no-js *,
 .light-mode,
 .dark-mode,
-.light-mode *,
-.dark-mode * {
+.light-mode a,
+.dark-mode a,
+.light-mode button,
+.dark-mode button {
   transition: background-color 0.2s, color 0.2s, opacity 0.2s;
 }
 
