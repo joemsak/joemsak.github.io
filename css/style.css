@@ -1,5 +1,5 @@
-html, body, div, span, a, h1, h2, h3, h4, h5, h6, p, blockquote, img, 
-ol, ul, li, input, label, select, table, tbody, tfoot, thead, tr, th, 
+html, body, div, span, a, h1, h2, h3, h4, h5, h6, p, blockquote, img,
+ol, ul, li, input, label, select, table, tbody, tfoot, thead, tr, th,
 td, footer, header, menu, nav, section, video {
   margin: 0;
   padding: 0;
@@ -8,6 +8,17 @@ td, footer, header, menu, nav, section, video {
   border: 0;
   font-family: 'Assistant', Trebuchet MS, arial, sans-serif;
   line-height: 1.2;
+}
+
+.no-js, .no-js * {
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.light-mode,
+.dark-mode,
+.light-mode *,
+.dark-mode * {
+  transition: background-color 0.2s, color 0.2s;
 }
 
 body {
@@ -59,6 +70,39 @@ footer {
   margin-top: 3rem;
 }
 
+#dark-mode-toggle {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  opacity: 0.8;
+}
+
+#dark-mode-toggle:active {
+  outline: 0;
+}
+
+#dark-mode-toggle svg {
+  width: 20px;
+  height: 20px;
+}
+
+#dark-mode-toggle svg path,
+#dark-mode-toggle svg polygon,
+#dark-mode-toggle svg rect {
+  fill: #333;
+}
+
+.svg-icon circle {
+  stroke: #333;
+  stroke-width: 1;
+}
+
 @media only screen and (max-width: 600px) {
   header {
     margin-bottom: 1rem;
@@ -76,5 +120,43 @@ footer {
 
   h1 {
     font-size: 1.25rem;
+  }
+}
+
+html.dark-mode {
+  background: #333;
+  color: #efefef;
+}
+
+.dark-mode a {
+  color: #bbb;
+}
+
+.dark-mode a:visited {
+  color: #999;
+}
+
+.dark-mode #dark-mode-toggle svg path,
+.dark-mode #dark-mode-toggle svg polygon,
+.dark-mode #dark-mode-toggle svg rect {
+  fill: #efefef;
+}
+
+.no-js #dark-mode-toggle {
+  display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html.no-js {
+    background: #333;
+    color: #efefef;
+  }
+
+  .no-js a {
+    color: #bbb;
+  }
+
+  .no-js a:visited {
+    color: #999;
   }
 }

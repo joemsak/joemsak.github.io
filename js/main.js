@@ -2,6 +2,7 @@
   document.addEventListener('DOMContentLoaded', () => {
     indicateJSEnabled()
     initHomeGreeting()
+    initDarkLightMode()
   })
 
   const indicateJSEnabled = () => {
@@ -56,5 +57,45 @@
     const weekday = weekdays[new Date().getDay()]
 
     return `${weekday === MONDAY ? 'Welcome back to' : 'Happy'} ${weekday}`
+  }
+
+  const initDarkLightMode = () => {
+    const DARK_MODE = 'dark-mode'
+    const LIGHT_MODE = 'light-mode'
+    const LOCAL_STORAGE_KEY = 'prefersColorScheme'
+
+    const htmlEl = document.querySelector('html')
+
+    const toggleDarkMode = () => {
+      if (htmlEl.classList.contains(DARK_MODE)) {
+        disableDarkMode()
+      } else {
+        enableDarkMode()
+      }
+    }
+
+    const disableDarkMode = () => {
+      htmlEl.classList.remove(DARK_MODE)
+      htmlEl.classList.add(LIGHT_MODE)
+      localStorage.setItem(LOCAL_STORAGE_KEY, false)
+    }
+
+    const enableDarkMode = () => {
+      htmlEl.classList.add(DARK_MODE)
+      htmlEl.classList.remove(LIGHT_MODE)
+      localStorage.setItem(LOCAL_STORAGE_KEY, true)
+    }
+
+    const prefersDarkMode = () => {
+      return matchMedia('(prefers-color-scheme: dark)').matches &&
+        localStorage.getItem(LOCAL_STORAGE_KEY) != 'false'
+    }
+
+    document
+      .getElementById('dark-mode-toggle')
+      .addEventListener('click', toggleDarkMode)
+
+    if (prefersDarkMode())
+      htmlEl.classList.add(DARK_MODE)
   }
 })()
