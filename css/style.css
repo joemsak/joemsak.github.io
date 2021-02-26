@@ -10,15 +10,13 @@ td, footer, header, menu, nav, section, video {
   line-height: 1.2;
 }
 
-.no-js, .no-js * {
-  transition: background-color 0.2s, color 0.2s;
-}
-
+.no-js,
+.no-js *,
 .light-mode,
 .dark-mode,
 .light-mode *,
 .dark-mode * {
-  transition: background-color 0.2s, color 0.2s;
+  transition: background-color 0.2s, color 0.2s, opacity: 0.2s;
 }
 
 body {
@@ -85,6 +83,10 @@ footer {
 
 #dark-mode-toggle:active {
   outline: 0;
+}
+
+#dark-mode-toggle:hover {
+  opacity: 1;
 }
 
 #dark-mode-toggle svg {
