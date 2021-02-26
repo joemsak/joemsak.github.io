@@ -60,8 +60,12 @@
   }
 
   const initDarkLightMode = () => {
-    const DARK_MODE = 'dark-mode'
-    const LIGHT_MODE = 'light-mode'
+    const LIGHT = 'light'
+    const DARK = 'dark'
+
+    const DARK_MODE = `${DARK}-mode`
+    const LIGHT_MODE = `${LIGHT}-mode`
+
     const LOCAL_STORAGE_KEY = 'prefersColorScheme'
 
     const htmlEl = document.querySelector('html')
@@ -77,18 +81,18 @@
     const disableDarkMode = () => {
       htmlEl.classList.remove(DARK_MODE)
       htmlEl.classList.add(LIGHT_MODE)
-      localStorage.setItem(LOCAL_STORAGE_KEY, false)
+      localStorage.setItem(LOCAL_STORAGE_KEY, LIGHT)
     }
 
     const enableDarkMode = () => {
       htmlEl.classList.add(DARK_MODE)
       htmlEl.classList.remove(LIGHT_MODE)
-      localStorage.setItem(LOCAL_STORAGE_KEY, true)
+      localStorage.setItem(LOCAL_STORAGE_KEY, DARK)
     }
 
     const prefersDarkMode = () => {
       return matchMedia('(prefers-color-scheme: dark)').matches &&
-        localStorage.getItem(LOCAL_STORAGE_KEY) != 'false'
+        localStorage.getItem(LOCAL_STORAGE_KEY) != LIGHT
     }
 
     document
