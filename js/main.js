@@ -3,6 +3,7 @@
     indicateJSEnabled()
     initHomeGreeting()
     initDarkLightMode()
+    initStickyHeader()
   })
 
   const indicateJSEnabled = () => {
@@ -104,5 +105,33 @@
 
     if (prefersDarkMode())
       htmlEl.classList.add(DARK_MODE)
+  }
+
+  const initStickyHeader = () => {
+    const header = document.querySelector('header')
+    const topBar = document.querySelector('#top-bar')
+    const img = document.querySelector('img')
+
+    const IMG_HEIGHT_AT_LOAD = img.getBoundingClientRect().top
+
+    const IMG_DIM_SMALL = 50
+    const IMG_DIM_LARGE = 200
+
+    const ghostElement = document.createElement('div')
+    ghostElement.style.height = `${topBar.offsetHeight}px`
+
+    window.onscroll = e => {
+      if (window.pageYOffset >= IMG_HEIGHT_AT_LOAD) {
+        img.height = IMG_DIM_SMALL
+        img.width = IMG_DIM_SMALL
+        topBar.classList.add('fixedTop')
+        header.appendChild(ghostElement)
+      } else {
+        img.height = IMG_DIM_LARGE
+        img.width = IMG_DIM_LARGE
+        topBar.classList.remove('fixedTop')
+        ghostElement.remove()
+      }
+    }
   }
 })()

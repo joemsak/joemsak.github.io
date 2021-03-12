@@ -28,6 +28,44 @@ header {
   margin-bottom: 2.5rem;
 }
 
+#top-bar .top-bar__item {
+  display: none;
+}
+
+#top-bar.fixedTop {
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+}
+
+.dark-mode #top-bar.fixedTop {
+  background: #333;
+}
+
+#top-bar.fixedTop figure {
+  padding: 0.5rem 1rem;
+  margin: 0;
+}
+
+#top-bar.fixedTop .top-bar__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+}
+
+#top-bar.fixedTop figcaption {
+  display: none;
+}
+
 #home header h2,
 #skills header h1 {
   font-size: 6rem;
@@ -43,6 +81,7 @@ header {
 
 header figure img {
   border-radius: 100px;
+  transition: width 0.2s, height 0.2s;
 }
 
 figcaption {
