@@ -78,7 +78,16 @@ figcaption {
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      margin-right: 1rem;
+      margin-right: 3rem;
+    }
+
+    a {
+      text-decoration: none;
+      font-weight: bold;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
@@ -248,24 +257,24 @@ footer {
       }
     }
   }
+}
 
-  .dark-mode {
-    #top-bar.fixedTop nav {
-      background: #333;
+.dark-mode {
+  #top-bar.fixedTop nav {
+    background: #333;
 
-      .top-bar__item {
-        color: #efefef;
-      }
+    .top-bar__item {
+      color: #efefef;
     }
   }
+}
 
-  .light-mode {
-    #top-bar.fixedTop nav {
-      background: #fff;
+.light-mode {
+  #top-bar.fixedTop nav {
+    background: #fff;
 
-      .top-bar__item {
-        color: #000;
-      }
+    .top-bar__item {
+      color: #000;
     }
   }
 }
