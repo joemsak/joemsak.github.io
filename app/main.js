@@ -4,6 +4,7 @@
     initHomeGreeting()
     initDarkLightMode()
     initStickyHeader()
+    initMobileMenu()
   })
 
   const indicateJSEnabled = () => {
@@ -103,8 +104,11 @@
       .getElementById('dark-mode-toggle')
       .addEventListener('click', toggleDarkMode)
 
-    if (prefersDarkMode())
+    if (prefersDarkMode()) {
       htmlEl.classList.add(DARK_MODE)
+    } else {
+      htmlEl.classList.add(LIGHT_MODE)
+    }
   }
 
   const initStickyHeader = () => {
@@ -166,5 +170,24 @@
       topBar.classList.remove('fixedTop')
       ghostElement.remove()
     }
+  }
+
+  const initMobileMenu = () => {
+    const mobileMenuBtn = document.querySelector('#mobile-menu-btn')
+    const mobileMenu = document.querySelector('#mobile-menu')
+
+    mobileMenuBtn.addEventListener('click', e => {
+      if (mobileMenuBtn.classList.contains('open')) {
+        mobileMenuBtn.classList.remove('open')
+      } else {
+        mobileMenuBtn.classList.add('open')
+      }
+
+      if (mobileMenu.classList.contains('open')) {
+        mobileMenu.classList.remove('open')
+      } else {
+        mobileMenu.classList.add('open')
+      }
+    })
   }
 })()
