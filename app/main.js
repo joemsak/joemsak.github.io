@@ -112,63 +112,65 @@
   }
 
   const initStickyHeader = () => {
-    const tracker = {
-      previousScroll: window.pageYOffset,
-
-      isScrollingDown() {
-        return window.pageYOffset > this.previousScroll
-      },
-
-      setPreviousScroll() {
-        this.previousScroll = window.pageYOffset
-      },
-    }
-
     const header = document.querySelector('header')
     const main = document.querySelector('main')
 
     const topBar = document.querySelector('#top-bar')
     const img = document.querySelector('img')
 
-    const originalImgDistanceFromTop = img.getBoundingClientRect().top
-    const originalTopBarHeight = topBar.offsetHeight
+    if (img && topBar && header && main) {
+      const tracker = {
+        previousScroll: window.pageYOffset,
 
-    const IMG_DIM_SMALL = 50
-    const IMG_DIM_LARGE = 200
+        isScrollingDown() {
+          return window.pageYOffset > this.previousScroll
+        },
 
-    const ghostElement = document.createElement('div')
-    ghostElement.style.height = `${originalTopBarHeight}px`
-
-    if (window.pageYOffset > 0 && mainDistanceRatioIsPastLimit())
-      setFixedTopBar()
-
-    window.onscroll = e => {
-      if (tracker.isScrollingDown() && mainDistanceRatioIsPastLimit()) {
-        setFixedTopBar()
-      } else {
-        tracker.setPreviousScroll()
-        setRelativeTopBar()
+        setPreviousScroll() {
+          this.previousScroll = window.pageYOffset
+        },
       }
-    }
 
-    function mainDistanceRatioIsPastLimit() {
-      const mainDistanceFromTop = main.getBoundingClientRect().top
-      const mainDistanceRatio = mainDistanceFromTop / originalTopBarHeight
-      return mainDistanceRatio < 0.75
-    }
+      const originalImgDistanceFromTop = img.getBoundingClientRect().top
+      const originalTopBarHeight = topBar.offsetHeight
 
-    function setFixedTopBar() {
-      img.height = IMG_DIM_SMALL
-      img.width = IMG_DIM_SMALL
-      topBar.classList.add('fixedTop')
-      header.appendChild(ghostElement)
-    }
+      const IMG_DIM_SMALL = 50
+      const IMG_DIM_LARGE = 200
 
-    function setRelativeTopBar() {
-      img.height = IMG_DIM_LARGE
-      img.width = IMG_DIM_LARGE
-      topBar.classList.remove('fixedTop')
-      ghostElement.remove()
+      const ghostElement = document.createElement('div')
+      ghostElement.style.height = `${originalTopBarHeight}px`
+
+      if (window.pageYOffset > 0 && mainDistanceRatioIsPastLimit())
+        setFixedTopBar()
+
+      window.onscroll = e => {
+        if (tracker.isScrollingDown() && mainDistanceRatioIsPastLimit()) {
+          setFixedTopBar()
+        } else {
+          tracker.setPreviousScroll()
+          setRelativeTopBar()
+        }
+      }
+
+      function mainDistanceRatioIsPastLimit() {
+        const mainDistanceFromTop = main.getBoundingClientRect().top
+        const mainDistanceRatio = mainDistanceFromTop / originalTopBarHeight
+        return mainDistanceRatio < 0.75
+      }
+
+      function setFixedTopBar() {
+        img.height = IMG_DIM_SMALL
+        img.width = IMG_DIM_SMALL
+        topBar.classList.add('fixedTop')
+        header.appendChild(ghostElement)
+      }
+
+      function setRelativeTopBar() {
+        img.height = IMG_DIM_LARGE
+        img.width = IMG_DIM_LARGE
+        topBar.classList.remove('fixedTop')
+        ghostElement.remove()
+      }
     }
   }
 
@@ -176,18 +178,10 @@
     const mobileMenuBtn = document.querySelector('#mobile-menu-btn')
     const mobileMenu = document.querySelector('#mobile-menu')
 
-    mobileMenuBtn.addEventListener('click', e => {
-      if (mobileMenuBtn.classList.contains('open')) {
-        mobileMenuBtn.classList.remove('open')
-      } else {
-        mobileMenuBtn.classList.add('open')
-      }
-
-      if (mobileMenu.classList.contains('open')) {
-        mobileMenu.classList.remove('open')
-      } else {
-        mobileMenu.classList.add('open')
-      }
-    })
+    if (mobileMenu && mobileMenuBtn)
+      mobileMenuBtn.addEventListener('click', e => {
+        mobileMenuBtn.classList.toggle('open')
+        mobileMenu.classList.toggle('open')
+      })
   }
 })()
