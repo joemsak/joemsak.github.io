@@ -43,7 +43,7 @@ figcaption {
 }
 
 #top-bar {
-  .top-bar__item {
+  .top-bar__item:not(figure) {
     display: none;
   }
 
@@ -78,7 +78,10 @@ figcaption {
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      margin-right: 3rem;
+
+      &:not(figure) {
+        margin-right: 3rem;
+      }
     }
 
     a {
@@ -103,6 +106,17 @@ figcaption {
 #skills header h2 {
   font-size: 1.5rem;
   font-weight: normal;
+}
+
+#home,
+#skills {
+  #top-bar {
+    h1 {
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin: 0;
+    }
+  }
 }
 
 h1 {

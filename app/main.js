@@ -112,13 +112,13 @@
   }
 
   const initStickyHeader = () => {
-    const header = document.querySelector('header')
-    const main = document.querySelector('main')
+    if (document.getElementById('home')) {
+      const header = document.querySelector('header')
+      const main = document.querySelector('main')
 
-    const topBar = document.querySelector('#top-bar')
-    const img = document.querySelector('img')
+      const topBar = document.querySelector('#top-bar')
+      const img = document.querySelector('img')
 
-    if (img && topBar && header && main) {
       const tracker = {
         previousScroll: window.pageYOffset,
 
