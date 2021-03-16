@@ -42,17 +42,12 @@
   bottom: 1rem;
   right: 1rem;
   text-align: right;
-  width: 170px;
+  width: 180px;
+  padding: 0.5rem 1rem;
 
   span {
     left: 15rem;
     width: 140px;
-  }
-
-  &:hover {
-    span {
-      left: 0;
-    }
   }
 }
 
