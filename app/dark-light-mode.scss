@@ -1,0 +1,118 @@
+.light-mode,
+.dark-mode {
+  transition: background-color 0.2s, color 0.2s, opacity 0.2s;
+
+  a, button {
+    transition: background-color 0.2s, color 0.2s, opacity 0.2s;
+  }
+}
+
+.dark-mode #poetry-modal,
+.dark-mode #poetry-modal .header,
+.dark-mode #poetry-modal .footer {
+  background: #333;
+  color: #efefef;
+}
+
+.light-mode #poetry-modal,
+.light-mode #poetry-modal .header,
+.light-mode #poetry-modal .footer {
+  background: #fff;
+  color: #000;
+}
+
+.dark-mode button {
+  color: #efefef;
+
+  svg {
+    path,
+    polygon,
+    rect {
+      fill: #efefef;
+    }
+  }
+}
+
+.light-mode button {
+  color: #000;
+}
+
+#dark-mode-toggle {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  text-align: right;
+  width: 150px;
+
+  span {
+    left: 15rem;
+    width: 120px;
+  }
+
+  &:hover {
+    span {
+      left: 0;
+    }
+  }
+}
+
+.dark-mode {
+  background: #333;
+  color: #efefef;
+
+  a {
+    color: #bbb;
+
+    &:visited {
+      color: #999;
+    }
+  }
+
+  #top-bar.fixedTop {
+    background: #333;
+  }
+}
+
+.light-mode #mobile-menu-btn span {
+  background: #d3531a;
+}
+
+.dark-mode #mobile-menu-btn span {
+  background: #efefef;
+}
+
+.dark-mode {
+  #top-bar.fixedTop nav {
+    background: #333;
+
+    .top-bar__item {
+      color: #efefef;
+    }
+  }
+}
+
+.light-mode {
+  #top-bar.fixedTop nav {
+    background: #fff;
+
+    .top-bar__item {
+      color: #000;
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .no-js {
+    background: #333;
+    color: #efefef;
+
+    a {
+      color: #bbb;
+
+      &:visited {
+        color: #999;
+      }
+    }
+  }
+}
+

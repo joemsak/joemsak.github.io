@@ -18,6 +18,7 @@ export default {
     modalOverlay.addEventListener('click', e => {
       poetryModal.classList.remove('show')
       modalOverlay.classList.remove('show')
+      poetryModal.classList.add('hide')
     })
 
     poetryBtn.addEventListener('click', async e => {
@@ -35,6 +36,7 @@ export default {
         modalBody.append(para)
       })
 
+      poetryModal.classList.remove('hide')
       poetryModal.classList.add('show')
       modalOverlay.classList.add('show')
 

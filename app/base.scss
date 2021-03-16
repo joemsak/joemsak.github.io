@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&display=swap');
+
+html, body, div, span, a, h1, h2, h3, h4, h5, h6, p, blockquote, img,
+ol, ul, li, input, label, select, table, tbody, tfoot, thead, tr, th,
+td, footer, header, menu, nav, section, video, button {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  list-style: none;
+  border: 0;
+  font-family: 'Assistant', Trebuchet MS, arial, sans-serif;
+  line-height: 1.2;
+}
+
+body {
+  padding: 1rem;
+  text-align: center;
+}
+
+header {
+  margin-bottom: 2.5rem;
+
+  figure {
+    img {
+      border-radius: 100px;
+      transition: width 0.2s, height 0.2s;
+    }
+  }
+}
+
+figcaption {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+p {
+  margin: 1rem 0;
+}
+
+footer {
+  margin-top: 3rem;
+}
+
