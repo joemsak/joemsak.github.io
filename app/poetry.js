@@ -7,12 +7,12 @@ export default {
     if (!poetryBtn)
       return
 
-    const body = document.querySelector('body')
+    const html = document.querySelector('html')
     const poetryModal = document.getElementById('poetry-modal')
     const modalOverlay = document.getElementById('modal-overlay')
 
     modalOverlay.addEventListener('click', e => {
-      body.classList.remove('modal-open')
+      html.classList.remove('modal-open')
       poetryModal.classList.remove('show')
       modalOverlay.classList.remove('show')
     })
@@ -32,7 +32,7 @@ export default {
         poetryModal.querySelector('.body').append(para)
       })
 
-      body.classList.add('modal-open')
+      html.classList.add('modal-open')
       poetryModal.classList.add('show')
       modalOverlay.classList.add('show')
     })
