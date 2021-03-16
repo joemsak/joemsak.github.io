@@ -12,18 +12,6 @@ td, footer, header, menu, nav, section, video, button {
   line-height: 1.2;
 }
 
-html,
-body {
-  height: 100%;
-  width: 100%;
-  overflow-x: hidden;
-
-  &.modal-open {
-    height: 100vh;
-    overflow-y: hidden;
-  }
-}
-
 .light-mode,
 .dark-mode {
   transition: background-color 0.2s, color 0.2s, opacity 0.2s;
@@ -204,7 +192,7 @@ button {
 }
 
 #modal-overlay {
-  position: absolute;
+  position: fixed;
   z-index: 98;
   top: 0;
   left: 0;
@@ -221,7 +209,7 @@ button {
 #poetry-modal {
   width: 70vw;
   height: 80vh;
-  position: absolute;
+  position: fixed;
   z-index: 99;
   left: 50%;
   top: 50%; 
