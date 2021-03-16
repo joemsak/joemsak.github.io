@@ -7,12 +7,15 @@ export default {
     if (!poetryBtn)
       return
 
-    const html = document.querySelector('html')
-    const poetryModal = document.getElementById('poetry-modal')
     const modalOverlay = document.getElementById('modal-overlay')
+    const poetryModal = document.getElementById('poetry-modal')
+
+    const modalHeader = poetryModal.querySelector('.header')
+    const modalTitle = modalHeader.querySelector('h1')
+    const modalAuthor = modalHeader.querySelector('h2')
+    const modalBody = poetryModal.querySelector('.body')
 
     modalOverlay.addEventListener('click', e => {
-      html.classList.remove('modal-open')
       poetryModal.classList.remove('show')
       modalOverlay.classList.remove('show')
     })
@@ -22,19 +25,20 @@ export default {
         return resp.json()
       }).then(json => json[0])
 
-      poetryModal.querySelector('h1').innerHTML = poem.title
-      poetryModal.querySelector('h2').innerHTML = `by ${poem.author}`
-      poetryModal.querySelector('.body').innerHTML = ''
+      modalTitle.innerHTML = poem.title
+      modalAuthor.innerHTML = `by ${poem.author}`
+      modalBody.innerHTML = ''
 
       poem.lines.forEach(line => {
         const para = document.createElement('p')
         para.innerHTML = line
-        poetryModal.querySelector('.body').append(para)
+        modalBody.append(para)
       })
 
-      html.classList.add('modal-open')
       poetryModal.classList.add('show')
       modalOverlay.classList.add('show')
+
+      modalBody.style.paddingTop = `${modalHeader.offsetHeight}px`
     })
   }
 }

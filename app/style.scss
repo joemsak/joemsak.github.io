@@ -216,23 +216,20 @@ button {
   margin-left: -35vw;
   margin-top: -40vh;
   display: none;
-  box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.2);
-  border-radius: 0.5rem;
   text-align: center;
-  overflow-y: scroll;
-
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  &::-webkit-scrollbar {
-    display: none;
-  }
+  overflow-y: auto;
 
   &.show {
     display: block;
   }
 
   .header {
-    padding: 0.5rem;
+    position: fixed;
+    margin-top: -1rem;
+    width: inherit;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    padding: 0.5rem 0;
     box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.2);
 
     h1,
@@ -251,6 +248,7 @@ button {
 
   .body {
     padding: 1rem;
+    text-align: left;
 
     p {
       margin-bottom: 0.5rem;
@@ -259,13 +257,15 @@ button {
 }
 
 .dark-mode #poetry-modal,
-.dark-mode #poetry-modal .header {
+.dark-mode #poetry-modal .header,
+.dark-mode #poetry-modal .footer {
   background: #333;
   color: #efefef;
 }
 
 .light-mode #poetry-modal,
-.light-mode #poetry-modal .header {
+.light-mode #poetry-modal .header,
+.light-mode #poetry-modal .footer {
   background: #fff;
   color: #000;
 }
