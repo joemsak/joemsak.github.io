@@ -1,0 +1,8 @@
+{
+  "name": "joemsak.github.io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:joemsak/joemsak.github.io.git",
+  "author": "Joe Sak <joe@joesak.com>",
+  "license": "MIT"
+}
