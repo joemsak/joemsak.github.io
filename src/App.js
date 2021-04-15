@@ -1,9 +1,7 @@
-import "tailwindcss"
-
 function App() {
   return (
     <div className="App">
-      <p class="bg-red text-white p-4">Hello world</p>
+      <p class="bg-red-500 text-white p-4">Hello world</p>
     </div>
   );
 }
