@@ -2,13 +2,13 @@ import { weekDayName } from './utils'
 
 export default function Greeting() {
   return (
-    <header className="mt-4 text-center">
-      <h1 className="text-6xl font-bold">
+    <header className="p-4 text-center">
+      <h1 className="text-3xl md:text-6xl font-bold">
         Happy {weekDayName()}.
       </h1>
 
-      <h2 className="mt-4 text-2xl font-bold">
-        I'm Joe Sak, Web Development Generalist
+      <h2 className="mt-4 text-base md:text-lg md:text-2xl font-bold">
+        I'm Joe Sak, a Generalist Web Developer
       </h2>
 
       <figure className="mt-4">

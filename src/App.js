@@ -6,12 +6,15 @@ export default function App() {
     <>
       <Header />
 
-      <main className="py-16 text-gray-700">
+      <main className="pt-16 pb-8 text-gray-700">
         <Greeting />
 
-        <div className="w-1/2 m-auto mt-4">
+        <div className="w-full md:w-3/5 m-auto px-4 pb-4">
           <p className="italic text-sm">
-            I'm still rebuilding my new site in React &amp; Tailwind.<br />
+            I'm still rebuilding my new site in React &amp; Tailwind.
+          </p>
+
+          <p className="mt-2 italic text-sm">
             In the meantime, please enjoy a selection from the Tao te Ching.
           </p>
 
@@ -68,7 +71,7 @@ export default function App() {
           </article>
         </div>
 
-        <p class="mt-16 text-xs italic text-center">
+        <p class="mt-4 text-xs italic text-center">
           Open the&nbsp;
           <a
             className="text-blue-400 hover:text-blue-900"
