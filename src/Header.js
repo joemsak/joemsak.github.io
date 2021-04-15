@@ -16,7 +16,7 @@ export default function Header() {
     >
       <h1 className="p-4">
         Joe Sak
-        <span className="hidden md:inline">&nbsp;&bull;&nbsp;</span>
+        <span className="hidden sm:inline">&nbsp;&bull;&nbsp;</span>
         <br className="block sm:hidden" />
         Technology Generalist
       </h1>
