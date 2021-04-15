@@ -1,6 +1,6 @@
 import NavLink from './NavLink'
 
-function Nav() {
+export default function Nav() {
   return (
     <nav className="flex">
       <div className="flex">
@@ -13,5 +13,3 @@ function Nav() {
     </nav>
   )
 }
-
-export default Nav

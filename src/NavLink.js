@@ -1,4 +1,4 @@
-function NavLink(props) {
+export default function NavLink(props) {
   const getHref = () => {
     if (props.mailTo)
       return `mailto:${props.mailTo}`
@@ -20,5 +20,3 @@ function NavLink(props) {
     </a>
   )
 }
-
-export default NavLink

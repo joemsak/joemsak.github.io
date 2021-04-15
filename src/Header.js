@@ -1,6 +1,6 @@
 import Nav from './Nav'
 
-function Header() {
+export default function Header() {
   return (
     <header
       className="
@@ -20,5 +20,3 @@ function Header() {
     </header>
   )
 }
-
-export default Header
