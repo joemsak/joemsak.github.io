@@ -14,7 +14,7 @@ export default function Header() {
         md:text-base
       "
     >
-      <h1 className="p-4">
+      <h1 className="p-4 pr-0">
         Joe Sak
         <span className="hidden sm:inline">&nbsp;&bull;&nbsp;</span>
         <br className="block sm:hidden" />
