@@ -109,7 +109,7 @@ export default function ReadingSelection() {
               transition-all
               sm:my-8
               sm:align-middle
-              sm:max-w-sm
+              sm:max-w-xl
               sm:w-full
               sm:p-6
             "
