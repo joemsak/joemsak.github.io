@@ -1,4 +1,4 @@
-import { enter, leave } from 'el-transition'
+  import { enter, leave } from 'el-transition'
 
 export default function ReadingSelection() {
   const toggleReading = () =>{
@@ -184,7 +184,8 @@ export default function ReadingSelection() {
                   arise together;<br />
                   hard and easy<br />
                   complete each other;<br />
-                  long and shortshape each other;<br />
+                  long and short<br />
+                  shape each other;<br />
                   high and low<br />
                   depend on each other;<br />
                   note and voice<br />
