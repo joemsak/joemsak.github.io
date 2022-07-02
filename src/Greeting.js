@@ -2,37 +2,40 @@ import { weekDayName } from './utils'
 
 export default function Greeting() {
   return (
-    <header className="w-1/2 mx-auto flex gap-8">
-      <figure>
-        <img
-          className="rounded-full m-auto"
-          src="/image.jpg"
-          alt="
-            My wife and me reaching across two balconies in an extremely
-            narrow, colorful alleyway, shot from below
-          "
-          width="400"
-          height="400"
-        />
+    <header class="mt-8">
+      <h1 className="text-center font-bold">
+        <span className="text-5xl md:text-6xl">Joe Sak</span>
+        <span className="block text-3xl lg:text-4xl">Certified Relationship Coach</span>
+      </h1>
 
-        <figcaption className="text-xs text-gray-500 mt-4 text-center">
-          With my wife Cristina at El Callejon del Beso
-          <br />
-          Guanajuato, Mexico
-        </figcaption>
-      </figure>
+      <div className="mt-4 lg:mt-16 px-4 md:flex gap-4 items-center justify-center">
+        <figure>
+          <img
+            className="w-2/5 md:w-4/5 rounded-full mx-auto"
+            src="/image.jpg"
+            alt="
+              My wife and me reaching across two balconies in an extremely
+              narrow, colorful alleyway, shot from below
+            "
+          />
 
-      <div>
-        <h1 className="text-base md:text-3xl lg:text-6xl font-bold">
-          Joe Sak, Certified Relationship Coach
-        </h1>
+          <figcaption className="text-xs text-gray-500 mt-4 text-center">
+            With my wife Cristina
+            <br class="hidden md:block lg:hidden" />
+            &nbsp;at El Callejon del Beso
+            <br />
+            Guanajuato, Mexico
+          </figcaption>
+        </figure>
 
-        <h2 className="mt-2 text-lg md:text-xl font-bold">
-          I help people transform their relationships with others and themselves.&nbsp;
-          <span className="font-normal">Hi there! Happy {weekDayName()}.</span>
-        </h2>
+        <div class="text-center md:w-2/5 lg:w-1/5">
+          <h2 className="mt-2 md:mt-0 text-2xl font-bold">
+            I help people transform their relationships with others and themselves.
+          </h2>
+
+          <p className="mt-2 font-normal">Hi there! Happy {weekDayName()}.</p>
+        </div>
       </div>
-
     </header>
   )
 }

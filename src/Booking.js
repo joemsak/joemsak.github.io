@@ -15,7 +15,8 @@ const Booking = () => {
       }}
       prefill={{}}
       styles={{
-        height: '700px'
+        height: '700px',
+        marginTop: '2rem'
       }}
       url="https://calendly.com/joe-sak/free-consultation"
       utm={{}}
