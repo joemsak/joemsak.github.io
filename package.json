@@ -14,16 +14,12 @@
     "gh-pages": "^4.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "craco start",
-    "predeploy": "craco build",
     "deploy": "gh-pages -b production -d build",
-    "build": "craco build",
-    "test": "craco test",
-    "eject": "react-scripts eject"
+    "build": "craco build"
   },
   "eslintConfig": {
     "extends": [
@@ -45,6 +41,7 @@
   },
   "devDependencies": {
     "craco": "^0.0.3",
+    "react-scripts": "^5.0.1",
     "tailwindcss": "^3.1.4"
   }
 }
