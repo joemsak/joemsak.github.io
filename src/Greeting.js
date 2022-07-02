@@ -8,7 +8,7 @@ export default function Greeting() {
       </h1>
 
       <h2 className="mt-4 text-base md:text-lg md:text-2xl font-bold">
-        I'm Joe Sak, a Generalist Web Developer
+        I'm Joe Sak, a Certified Relationship Coach
       </h2>
 
       <figure className="mt-4">
