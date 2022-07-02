@@ -16,8 +16,8 @@ export default function Header() {
     >
       <h1 className="p-4 pr-0">
         Joe Sak
-        <span className="inline md:hidden">&nbsp;&bull;&nbsp;</span>
-        <br className="hidden md:block" />
+        <span className="hidden md:inline">&nbsp;&bull;&nbsp;</span>
+        <br className="block md:hidden" />
         Certified Relationship Coach
       </h1>
 
