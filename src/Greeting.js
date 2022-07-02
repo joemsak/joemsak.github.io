@@ -2,16 +2,8 @@ import { weekDayName } from './utils'
 
 export default function Greeting() {
   return (
-    <header className="p-4 text-center">
-      <h1 className="text-3xl md:text-6xl font-bold">
-        Happy {weekDayName()}.
-      </h1>
-
-      <h2 className="mt-4 text-base md:text-lg md:text-2xl font-bold">
-        I'm Joe Sak, a Certified Relationship Coach
-      </h2>
-
-      <figure className="mt-4">
+    <header className="w-1/2 mx-auto flex gap-8">
+      <figure>
         <img
           className="rounded-full m-auto"
           src="/image.jpg"
@@ -19,16 +11,28 @@ export default function Greeting() {
             My wife and me reaching across two balconies in an extremely
             narrow, colorful alleyway, shot from below
           "
-          width="200"
-          height="200"
+          width="400"
+          height="400"
         />
 
-        <figcaption className="text-xs text-gray-500 mt-4">
+        <figcaption className="text-xs text-gray-500 mt-4 text-center">
           With my wife Cristina at El Callejon del Beso
           <br />
           Guanajuato, Mexico
         </figcaption>
       </figure>
+
+      <div>
+        <h1 className="text-base md:text-3xl lg:text-6xl font-bold">
+          Joe Sak, Certified Relationship Coach
+        </h1>
+
+        <h2 className="mt-2 text-lg md:text-xl font-bold">
+          I help people transform their relationships with others and themselves.&nbsp;
+          <span className="font-normal">Hi there! Happy {weekDayName()}.</span>
+        </h2>
+      </div>
+
     </header>
   )
 }
