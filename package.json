@@ -3,17 +3,16 @@
   "homepage": "https://joesak.com",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
+  "devDependencies": {
     "@craco/craco": "^6.4.4",
     "@headlessui/react": "^1.6.5",
     "@heroicons/react": "^1.0.6",
-    "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^13.3.0",
-    "@testing-library/user-event": "^14.2.1",
     "el-transition": "^0.0.7",
     "gh-pages": "^4.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-scripts": "^5.0.1",
+    "tailwindcss": "^3.1.4",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -38,10 +37,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "craco": "^0.0.3",
-    "react-scripts": "^5.0.1",
-    "tailwindcss": "^3.1.4"
   }
 }
