@@ -4,7 +4,7 @@ import Booking from './Booking'
 
 export default function Main() {
   return (
-    <main className="pt-16 text-gray-700">
+    <main className="text-gray-700">
       <Greeting />
       <Pitch />
       <Booking />
