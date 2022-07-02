@@ -1,4 +1,4 @@
-  import { enter, leave } from 'el-transition'
+import { enter, leave } from 'el-transition'
 
 export default function ReadingSelection() {
   const toggleReading = () =>{
