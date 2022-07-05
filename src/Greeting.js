@@ -12,7 +12,7 @@ export default function Greeting() {
         <figure>
           <img
             className="w-2/5 md:w-4/5 rounded-full mx-auto"
-            src="/image.jpg"
+            src="/wife.jpg"
             alt="
               My wife and me reaching across two balconies in an extremely
               narrow, colorful alleyway, shot from below
