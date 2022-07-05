@@ -26,9 +26,11 @@ export default function About() {
 
       <p className="mt-4">
         I knew at that moment that I didn&apos;t want to lose her. So I finally took a deeper look inward.
-        I found the Relationship School podcast and I faced my own bullshit. I hired a coach. I started taking
-        personal responsibility for my life and owning my needs. A couple of years later I enrolled in and
-        graduated from Relationship Mastery and then got certified as a Relationship Coach.
+        I found <a href="https://relationshipschool.com/relationship-school-podcast/">the Relationship School podcast</a>
+        and I faced my own bullshit. I hired a coach. I started taking personal responsibility for my life
+        and owning my needs. A couple of years later I enrolled in and graduated from
+        <a href="https://relationshipschool.com/relationshipmastery/">Relationship Mastery</a>
+        and then got certified as a <a href="https://relationshipschool.com/level1-rct/">Relationship Coach</a>.
       </p>
 
       <p className="mt-4">
