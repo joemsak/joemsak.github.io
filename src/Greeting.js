@@ -2,7 +2,7 @@ import { weekDayName } from './utils'
 
 export default function Greeting() {
   return (
-    <header class="mt-8">
+    <header>
       <h1 className="text-center font-bold">
         <span className="text-5xl md:text-6xl">Joe Sak</span>
         <span className="block text-3xl lg:text-4xl">Certified Relationship Coach</span>
@@ -21,14 +21,14 @@ export default function Greeting() {
 
           <figcaption className="text-xs text-gray-500 mt-4 text-center">
             With my wife Cristina
-            <br class="hidden md:block lg:hidden" />
+            <br className="hidden md:block lg:hidden" />
             &nbsp;at El Callejon del Beso
             <br />
             Guanajuato, Mexico
           </figcaption>
         </figure>
 
-        <div class="text-center md:w-2/5 lg:w-1/5">
+        <div className="text-center md:w-2/5 lg:w-1/5">
           <h2 className="mt-2 md:mt-0 text-2xl font-bold">
             I help people transform their relationships with others and themselves.
           </h2>
