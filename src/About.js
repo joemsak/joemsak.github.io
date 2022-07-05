@@ -1,5 +1,4 @@
 export default function About() {
-
   return (
     <div className="px-4 md:w-3/5 mx-auto">
       <h3 className="md:text-2xl text-3xl font-bold">About Me</h3>
@@ -10,7 +9,7 @@ export default function About() {
         alt="Self-portrait in my plant-filled back patio"
       />
 
-      <p class="mt-4">
+      <p className="mt-4">
         For most of my adult life, everyone else needed to change. It couldn&apos;t have been me,
         because I had done the work! I had gone through therapy, studied hard for my job skills,
         and I knew what not to be as a partner for women. And yet, I had consistent trouble in all
@@ -26,11 +25,21 @@ export default function About() {
 
       <p className="mt-4">
         I knew at that moment that I didn&apos;t want to lose her. So I finally took a deeper look inward.
-        I found <a href="https://relationshipschool.com/relationship-school-podcast/">the Relationship School podcast</a>
-        and I faced my own bullshit. I hired a coach. I started taking personal responsibility for my life
-        and owning my needs. A couple of years later I enrolled in and graduated from
-        <a href="https://relationshipschool.com/relationshipmastery/">Relationship Mastery</a>
-        and then got certified as a <a href="https://relationshipschool.com/level1-rct/">Relationship Coach</a>.
+        I found&nbsp;
+        <a
+          href="https://relationshipschool.com/relationship-school-podcast/"
+          className="text-blue-600 hover:text-blue-900"
+        >the Relationship School podcast</a> and I faced my own bullshit. I hired a coach.
+        I started taking personal responsibility for my life and owning my needs.
+        A couple of years later I enrolled in and graduated from&nbsp;
+        <a
+          href="https://relationshipschool.com/relationshipmastery/"
+          className="text-blue-600 hover:text-blue-900"
+        >Relationship Mastery</a> and then got certified as a&nbsp;
+        <a
+          href="https://relationshipschool.com/level1-rct/"
+          className="text-blue-600 hover:text-blue-900"
+        >Relationship Coach</a>.
       </p>
 
       <p className="mt-4">

@@ -6,7 +6,10 @@ import Booking from './Booking'
 export default function App() {
   return (
     <main className="text-gray-700">
-      <Greeting />
+      <div className="mt-8">
+        <Greeting />
+      </div>
+
       <Pitch />
 
       <div className="mt-4">
