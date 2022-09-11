@@ -18,7 +18,7 @@ export default function Header() {
         Joe Sak
         <span className="hidden md:inline">&nbsp;&bull;&nbsp;</span>
         <br className="block md:hidden" />
-        Certified Relationship Coach
+        Relationship Coach
       </h1>
 
       <Nav />
