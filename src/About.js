@@ -35,7 +35,7 @@ export default function About() {
         <a
           href="https://relationshipschool.com/relationshipmastery/"
           className="text-blue-600 hover:text-blue-900"
-        >Relationship Mastery</a> and then got certified as a&nbsp;
+        >Relationship Mastery</a> and then studied as a&nbsp;
         <a
           href="https://relationshipschool.com/level1-rct/"
           className="text-blue-600 hover:text-blue-900"

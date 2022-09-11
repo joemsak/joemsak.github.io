@@ -5,7 +5,7 @@ export default function Greeting() {
     <header>
       <h1 className="text-center font-bold">
         <span className="text-5xl md:text-6xl">Joe Sak</span>
-        <span className="block text-3xl lg:text-4xl">Certified Relationship Coach</span>
+        <span className="block text-3xl lg:text-4xl">Relationship Coach</span>
       </h1>
 
       <div className="mt-4 lg:mt-16 px-4 md:flex gap-4 items-center justify-center">
