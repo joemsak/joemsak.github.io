@@ -7,7 +7,7 @@ export default function Greeting() {
         <span className="text-5xl md:text-6xl">Joe Sak</span>
       </h1>
 
-      <div className="mt-4 lg:mt-16 px-4 md:flex gap-4 items-center justify-center">
+      <div className="mt-4 lg:mt-16 px-4">
         <figure>
           <img
             className="w-2/5 md:w-4/5 rounded-full mx-auto"
