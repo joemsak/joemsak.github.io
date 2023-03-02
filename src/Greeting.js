@@ -28,7 +28,7 @@ export default function Greeting() {
         </figure>
       </div>
 
-      <h2 className="mt-2 text-4xl font-bold text-center">
+      <h2 className="mt-8 lg:mt-16 text-4xl font-bold text-center">
         Hi there!
         <br />
         Happy {weekDayName()}.
