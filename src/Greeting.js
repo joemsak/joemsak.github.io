@@ -1,11 +1,10 @@
-import { weekDayName } from './utils'
+import { weekDayName } from "./utils";
 
 export default function Greeting() {
   return (
     <header>
       <h1 className="text-center font-bold">
         <span className="text-5xl md:text-6xl">Joe Sak</span>
-        <span className="block text-3xl lg:text-4xl">Relationship Coach</span>
       </h1>
 
       <div className="mt-4 lg:mt-16 px-4 md:flex gap-4 items-center justify-center">
@@ -29,13 +28,9 @@ export default function Greeting() {
         </figure>
 
         <div className="text-center md:w-2/5 lg:w-1/5">
-          <h2 className="mt-2 md:mt-0 text-2xl font-bold">
-            I help people transform their relationships with others and themselves.
-          </h2>
-
           <p className="mt-2 font-normal">Hi there! Happy {weekDayName()}.</p>
         </div>
       </div>
     </header>
-  )
+  );
 }
