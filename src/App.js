@@ -1,7 +1,4 @@
-import About from './About'
-import Greeting from './Greeting'
-import Pitch from './Pitch'
-import Booking from './Booking'
+import Greeting from "./Greeting";
 
 export default function App() {
   return (
@@ -9,14 +6,6 @@ export default function App() {
       <div className="mt-8">
         <Greeting />
       </div>
-
-      <Pitch />
-
-      <div className="mt-4">
-        <About />
-      </div>
-
-      <Booking />
     </main>
-  )
+  );
 }
