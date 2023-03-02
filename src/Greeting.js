@@ -2,15 +2,15 @@ import { weekDayName } from "./utils";
 
 export default function Greeting() {
   return (
-    <header>
+    <header class="max-w-[450px] mx-auto">
       <h1 className="text-center font-bold">
         <span className="text-5xl md:text-6xl">Joe Sak</span>
       </h1>
 
-      <div className="mt-4 lg:mt-16 px-4">
+      <div className="mt-4 max-w-[300px] mx-auto lg:mt-16 px-4">
         <figure>
           <img
-            className="w-2/5 md:w-4/5 rounded-full mx-auto"
+            className="mx-auto rounded-full"
             src="/wife.jpg"
             alt="
               My wife and me reaching across two balconies in an extremely
@@ -26,11 +26,13 @@ export default function Greeting() {
             Guanajuato, Mexico
           </figcaption>
         </figure>
-
-        <div className="text-center md:w-2/5 lg:w-1/5">
-          <p className="mt-2 font-normal">Hi there! Happy {weekDayName()}.</p>
-        </div>
       </div>
+
+      <h2 className="mt-2 text-4xl font-bold text-center">
+        Hi there!
+        <br />
+        Happy {weekDayName()}.
+      </h2>
     </header>
   );
 }
