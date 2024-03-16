@@ -1,4 +1,4 @@
-import { weekDayName } from "./utils";
+import { weekDayName, weekDayEmotion } from "./utils";
 
 export default function Greeting() {
   return (
@@ -29,9 +29,8 @@ export default function Greeting() {
       </div>
 
       <h2 className="mt-8 lg:mt-16 text-4xl font-bold text-center">
-        Hi there!
-        <br />
-        Happy {weekDayName()}.
+        Happy {weekDayName()}
+        {weekDayEmotion(weekDayName())}
       </h2>
     </header>
   );
