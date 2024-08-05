@@ -1,6 +1,6 @@
 import { weekDayName, weekDayEmotion } from "./utils";
 
-export default function App() {
+export default () => {
   return (
     <main className="text-gray-700 pt-8 max-w-[450px] mx-auto">
       <h1 className="text-center font-bold">
@@ -34,4 +34,4 @@ export default function App() {
       </h2>
     </main>
   );
-}
+};
