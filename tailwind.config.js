@@ -1,6 +1,7 @@
-const defaultTheme = require("tailwindcss/defaultTheme");
+import { defineConfig } from "vite";
+import defaultTheme from "tailwindcss/defaultTheme";
 
-module.exports = {
+export default defineConfig({
   content: ["./src/**/*"],
 
   theme: {
@@ -16,4 +17,4 @@ module.exports = {
   },
 
   plugins: [],
-};
+});
