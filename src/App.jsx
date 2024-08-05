@@ -1,5 +1,4 @@
 import { weekDayName, weekDayEmotion } from "./utils";
-import wife from "./assets/wife.jpg";
 
 const App = () => {
   return (
@@ -12,7 +11,7 @@ const App = () => {
         <figure>
           <img
             className="mx-auto rounded-full"
-            src={wife}
+            src="./wife.jpg"
             alt="
               My wife and me reaching across two balconies in an extremely
               narrow, colorful alleyway, shot from below
