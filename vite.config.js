@@ -16,5 +16,5 @@ export default defineConfig({
       },
     },
   },
-  plugins: [compress, react],
+  plugins: [compress, react()],
 });
