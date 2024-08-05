@@ -12,7 +12,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(process.cwd(), "./src/index.html"),
-        legal: resolve(process.cwd(), "./src/privacy/index.html"),
+        privacy: resolve(process.cwd(), "./src/privacy/index.html"),
+        terms: resolve(process.cwd(), "./src/terms/index.html"),
       },
     },
   },
