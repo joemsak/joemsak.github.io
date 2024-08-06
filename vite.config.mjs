@@ -11,9 +11,7 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       input: {
-        main: resolve(process.cwd(), "./src/index.html"),
-        privacy: resolve(process.cwd(), "./src/privacy/index.html"),
-        terms: resolve(process.cwd(), "./src/terms/index.html"),
+        main: resolve(process.cwd(), "./src/index.html")
       },
     },
   },
