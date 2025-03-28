@@ -1,19 +1,11 @@
-import compress from "vite-plugin-compress";
-import process from "process";
-import tailwindcss from "@tailwindcss/vite";
-import { resolve } from "path";
 import { defineConfig } from "vite";
+import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   root: "src",
   build: {
     outDir: "../dist",
     emptyOutDir: true,
-    rollupOptions: {
-      input: {
-        main: resolve(process.cwd(), "./src/index.html")
-      },
-    },
   },
-  plugins: [compress, tailwindcss()],
+  plugins: [tailwindcss()],
 });
