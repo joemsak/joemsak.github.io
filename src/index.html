@@ -1,18 +1,79 @@
 <!DOCTYPE html>
 <html lang="en" class="h-screen">
+  <head>
+    <title>Joe Sak &bull; Backend Engineer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link href="./style.css" rel="stylesheet">
+  </head>
 
-<head>
-  <title>Joe Sak</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-</head>
+  <body class="h-svh bg-white dark:bg-gray-950 dark:text-gray-400">
+    <div
+      id="app"
+      class="container sm:px-16 sm:py-8 px-10 max-w-[80ch] overflow-hidden"
+    >
+      <div
+        class="
+          flex
+          items-center
+          size-20
+          rounded-full
+          overflow-hidden
+          my-10
+          dark:opacity-60
+          bg-yellow-500
+          border-4
+          border-yellow-500
+          hover:animate-spin
+        "
+      >
+        <img
+          src="/assets/avatar-BmlLGlAt.png"
+          class="object-cover mix-blend-hard-light"
+        />
+    </div>
+    <div id="intro" class="leading-normal text-3xl my-10">
+      <span class="animate-reveal animate-delay-300 font-bold">
+        Hi,
+      </span>
+      <span class="animate-reveal animate-delay-500 font-bold">
+        I'm Joe.
+      </span>
+      <span class="animate-reveal animate-delay-1600">
+        I'm a backend engineer
+      </span>
+      <span class="animate-reveal animate-delay-2000">
+        with a passion
+      </span>
+      <span class="animate-reveal animate-delay-2600">
+        for writing code
+      </span>
+      <span class="animate-reveal animate-delay-3000">
+        that is a joy to maintain.
+      </span>
+    </div>
 
-<body class="bg-gray-100 h-full w-full">
-  <noscript>You need to enable JavaScript to run this app.</noscript>
-  <div id="root"></div>
-  <script type="module" src="./index.jsx"></script>
-  <script> var MemberSpace = window.MemberSpace || { "subdomain": "joesak" }; (function (d) { var s = d.createElement("script"); s.src = "https://cdn.memberspace-staging.com/scripts/widgets.js"; var e = d.getElementsByTagName("script")[0]; e.parentNode.insertBefore(s, e); }(document)); </script>
-</body>
-
+    <div id="about" class="leading-normal mb-5 flex flex-col gap-5 text-lg">
+      <span class="animate-reveal animate-delay-4000">
+        🧑‍💻 Currently at Gusto
+      </span>
+      <span class="animate-reveal animate-delay-4200">
+        💬 Reach out at
+        <a
+          class="
+            border-b-2
+            transition-all
+            border-gray-300
+            dark:border-gray-700
+            hover:border-yellow-500
+            dark:hover:text-yellow-400/80
+          "
+          href="mailto:joe@joesak.com"
+        >
+          joe@joesak.com
+        </a>
+      </span>
+    </div>
+  </body>
 </html>
