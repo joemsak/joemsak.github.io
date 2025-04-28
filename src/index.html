@@ -8,21 +8,96 @@
     <link href="./style.css" rel="stylesheet">
   </head>
 
-  <body class="h-svh bg-white dark:bg-gray-950 dark:text-gray-400 p-4 flex items-center flex-col gap-4 justify-center">
-    <p>Use the button:</p>
-    <a class="px-4 py-2 rounded bg-white text-blue-900 font-bold shadow-sm shadow-blue-100 outline-blue-900 outline" href="https://www.signupgenius.com/go/10C0B4AA4A722A2F8CE9-56295987-table?useFullSite=true#/">HELP COLORADO HISTORY RIDES HERE</a>
-    <p>... or tap/click below for copy/paste:</p>
-    <input id="link-text" type="text" class="p-4 w-full text-center" value="https://www.signupgenius.com/go/10C0B4AA4A722A2F8CE9-56295987-table?useFullSite=true#/" />
+  <body class="h-svh bg-white dark:bg-gray-950 dark:text-gray-400">
+    <div
+      id="app"
+      class="container sm:px-16 sm:py-8 px-10 max-w-[80ch] overflow-hidden"
+    >
+      <div
+        class="
+          flex
+          items-center
+          size-50
+          rounded-full
+          overflow-hidden
+          my-10
+          dark:opacity-99
+          border-4
+        "
+      >
+        <img
+          src="/snowboard-selfy.jpeg"
+          class="object-cover mix-blend-hard-light"
+        />
+      </div>
 
-    <script type="text/javascript">
-  document.querySelector('#link-text').addEventListener('focus', function() {
-    setTimeout(() => {
-      this.select();
-      if (this.setSelectionRange) {
-        this.setSelectionRange(0, this.value.length);
-      }
-    }, 0);
-  });
-    </script>
+      <div id="intro" class="leading-normal text-3xl my-10">
+        <span class="animate-reveal animate-delay-300 font-bold">
+          Hi,
+        </span>
+        <span class="animate-reveal animate-delay-500 font-bold">
+          I'm Joe.
+        </span>
+        <span class="animate-reveal animate-delay-1600">
+          I'm a backend engineer
+        </span>
+        <span class="animate-reveal animate-delay-2000">
+          located in Denver.
+        </span>
+        <span class="animate-reveal animate-delay-2800">
+          I write clean
+        </span>
+        <span class="animate-reveal animate-delay-3200">
+          and maintainable code
+        </span>
+        <span class="animate-reveal animate-delay-3600">
+          that improves productivity.
+        </span>
+      </div>
+
+      <div id="about" class="leading-normal mb-5 flex flex-col gap-5 text-lg">
+        <span class="animate-reveal animate-delay-4000">
+          🧑‍💻 Staff Software Engineer, Ruby Infrastructure at Gusto
+        </span>
+
+        <span class="animate-reveal animate-delay-4200">
+          🏂 I enjoy snowboarding, hikes, multi-modal advocacy, &amp; Avs hockey
+        </span>
+
+        <span class="animate-reveal animate-delay-4400">
+          <svg data-name="Layer 1" id="Layer_1" class="size-6 inline" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:#ddd;}</style></defs><title/><path class="cls-1" d="M250,193.27A56.73,56.73,0,1,0,306.73,250,56.8,56.8,0,0,0,250,193.27Z"/><path class="cls-1" d="M316.74,105.49H183.26a77.86,77.86,0,0,0-77.77,77.77V316.74a77.86,77.86,0,0,0,77.77,77.77H316.74a77.86,77.86,0,0,0,77.77-77.77V183.26A77.86,77.86,0,0,0,316.74,105.49ZM250,336.7A86.7,86.7,0,1,1,336.7,250,86.8,86.8,0,0,1,250,336.7Zm95.27-160.26A21.41,21.41,0,1,1,366.68,155,21.41,21.41,0,0,1,345.27,176.45Z"/><path class="cls-1" d="M484.85,124.74a144.17,144.17,0,0,0-2.32-25.29c-1.94-10.19-4.67-20.12-9.55-29.33A101.84,101.84,0,0,0,453.39,44a97.14,97.14,0,0,0-42.76-24.4c-14.83-4-30-4.84-45.21-4.82a.46.46,0,0,1-.09-.23H134.59c0,.08,0,.16,0,.23-8.65.16-17.32.09-25.92,1.16A123.46,123.46,0,0,0,81,22.14,97.48,97.48,0,0,0,44.25,46.26,97.15,97.15,0,0,0,19.68,89.17c-3.94,14.72-4.8,29.73-4.82,44.85L14.7,365.69v0c.28,10.45.37,21,2.13,31.36,1.87,11,4.54,21.71,9.64,31.69A101.36,101.36,0,0,0,54.77,463a91.91,91.91,0,0,0,28.31,15.35c15.12,4.88,30.72,6.75,46.55,6.84,9.88.06,19.74.31,29.62.27,71.74-.3,143.49.52,215.23-.44a169.32,169.32,0,0,0,28.23-3A95.61,95.61,0,0,0,450,459c15.78-14.08,26.43-31.3,31.24-52.09,3.15-13.59,3.93-27.38,4.07-41.21v-2.76C485.3,361.86,484.89,127.84,484.85,124.74Zm-60.38,192A107.87,107.87,0,0,1,316.74,424.48H183.26A107.87,107.87,0,0,1,75.52,316.74V183.26A107.87,107.87,0,0,1,183.26,75.52H316.74A107.87,107.87,0,0,1,424.48,183.26Z"/></svg>
+          <a
+            class="
+              border-b-2
+              transition-all
+              border-gray-300
+              dark:border-gray-700
+              hover:border-yellow-500
+              dark:hover:text-yellow-400/80
+            "
+            href="https://instagram.com/joesakthatsme"
+          >
+            @joesakthatsme
+          </a>
+        </span>
+
+        <span class="animate-reveal animate-delay-4600">
+          💬 Say hey at
+          <a
+            class="
+              border-b-2
+              transition-all
+              border-gray-300
+              dark:border-gray-700
+              hover:border-yellow-500
+              dark:hover:text-yellow-400/80
+            "
+            href="mailto:joe@joesak.com"
+          >
+            joe@joesak.com
+          </a>
+        </span>
+      </div>
+    </div>
   </body>
 </html>
