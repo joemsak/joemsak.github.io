@@ -52,14 +52,3 @@
   animation-delay: calc(--value(integer) * 1ms);
 }
 
-@utility skip-animation {
-  .animate-reveal {
-    animation-duration: 5ms;
-  }
-}
-
-@utility skip-delay {
-  .animate-reveal {
-      animation-delay: 50ms;
-  }
-}

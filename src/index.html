@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="h-screen">
+<html lang="en">
   <head>
     <title>Joe Sak &bull; Backend Engineer</title>
     <meta charset="UTF-8">
@@ -16,19 +16,21 @@
     <link href="./style.css" rel="stylesheet">
   </head>
 
-  <body class="h-svh bg-white dark:bg-gray-950 dark:text-gray-400">
+  <body class="min-h-svh bg-white dark:bg-gray-950 dark:text-gray-400">
     <div
       id="app"
-      class="container sm:px-16 sm:py-8 px-10 max-w-[80ch] overflow-hidden"
+      class="container sm:px-16 sm:py-8 px-6 py-4 max-w-[72ch] mx-auto"
     >
       <div
         class="
           flex
           items-center
-          size-50
+          size-44
+          sm:size-50
           rounded-full
           overflow-hidden
-          my-10
+          mt-8
+          mb-6
           dark:opacity-99
           border-4
         "
@@ -40,7 +42,7 @@
         />
       </div>
 
-      <div id="intro" class="leading-normal text-3xl my-10">
+      <div id="intro" class="leading-normal text-3xl mb-10">
         <span class="animate-reveal animate-delay-300 font-bold">
           Hi,
         </span>
@@ -64,16 +66,16 @@
         </span>
       </div>
 
-      <div id="about" class="leading-normal mb-5 flex flex-col gap-5 text-lg">
-        <span class="animate-reveal animate-delay-4000">
-          🧑‍💻 Developer Productivity for Rails Product Engineers
+      <div id="about" class="leading-normal mb-8 flex flex-col gap-4 text-lg">
+        <span class="animate-reveal animate-delay-3900">
+          &#129489;&#8205;&#128187; Developer Productivity for Rails Product Engineers
+        </span>
+
+        <span class="animate-reveal animate-delay-4050">
+          &#127938; I enjoy snowboarding, hiking, multi-modal advocacy, &amp; Avs hockey
         </span>
 
         <span class="animate-reveal animate-delay-4200">
-          🏂 I enjoy snowboarding, hiking, multi-modal advocacy, &amp; Avs hockey
-        </span>
-
-        <span class="animate-reveal animate-delay-4400">
           <svg data-name="Layer 1" id="Layer_1" class="size-6 inline" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:#ddd;}</style></defs><title/><path class="cls-1" d="M250,193.27A56.73,56.73,0,1,0,306.73,250,56.8,56.8,0,0,0,250,193.27Z"/><path class="cls-1" d="M316.74,105.49H183.26a77.86,77.86,0,0,0-77.77,77.77V316.74a77.86,77.86,0,0,0,77.77,77.77H316.74a77.86,77.86,0,0,0,77.77-77.77V183.26A77.86,77.86,0,0,0,316.74,105.49ZM250,336.7A86.7,86.7,0,1,1,336.7,250,86.8,86.8,0,0,1,250,336.7Zm95.27-160.26A21.41,21.41,0,1,1,366.68,155,21.41,21.41,0,0,1,345.27,176.45Z"/><path class="cls-1" d="M484.85,124.74a144.17,144.17,0,0,0-2.32-25.29c-1.94-10.19-4.67-20.12-9.55-29.33A101.84,101.84,0,0,0,453.39,44a97.14,97.14,0,0,0-42.76-24.4c-14.83-4-30-4.84-45.21-4.82a.46.46,0,0,1-.09-.23H134.59c0,.08,0,.16,0,.23-8.65.16-17.32.09-25.92,1.16A123.46,123.46,0,0,0,81,22.14,97.48,97.48,0,0,0,44.25,46.26,97.15,97.15,0,0,0,19.68,89.17c-3.94,14.72-4.8,29.73-4.82,44.85L14.7,365.69v0c.28,10.45.37,21,2.13,31.36,1.87,11,4.54,21.71,9.64,31.69A101.36,101.36,0,0,0,54.77,463a91.91,91.91,0,0,0,28.31,15.35c15.12,4.88,30.72,6.75,46.55,6.84,9.88.06,19.74.31,29.62.27,71.74-.3,143.49.52,215.23-.44a169.32,169.32,0,0,0,28.23-3A95.61,95.61,0,0,0,450,459c15.78-14.08,26.43-31.3,31.24-52.09,3.15-13.59,3.93-27.38,4.07-41.21v-2.76C485.3,361.86,484.89,127.84,484.85,124.74Zm-60.38,192A107.87,107.87,0,0,1,316.74,424.48H183.26A107.87,107.87,0,0,1,75.52,316.74V183.26A107.87,107.87,0,0,1,183.26,75.52H316.74A107.87,107.87,0,0,1,424.48,183.26Z"/></svg>
           <a
             class="
@@ -90,8 +92,8 @@
           </a>
         </span>
 
-        <span class="animate-reveal animate-delay-4600">
-          💬 Say hey at
+        <span class="animate-reveal animate-delay-4350">
+          &#128172; Say hey at
           <a
             class="
               border-b-2
@@ -108,22 +110,46 @@
         </span>
       </div>
 
-      <div id="projects" class="leading-normal mb-5 flex flex-col gap-3 text-base">
-        <span class="animate-reveal animate-delay-4800 font-semibold text-lg">Projects</span>
+      <div
+        id="weather-widget"
+        class="flex flex-col gap-2 mb-8 animate-reveal animate-delay-4500 opacity-0 transition-opacity duration-500"
+      ></div>
+
+      <div id="projects" class="leading-normal mb-8 flex flex-col gap-2 text-base">
+        <span class="animate-reveal animate-delay-4500 font-semibold text-lg mb-1">Projects</span>
         <a
           class="
-            animate-reveal animate-delay-5000
-            flex items-center gap-2
-            px-4 py-2
-            bg-gray-100 dark:bg-gray-900
+            animate-reveal animate-delay-4600
+            flex items-center gap-3
+            px-4 py-3
+            bg-gray-50 dark:bg-gray-900
             rounded-xl
-            hover:bg-gray-200 dark:hover:bg-gray-800
+            hover:bg-gray-100 dark:hover:bg-gray-800
+            transition-colors
+            no-underline
+          "
+          href="https://github.com/joemsak/claude-code-desktop"
+        >
+          <span class="text-xl">&#128421;&#65039;</span>
+          <span class="flex flex-col">
+            <span class="font-medium dark:text-gray-300">Claude Code Desktop</span>
+            <span class="text-xs text-gray-500">Native macOS terminal multiplexer for Claude Code</span>
+          </span>
+        </a>
+        <a
+          class="
+            animate-reveal animate-delay-4700
+            flex items-center gap-3
+            px-4 py-3
+            bg-gray-50 dark:bg-gray-900
+            rounded-xl
+            hover:bg-gray-100 dark:hover:bg-gray-800
             transition-colors
             no-underline
           "
           href="https://joesak.com/weather"
         >
-          <span>&#9748;&#65039;</span>
+          <span class="text-xl">&#9748;&#65039;</span>
           <span class="flex flex-col">
             <span class="font-medium dark:text-gray-300">Weather</span>
             <span class="text-xs text-gray-500">Vanilla JS weather app using Open-Meteo APIs</span>
@@ -131,18 +157,18 @@
         </a>
         <a
           class="
-            animate-reveal animate-delay-5200
-            flex items-center gap-2
-            px-4 py-2
-            bg-gray-100 dark:bg-gray-900
+            animate-reveal animate-delay-4800
+            flex items-center gap-3
+            px-4 py-3
+            bg-gray-50 dark:bg-gray-900
             rounded-xl
-            hover:bg-gray-200 dark:hover:bg-gray-800
+            hover:bg-gray-100 dark:hover:bg-gray-800
             transition-colors
             no-underline
           "
           href="https://github.com/joemsak/codecrafters-shell-typescript"
         >
-          <span>&#128187;</span>
+          <span class="text-xl">&#128187;</span>
           <span class="flex flex-col">
             <span class="font-medium dark:text-gray-300">Build Your Own Shell</span>
             <span class="text-xs text-gray-500">Shell implementation in TypeScript</span>
@@ -150,18 +176,18 @@
         </a>
         <a
           class="
-            animate-reveal animate-delay-5400
-            flex items-center gap-2
-            px-4 py-2
-            bg-gray-100 dark:bg-gray-900
+            animate-reveal animate-delay-4900
+            flex items-center gap-3
+            px-4 py-3
+            bg-gray-50 dark:bg-gray-900
             rounded-xl
-            hover:bg-gray-200 dark:hover:bg-gray-800
+            hover:bg-gray-100 dark:hover:bg-gray-800
             transition-colors
             no-underline
           "
           href="https://github.com/joemsak/hello_world_asm"
         >
-          <span>&#9881;&#65039;</span>
+          <span class="text-xl">&#9881;&#65039;</span>
           <span class="flex flex-col">
             <span class="font-medium dark:text-gray-300">Hello World in ARM Assembly</span>
             <span class="text-xs text-gray-500">Low-level exploration on Apple Silicon</span>
@@ -169,39 +195,41 @@
         </a>
         <a
           class="
-            animate-reveal animate-delay-5600
-            flex items-center gap-2
-            px-4 py-2
-            bg-gray-100 dark:bg-gray-900
+            animate-reveal animate-delay-5000
+            flex items-center gap-3
+            px-4 py-3
+            bg-gray-50 dark:bg-gray-900
             rounded-xl
-            hover:bg-gray-200 dark:hover:bg-gray-800
+            hover:bg-gray-100 dark:hover:bg-gray-800
             transition-colors
             no-underline
           "
           href="https://github.com/joemsak/journal"
         >
-          <span>&#128221;</span>
+          <span class="text-xl">&#128221;</span>
           <span class="flex flex-col">
             <span class="font-medium dark:text-gray-300">Technical Journal</span>
             <span class="text-xs text-gray-500">Daily engineering notes and learnings</span>
           </span>
         </a>
+      </div>
 
-        <span class="animate-reveal animate-delay-5800 font-semibold text-lg mt-4">Open Source Contributions</span>
+      <div id="oss" class="leading-normal mb-8 flex flex-col gap-2 text-base">
+        <span class="animate-reveal animate-delay-5100 font-semibold text-lg mb-1">Open Source Contributions</span>
         <a
           class="
-            animate-reveal animate-delay-6000
-            flex items-center gap-2
-            px-4 py-2
-            bg-gray-100 dark:bg-gray-900
+            animate-reveal animate-delay-5200
+            flex items-center gap-3
+            px-4 py-3
+            bg-gray-50 dark:bg-gray-900
             rounded-xl
-            hover:bg-gray-200 dark:hover:bg-gray-800
+            hover:bg-gray-100 dark:hover:bg-gray-800
             transition-colors
             no-underline
           "
           href="https://github.com/rubyatscale/code_teams"
         >
-          <span>&#128101;</span>
+          <span class="text-xl">&#128101;</span>
           <span class="flex flex-col">
             <span class="font-medium dark:text-gray-300">code_teams</span>
             <span class="text-xs text-gray-500">Ruby at Scale team ownership &middot; 3 merged PRs</span>
@@ -209,18 +237,18 @@
         </a>
         <a
           class="
-            animate-reveal animate-delay-6200
-            flex items-center gap-2
-            px-4 py-2
-            bg-gray-100 dark:bg-gray-900
+            animate-reveal animate-delay-5300
+            flex items-center gap-3
+            px-4 py-3
+            bg-gray-50 dark:bg-gray-900
             rounded-xl
-            hover:bg-gray-200 dark:hover:bg-gray-800
+            hover:bg-gray-100 dark:hover:bg-gray-800
             transition-colors
             no-underline
           "
           href="https://github.com/norman/friendly_id"
         >
-          <span>&#128279;</span>
+          <span class="text-xl">&#128279;</span>
           <span class="flex flex-col">
             <span class="font-medium dark:text-gray-300">friendly_id</span>
             <span class="text-xs text-gray-500">Slugging and permalinks for ActiveRecord &middot; 2 merged PRs</span>
@@ -228,18 +256,18 @@
         </a>
         <a
           class="
-            animate-reveal animate-delay-6400
-            flex items-center gap-2
-            px-4 py-2
-            bg-gray-100 dark:bg-gray-900
+            animate-reveal animate-delay-5400
+            flex items-center gap-3
+            px-4 py-3
+            bg-gray-50 dark:bg-gray-900
             rounded-xl
-            hover:bg-gray-200 dark:hover:bg-gray-800
+            hover:bg-gray-100 dark:hover:bg-gray-800
             transition-colors
             no-underline
           "
           href="https://github.com/refinery/refinerycms"
         >
-          <span>&#128142;</span>
+          <span class="text-xl">&#128142;</span>
           <span class="flex flex-col">
             <span class="font-medium dark:text-gray-300">Refinery CMS</span>
             <span class="text-xs text-gray-500">Rails CMS engine &middot; 14 merged PRs</span>
@@ -247,10 +275,14 @@
         </a>
       </div>
 
-      <div
-        id="weather-widget"
-        class="flex flex-col gap-2 mb-5 animate-reveal animate-delay-6600 opacity-0 transition-opacity duration-500"
-      ></div>
+      <footer class="animate-reveal animate-delay-5500 border-t border-gray-200 dark:border-gray-800 pt-6 pb-8 mt-4">
+        <a
+          class="text-sm text-gray-400 dark:text-gray-600 hover:text-gray-600 dark:hover:text-gray-400 transition-colors"
+          href="https://github.com/joemsak"
+        >
+          github.com/joemsak
+        </a>
+      </footer>
     </div>
     <script type="module" src="./main.ts"></script>
   </body>
