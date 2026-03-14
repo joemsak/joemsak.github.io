@@ -26,9 +26,29 @@
     >
       <button
         id="dark-toggle"
-        class="absolute top-4 right-4 sm:top-8 sm:right-0 text-xl cursor-pointer bg-transparent border-none p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+        class="absolute top-4 right-4 sm:top-8 sm:right-0 cursor-pointer bg-transparent border-none p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
         aria-label="Toggle dark mode"
-      ></button>
+      >
+        <svg class="size-6" viewBox="0 0 24 24" fill="currentColor" style="transform-origin: center">
+          <defs>
+            <mask id="moon-mask">
+              <rect x="0" y="0" width="24" height="24" fill="white"/>
+              <circle class="toggle-mask" cx="30" cy="0" r="8" fill="black"/>
+            </mask>
+          </defs>
+          <circle class="toggle-circle" cx="12" cy="12" r="5" mask="url(#moon-mask)"/>
+          <g class="toggle-rays" style="transform-origin: center">
+            <line x1="12" y1="1" x2="12" y2="3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <line x1="12" y1="21" x2="12" y2="23" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <line x1="1" y1="12" x2="3" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <line x1="21" y1="12" x2="23" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </g>
+        </svg>
+      </button>
       <div
         class="
           flex
@@ -84,7 +104,8 @@
         </span>
 
         <span class="animate-reveal animate-delay-4200">
-          &#128690; Dedicated advocate for safe streets and mode shift, as the chair of the <a
+          <svg class="size-5 inline -mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18.5" cy="17.5" r="3.5"/><circle cx="5.5" cy="17.5" r="3.5"/><path d="M15 6a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-3 11.5V14l-3-3 4-3 2 3h2"/></svg>
+          Dedicated advocate for safe streets and mode shift, as the chair of the <a
             class="
               border-b-2
               transition-all
@@ -94,11 +115,46 @@
               dark:hover:text-yellow-400/80
             "
             href="https://denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Department-of-Transportation-and-Infrastructure/Vision/MBAC"
-          >Denver Mayor's Bicycle Advisory Committee</a> and a volunteer partner with Denver Streets Partnership
+          >Denver Mayor's Bicycle Advisory Committee</a> and a volunteer partner with <a
+            class="
+              border-b-2
+              transition-all
+              border-gray-300
+              dark:border-gray-700
+              hover:border-yellow-500
+              dark:hover:text-yellow-400/80
+            "
+            href="https://denverstreetspartnership.org/"
+          >Denver Streets Partnership</a>
         </span>
 
         <span class="animate-reveal animate-delay-4400">
-          <svg data-name="Layer 1" id="Layer_1" class="size-6 inline" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:#ddd;}</style></defs><title/><path class="cls-1" d="M250,193.27A56.73,56.73,0,1,0,306.73,250,56.8,56.8,0,0,0,250,193.27Z"/><path class="cls-1" d="M316.74,105.49H183.26a77.86,77.86,0,0,0-77.77,77.77V316.74a77.86,77.86,0,0,0,77.77,77.77H316.74a77.86,77.86,0,0,0,77.77-77.77V183.26A77.86,77.86,0,0,0,316.74,105.49ZM250,336.7A86.7,86.7,0,1,1,336.7,250,86.8,86.8,0,0,1,250,336.7Zm95.27-160.26A21.41,21.41,0,1,1,366.68,155,21.41,21.41,0,0,1,345.27,176.45Z"/><path class="cls-1" d="M484.85,124.74a144.17,144.17,0,0,0-2.32-25.29c-1.94-10.19-4.67-20.12-9.55-29.33A101.84,101.84,0,0,0,453.39,44a97.14,97.14,0,0,0-42.76-24.4c-14.83-4-30-4.84-45.21-4.82a.46.46,0,0,1-.09-.23H134.59c0,.08,0,.16,0,.23-8.65.16-17.32.09-25.92,1.16A123.46,123.46,0,0,0,81,22.14,97.48,97.48,0,0,0,44.25,46.26,97.15,97.15,0,0,0,19.68,89.17c-3.94,14.72-4.8,29.73-4.82,44.85L14.7,365.69v0c.28,10.45.37,21,2.13,31.36,1.87,11,4.54,21.71,9.64,31.69A101.36,101.36,0,0,0,54.77,463a91.91,91.91,0,0,0,28.31,15.35c15.12,4.88,30.72,6.75,46.55,6.84,9.88.06,19.74.31,29.62.27,71.74-.3,143.49.52,215.23-.44a169.32,169.32,0,0,0,28.23-3A95.61,95.61,0,0,0,450,459c15.78-14.08,26.43-31.3,31.24-52.09,3.15-13.59,3.93-27.38,4.07-41.21v-2.76C485.3,361.86,484.89,127.84,484.85,124.74Zm-60.38,192A107.87,107.87,0,0,1,316.74,424.48H183.26A107.87,107.87,0,0,1,75.52,316.74V183.26A107.87,107.87,0,0,1,183.26,75.52H316.74A107.87,107.87,0,0,1,424.48,183.26Z"/></svg>
+          &#9855; Re-started <a
+            class="
+              border-b-2
+              transition-all
+              border-gray-300
+              dark:border-gray-700
+              hover:border-yellow-500
+              dark:hover:text-yellow-400/80
+            "
+            href="https://denvercriticalmass.org"
+          >Denver Critical Mass</a> &middot;
+          <a
+            class="
+              border-b-2
+              transition-all
+              border-gray-300
+              dark:border-gray-700
+              hover:border-yellow-500
+              dark:hover:text-yellow-400/80
+            "
+            href="https://instagram.com/criticalmassdenver"
+          >@criticalmassdenver</a>
+        </span>
+
+        <span class="animate-reveal animate-delay-4550">
+          <svg class="size-5 inline -mt-0.5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
           <a
             class="
               border-b-2
@@ -114,8 +170,9 @@
           </a>
         </span>
 
-        <span class="animate-reveal animate-delay-4550">
-          &#128172; Say hey at
+        <span class="animate-reveal animate-delay-4700">
+          <svg class="size-5 inline -mt-0.5" viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+          Say hey at
           <a
             class="
               border-b-2
@@ -134,14 +191,14 @@
 
       <div
         id="weather-widget"
-        class="flex flex-col gap-2 mb-8 animate-reveal animate-delay-4500 opacity-0 transition-opacity duration-500"
+        class="flex flex-col gap-2 mb-8 animate-reveal animate-delay-4700 opacity-0 transition-opacity duration-500"
       ></div>
 
       <div id="projects" class="leading-normal mb-8 flex flex-col gap-2 text-base">
-        <span class="animate-reveal animate-delay-4500 font-semibold text-lg mb-1">Projects</span>
+        <span class="animate-reveal animate-delay-4900 font-semibold text-lg mb-1">Projects</span>
         <a
           class="
-            animate-reveal animate-delay-4600
+            animate-reveal animate-delay-5000
             flex items-center gap-3
             px-4 py-3
             bg-gray-50 dark:bg-gray-900/60
@@ -161,7 +218,7 @@
         </a>
         <a
           class="
-            animate-reveal animate-delay-4700
+            animate-reveal animate-delay-5100
             flex items-center gap-3
             px-4 py-3
             bg-gray-50 dark:bg-gray-900/60
@@ -181,7 +238,7 @@
         </a>
         <a
           class="
-            animate-reveal animate-delay-4800
+            animate-reveal animate-delay-5200
             flex items-center gap-3
             px-4 py-3
             bg-gray-50 dark:bg-gray-900/60
@@ -201,7 +258,7 @@
         </a>
         <a
           class="
-            animate-reveal animate-delay-4900
+            animate-reveal animate-delay-5300
             flex items-center gap-3
             px-4 py-3
             bg-gray-50 dark:bg-gray-900/60
@@ -221,7 +278,7 @@
         </a>
         <a
           class="
-            animate-reveal animate-delay-5000
+            animate-reveal animate-delay-5400
             flex items-center gap-3
             px-4 py-3
             bg-gray-50 dark:bg-gray-900/60
@@ -242,10 +299,10 @@
       </div>
 
       <div id="oss" class="leading-normal mb-8 flex flex-col gap-2 text-base">
-        <span class="animate-reveal animate-delay-5100 font-semibold text-lg mb-1">Open Source Contributions</span>
+        <span class="animate-reveal animate-delay-5500 font-semibold text-lg mb-1">Open Source Contributions</span>
         <a
           class="
-            animate-reveal animate-delay-5200
+            animate-reveal animate-delay-5600
             flex items-center gap-3
             px-4 py-3
             bg-emerald-50 dark:bg-emerald-950/30
@@ -265,7 +322,7 @@
         </a>
         <a
           class="
-            animate-reveal animate-delay-5300
+            animate-reveal animate-delay-5700
             flex items-center gap-3
             px-4 py-3
             bg-emerald-50 dark:bg-emerald-950/30
@@ -285,7 +342,7 @@
         </a>
         <a
           class="
-            animate-reveal animate-delay-5400
+            animate-reveal animate-delay-5800
             flex items-center gap-3
             px-4 py-3
             bg-emerald-50 dark:bg-emerald-950/30
@@ -305,7 +362,7 @@
         </a>
       </div>
 
-      <footer class="animate-reveal animate-delay-5500 border-t border-gray-200 dark:border-gray-800 pt-6 pb-8 mt-4">
+      <footer class="animate-reveal animate-delay-5900 border-t border-gray-200 dark:border-gray-800 pt-6 pb-8 mt-4">
         <a
           class="text-sm text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
           href="https://github.com/joemsak"
