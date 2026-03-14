@@ -85,25 +85,26 @@ function formatDateTime(): string {
 
 function renderWeatherCard(w: CurrentWeather, showDate: boolean): string {
   const dateHtml = showDate
-    ? `<span class="text-xs text-gray-400 dark:text-gray-600">${formatDateTime()}</span>`
+    ? `<span class="text-xs text-gray-500 dark:text-gray-400">${formatDateTime()}</span>`
     : "";
   return `
     <a href="/weather?q=${encodeURIComponent(w.name)}" class="
       flex items-center gap-3 px-4 py-3
-      bg-gray-100 dark:bg-gray-900
+      bg-sky-50 dark:bg-sky-950/40
+      border border-sky-200 dark:border-sky-800/50
       rounded-xl
-      hover:bg-gray-200 dark:hover:bg-gray-800
+      hover:bg-sky-100 dark:hover:bg-sky-900/40
       transition-colors
       no-underline
     ">
       <span class="text-2xl">${weatherIcon(w.weatherCode)}</span>
       <span class="flex flex-col">
-        <span class="text-sm text-gray-500 dark:text-gray-500">${w.name}</span>
-        <span class="text-lg font-semibold dark:text-gray-300">${w.temp}\u00B0F</span>
+        <span class="text-sm text-sky-700 dark:text-sky-300">${w.name}</span>
+        <span class="text-lg font-semibold text-gray-900 dark:text-gray-100">${w.temp}\u00B0F</span>
       </span>
       <span class="flex flex-col items-end ml-auto">
         ${dateHtml}
-        <span class="text-xs text-gray-400 dark:text-gray-600">${weatherDescription(w.weatherCode)}</span>
+        <span class="text-xs text-sky-600 dark:text-sky-400">${weatherDescription(w.weatherCode)}</span>
       </span>
     </a>`;
 }
