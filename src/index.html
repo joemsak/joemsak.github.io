@@ -4,7 +4,15 @@
     <title>Joe Sak &bull; Backend Engineer</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Joe Sak is a backend engineer in Denver specializing in developer productivity for Rails product engineers.">
+    <meta property="og:title" content="Joe Sak - Backend Engineer">
+    <meta property="og:description" content="Backend engineer in Denver. Developer productivity for Rails product engineers.">
+    <meta property="og:image" content="https://joesak.com/snowboard-selfy.jpeg">
+    <meta property="og:url" content="https://joesak.com">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://api.open-meteo.com">
     <link href="./style.css" rel="stylesheet">
   </head>
 
@@ -27,6 +35,7 @@
       >
         <img
           src="/snowboard-selfy.jpeg"
+          alt="Joe Sak snowboarding selfie"
           class="object-cover mix-blend-hard-light"
         />
       </div>
@@ -99,9 +108,108 @@
         </span>
       </div>
 
+      <div id="projects" class="leading-normal mb-5 flex flex-col gap-3 text-base">
+        <span class="animate-reveal animate-delay-4800 font-semibold text-lg">Projects</span>
+        <a
+          class="
+            animate-reveal animate-delay-5000
+            flex items-center gap-2
+            px-4 py-2
+            bg-gray-100 dark:bg-gray-900
+            rounded-xl
+            hover:bg-gray-200 dark:hover:bg-gray-800
+            transition-colors
+            no-underline
+          "
+          href="https://joesak.com/weather"
+        >
+          <span>&#9748;&#65039;</span>
+          <span class="flex flex-col">
+            <span class="font-medium dark:text-gray-300">Weather</span>
+            <span class="text-xs text-gray-500">Vanilla JS weather app using Open-Meteo APIs</span>
+          </span>
+        </a>
+        <a
+          class="
+            animate-reveal animate-delay-5200
+            flex items-center gap-2
+            px-4 py-2
+            bg-gray-100 dark:bg-gray-900
+            rounded-xl
+            hover:bg-gray-200 dark:hover:bg-gray-800
+            transition-colors
+            no-underline
+          "
+          href="https://github.com/joemsak/aoc_2025"
+        >
+          <span>&#11088;</span>
+          <span class="flex flex-col">
+            <span class="font-medium dark:text-gray-300">Advent of Code 2025</span>
+            <span class="text-xs text-gray-500">Daily programming puzzles</span>
+          </span>
+        </a>
+        <a
+          class="
+            animate-reveal animate-delay-5400
+            flex items-center gap-2
+            px-4 py-2
+            bg-gray-100 dark:bg-gray-900
+            rounded-xl
+            hover:bg-gray-200 dark:hover:bg-gray-800
+            transition-colors
+            no-underline
+          "
+          href="https://github.com/joemsak/codecrafters-shell-typescript"
+        >
+          <span>&#128187;</span>
+          <span class="flex flex-col">
+            <span class="font-medium dark:text-gray-300">Build Your Own Shell</span>
+            <span class="text-xs text-gray-500">Shell implementation in TypeScript</span>
+          </span>
+        </a>
+        <a
+          class="
+            animate-reveal animate-delay-5600
+            flex items-center gap-2
+            px-4 py-2
+            bg-gray-100 dark:bg-gray-900
+            rounded-xl
+            hover:bg-gray-200 dark:hover:bg-gray-800
+            transition-colors
+            no-underline
+          "
+          href="https://github.com/joemsak/hello_world_asm"
+        >
+          <span>&#9881;&#65039;</span>
+          <span class="flex flex-col">
+            <span class="font-medium dark:text-gray-300">Hello World in ARM Assembly</span>
+            <span class="text-xs text-gray-500">Low-level exploration on Apple Silicon</span>
+          </span>
+        </a>
+        <a
+          class="
+            animate-reveal animate-delay-5800
+            flex items-center gap-2
+            px-4 py-2
+            bg-gray-100 dark:bg-gray-900
+            rounded-xl
+            hover:bg-gray-200 dark:hover:bg-gray-800
+            transition-colors
+            no-underline
+          "
+          href="https://github.com/joemsak/journal"
+        >
+          <span>&#128221;</span>
+          <span class="flex flex-col">
+            <span class="font-medium dark:text-gray-300">Technical Journal</span>
+            <span class="text-xs text-gray-500">Daily engineering notes and learnings</span>
+          </span>
+        </a>
+      </div>
+
       <div
         id="weather-widget"
-        class="flex flex-col gap-2 mb-5 animate-reveal animate-delay-4800 opacity-0 transition-opacity duration-500"
+        class="flex flex-col gap-2 mb-5 animate-reveal animate-delay-6000 opacity-0 transition-opacity duration-500"
       ></div>
     </div>
     <script type="module" src="./main.ts"></script>
