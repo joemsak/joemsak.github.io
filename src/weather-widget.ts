@@ -68,7 +68,25 @@ async function fetchCurrentWeather(
   };
 }
 
-function renderWeatherCard(w: CurrentWeather): string {
+function formatDateTime(): string {
+  const now = new Date();
+  const day = now.toLocaleDateString("en-US", { weekday: "long" });
+  const date = now.toLocaleDateString("en-US", {
+    month: "long",
+    day: "numeric",
+  });
+  const time = now.toLocaleTimeString("en-US", {
+    hour: "numeric",
+    minute: "2-digit",
+    hour12: true,
+  });
+  return `${day}, ${date} · ${time}`;
+}
+
+function renderWeatherCard(w: CurrentWeather, showDate: boolean): string {
+  const dateHtml = showDate
+    ? `<span class="text-xs text-gray-400 dark:text-gray-600">${formatDateTime()}</span>`
+    : "";
   return `
     <a href="/weather?q=${encodeURIComponent(w.name)}" class="
       flex items-center gap-3 px-4 py-3
@@ -83,7 +101,10 @@ function renderWeatherCard(w: CurrentWeather): string {
         <span class="text-sm text-gray-500 dark:text-gray-500">${w.name}</span>
         <span class="text-lg font-semibold dark:text-gray-300">${w.temp}\u00B0F</span>
       </span>
-      <span class="text-xs text-gray-400 dark:text-gray-600 ml-auto">${weatherDescription(w.weatherCode)}</span>
+      <span class="flex flex-col items-end ml-auto">
+        ${dateHtml}
+        <span class="text-xs text-gray-400 dark:text-gray-600">${weatherDescription(w.weatherCode)}</span>
+      </span>
     </a>`;
 }
 
@@ -140,9 +161,9 @@ export async function initWeatherWidget() {
 
   try {
     const [denver, user] = await Promise.all([denverWeather, userWeather]);
-    let html = renderWeatherCard(denver);
+    let html = renderWeatherCard(denver, true);
     if (user) {
-      html += renderWeatherCard(user);
+      html += renderWeatherCard(user, false);
     }
     container.innerHTML = html;
     container.style.opacity = "1";
