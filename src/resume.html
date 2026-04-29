@@ -1,0 +1,656 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Joe Sak - Resume - Senior Rails Engineer</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Resume for Joe Sak, Senior Rails Engineer in Denver. Maintainability, Rails modernization, developer productivity, and mentorship for long-lived product systems."
+    />
+    <meta
+      property="og:title"
+      content="Joe Sak - Resume - Senior Rails Engineer"
+    />
+    <meta
+      property="og:description"
+      content="Senior Rails engineer focused on maintainability, Rails modernization, and developer productivity."
+    />
+    <meta property="og:image" content="https://joesak.com/headshot.jpg" />
+    <meta property="og:url" content="https://joesak.com/resume.html" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link href="./style.css" rel="stylesheet" />
+    <script>
+      (function () {
+        var t = localStorage.getItem("theme");
+        if (
+          t === "dark" ||
+          (t !== "light" && matchMedia("(prefers-color-scheme:dark)").matches)
+        )
+          document.documentElement.classList.add("dark");
+      })();
+    </script>
+  </head>
+
+  <body
+    class="min-h-svh bg-[#f7f3ea] text-zinc-950 antialiased dark:bg-zinc-950 dark:text-zinc-100 print:bg-white print:text-zinc-950"
+  >
+    <div class="mx-auto max-w-5xl px-5 sm:px-8 lg:px-10">
+      <header
+        class="flex items-center justify-between border-b border-zinc-300/80 py-5 dark:border-zinc-800 print:hidden"
+      >
+        <a
+          class="whitespace-nowrap text-base font-black text-zinc-950 dark:text-white"
+          href="/"
+          >← Joe Sak</a
+        >
+        <nav
+          class="flex items-center gap-3 text-xs font-semibold text-zinc-600 dark:text-zinc-300 sm:gap-6 sm:text-sm"
+        >
+          <button
+            type="button"
+            onclick="window.print()"
+            class="cursor-pointer hover:text-zinc-950 dark:hover:text-white"
+          >
+            Print or Save PDF
+          </button>
+          <button
+            id="dark-toggle"
+            class="flex size-9 cursor-pointer items-center justify-center rounded-lg border border-zinc-300 bg-white/70 p-2 text-zinc-900 transition-colors hover:bg-white dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 dark:hover:bg-zinc-800 sm:size-10"
+            aria-label="Toggle dark mode"
+          >
+            <svg
+              class="size-5"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              style="transform-origin: center"
+            >
+              <defs>
+                <mask id="moon-mask">
+                  <rect x="0" y="0" width="24" height="24" fill="white" />
+                  <circle
+                    class="toggle-mask"
+                    cx="30"
+                    cy="0"
+                    r="8"
+                    fill="black"
+                  />
+                </mask>
+              </defs>
+              <circle
+                class="toggle-circle"
+                cx="12"
+                cy="12"
+                r="5"
+                mask="url(#moon-mask)"
+              />
+              <g class="toggle-rays" style="transform-origin: center">
+                <line
+                  x1="12"
+                  y1="1"
+                  x2="12"
+                  y2="3"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <line
+                  x1="12"
+                  y1="21"
+                  x2="12"
+                  y2="23"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <line
+                  x1="4.22"
+                  y1="4.22"
+                  x2="5.64"
+                  y2="5.64"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <line
+                  x1="18.36"
+                  y1="18.36"
+                  x2="19.78"
+                  y2="19.78"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <line
+                  x1="1"
+                  y1="12"
+                  x2="3"
+                  y2="12"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <line
+                  x1="21"
+                  y1="12"
+                  x2="23"
+                  y2="12"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <line
+                  x1="4.22"
+                  y1="19.78"
+                  x2="5.64"
+                  y2="18.36"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <line
+                  x1="18.36"
+                  y1="5.64"
+                  x2="19.78"
+                  y2="4.22"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </g>
+            </svg>
+          </button>
+        </nav>
+      </header>
+
+      <main>
+        <section
+          class="grid gap-8 border-b border-zinc-300/80 py-10 dark:border-zinc-800 print:py-5 sm:grid-cols-[1fr_auto] sm:items-end sm:py-14"
+        >
+          <div>
+            <h1
+              class="text-5xl font-black leading-[0.98] text-zinc-950 dark:text-white sm:text-6xl print:text-5xl"
+            >
+              Joe Sak
+            </h1>
+            <p
+              class="mt-3 text-sm font-black uppercase tracking-[0.18em] text-rose-700 dark:text-rose-300"
+            >
+              Senior Rails Engineer
+            </p>
+          </div>
+          <address
+            class="not-italic text-sm leading-6 text-zinc-700 dark:text-zinc-300 sm:text-right"
+          >
+            <p class="font-bold text-zinc-950 dark:text-zinc-100">Denver, CO</p>
+            <p>+1 303.956.4769</p>
+            <p>
+              <a
+                class="animated-link js-email"
+                href="#"
+                data-email-name="eoj"
+                data-email-host="moc.kaseoj"
+                >Email me</a
+              >
+            </p>
+            <p>
+              <a class="animated-link" href="https://joesak.com">joesak.com</a>
+            </p>
+            <p>
+              <a
+                class="animated-link"
+                href="https://www.linkedin.com/in/joemsak"
+                >linkedin.com/in/joemsak</a
+              >
+            </p>
+            <p>
+              <a class="animated-link" href="https://github.com/joemsak"
+                >github.com/joemsak</a
+              >
+            </p>
+          </address>
+        </section>
+
+        <section
+          class="grid gap-6 border-b border-zinc-300/80 py-10 dark:border-zinc-800 print:py-5 sm:grid-cols-[170px_1fr] sm:gap-10"
+        >
+          <p
+            class="text-sm font-black uppercase tracking-[0.18em] text-rose-700 dark:text-rose-300"
+          >
+            Summary
+          </p>
+          <div>
+            <p
+              class="text-xl font-black leading-7 text-zinc-950 dark:text-white sm:text-2xl"
+            >
+              I make hard-to-change software maintainable.
+            </p>
+            <p
+              class="mt-3 text-base leading-7 text-zinc-700 dark:text-zinc-300"
+            >
+              Senior Rails engineer with 20+ years building web software and 15+
+              years in Ruby and Rails. Full-stack by history, Rails by habitat.
+              Most useful when an AI-assisted, vibe-coded, or long-lived
+              prototype has to become a real product the next engineer can trust
+              - readable code, clear boundaries, rollbacks ready before each
+              deploy.
+            </p>
+          </div>
+        </section>
+
+        <section
+          class="grid gap-6 border-b border-zinc-300/80 py-10 dark:border-zinc-800 print:py-5 sm:grid-cols-[170px_1fr] sm:gap-10"
+        >
+          <p
+            class="text-sm font-black uppercase tracking-[0.18em] text-sky-700 dark:text-sky-300"
+          >
+            Skills
+          </p>
+          <dl class="space-y-4">
+            <div>
+              <dt
+                class="text-xs font-black uppercase tracking-[0.18em] text-sky-700 dark:text-sky-300"
+              >
+                Application
+              </dt>
+              <dd class="mt-1 leading-7 text-zinc-700 dark:text-zinc-300">
+                Ruby, Rails, Phlex, Hotwire, GraphQL, JavaScript, HTML, CSS,
+                RSpec, SOLID object design, refactoring, accessibility, SEO,
+                product-minded UI work.
+              </dd>
+            </div>
+            <div>
+              <dt
+                class="text-xs font-black uppercase tracking-[0.18em] text-sky-700 dark:text-sky-300"
+              >
+                Platform
+              </dt>
+              <dd class="mt-1 leading-7 text-zinc-700 dark:text-zinc-300">
+                PostgreSQL, Redis, Sidekiq, AWS (IAM, ECS, EC2, S3, CloudFront),
+                Heroku, Docker, Linux, OAuth, REST and JSON APIs, service
+                integrations, infrastructure ownership, data security.
+              </dd>
+            </div>
+            <div>
+              <dt
+                class="text-xs font-black uppercase tracking-[0.18em] text-sky-700 dark:text-sky-300"
+              >
+                Practice
+              </dt>
+              <dd class="mt-1 leading-7 text-zinc-700 dark:text-zinc-300">
+                Rails and Ruby upgrades, technical debt strategy, repository
+                health, monolith extraction, feature flags, progressive
+                delivery, incident response, mentorship, technical planning, and
+                clean-code refactoring.
+              </dd>
+            </div>
+          </dl>
+        </section>
+
+        <section
+          class="grid gap-6 border-b border-zinc-300/80 py-10 dark:border-zinc-800 print:py-5 sm:grid-cols-[170px_1fr] sm:gap-10"
+        >
+          <p
+            class="text-sm font-black uppercase tracking-[0.18em] text-amber-700 dark:text-amber-300"
+          >
+            Experience
+          </p>
+          <ol
+            class="divide-y divide-zinc-300/80 dark:divide-zinc-800 print:divide-zinc-300"
+          >
+            <li class="break-inside-avoid pb-7 first:pt-0">
+              <h3
+                class="text-xl font-black text-zinc-950 dark:text-white print:text-lg"
+              >
+                Gusto
+                <span class="text-zinc-500 dark:text-zinc-400">/</span> Staff
+                Engineer, Developer Productivity
+              </h3>
+              <p
+                class="mt-1 text-xs font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400"
+              >
+                April 2024 - Present &middot; Remote
+              </p>
+              <ul
+                class="mt-3 list-disc space-y-2 pl-5 leading-7 text-zinc-700 marker:text-zinc-400 dark:text-zinc-300"
+              >
+                <li>
+                  <span class="font-bold text-zinc-950 dark:text-white"
+                    >Led Rails upgrades across two production monoliths</span
+                  >
+                  to 8.0 and 8.1, and raised extracted services to a 7.2 minimum
+                  (the oldest had been on 6.0). Each cut shipped with standby
+                  revert PRs and real-time triage as changes rippled across
+                  services.
+                </li>
+                <li>
+                  <span class="font-bold text-zinc-950 dark:text-white"
+                    >Built a maturity-model scorecard tool</span
+                  >
+                  to campaign and track repo upgrades for Ruby, Rails, Rubocop,
+                  Sorbet, Appraisal, and related standards, with an automation
+                  plan tied to Ruby and Rails EOL windows.
+                </li>
+                <li>
+                  <span class="font-bold text-zinc-950 dark:text-white"
+                    >Contributed to GraphQL federation for centralized feature
+                    flags,</span
+                  >
+                  decoupling services and enabling progressive delivery across
+                  the org.
+                </li>
+                <li>
+                  <span class="font-bold text-zinc-950 dark:text-white"
+                    >Modernized core repositories</span
+                  >
+                  with consistent best practices (Rubocop, Sorbet, Appraisal) so
+                  they are safer to change and easier for product engineers to
+                  work in.
+                </li>
+                <li>
+                  <span class="font-bold text-zinc-950 dark:text-white"
+                    >Provided direct developer-productivity support:</span
+                  >
+                  pairing, code review, generator tooling, and architectural
+                  guidance for monolith extraction.
+                </li>
+              </ul>
+            </li>
+
+            <li class="break-inside-avoid py-7">
+              <h3
+                class="text-xl font-black text-zinc-950 dark:text-white print:text-lg"
+              >
+                MemberSpace
+                <span class="text-zinc-500 dark:text-zinc-400">/</span> Senior
+                Rails Developer
+              </h3>
+              <p
+                class="mt-1 text-xs font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400"
+              >
+                April 2021 - April 2024 &middot; Remote
+              </p>
+              <ul
+                class="mt-3 list-disc space-y-2 pl-5 leading-7 text-zinc-700 marker:text-zinc-400 dark:text-zinc-300"
+              >
+                <li>
+                  <span class="font-bold text-zinc-950 dark:text-white"
+                    >Led full-stack modernization of the core app</span
+                  >
+                  from Rails 6.x and Ruby 2.x toward Rails 8 and Ruby 3.4, with
+                  rollback planning and live triage on each production cut.
+                </li>
+                <li>
+                  <span class="font-bold text-zinc-950 dark:text-white"
+                    >Owned production and staging infrastructure</span
+                  >
+                  across Heroku, RDS, and Docker; held 99.9% uptime through
+                  years of upgrades and feature work.
+                </li>
+                <li>
+                  <span class="font-bold text-zinc-950 dark:text-white"
+                    >Supported the infrastructure underpinning thousands of paid
+                    memberships</span
+                  >
+                  and hundreds of digital and ecommerce products without revenue
+                  interruption.
+                </li>
+                <li>
+                  <span class="font-bold text-zinc-950 dark:text-white"
+                    >Refactored core domain code</span
+                  >
+                  toward SOLID and Metz-style object design so the codebase
+                  stayed friendly to change as the product evolved.
+                </li>
+              </ul>
+            </li>
+
+            <li class="break-inside-avoid py-7">
+              <h3
+                class="text-xl font-black text-zinc-950 dark:text-white print:text-lg"
+              >
+                Kadenze
+                <span class="text-zinc-500 dark:text-zinc-400">/</span> Lead
+                Applications &amp; DevOps Engineer
+              </h3>
+              <p
+                class="mt-1 text-xs font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400"
+              >
+                January 2019 - April 2021 &middot; Remote
+              </p>
+              <ul
+                class="mt-3 list-disc space-y-2 pl-5 leading-7 text-zinc-700 marker:text-zinc-400 dark:text-zinc-300"
+              >
+                <li>
+                  <span class="font-bold text-zinc-950 dark:text-white"
+                    >Upgraded a six-year-old LMS</span
+                  >
+                  from Rails 4.2 and Ruby 2.3 to Rails 6.1 and Ruby 2.7 through
+                  staged production cuts, while continuing day-to-day product
+                  work.
+                </li>
+                <li>
+                  <span class="font-bold text-zinc-950 dark:text-white"
+                    >Owned the full AWS and Docker stack</span
+                  >
+                  across staging and production as the only full-time engineer.
+                </li>
+                <li>
+                  <span class="font-bold text-zinc-950 dark:text-white"
+                    >Architected the multi-tenant system and
+                    institution-specific portals</span
+                  >
+                  powering Kadenze's higher-education partnerships.
+                </li>
+                <li>
+                  <span class="font-bold text-zinc-950 dark:text-white"
+                    >Refactored long-lived domain code</span
+                  >
+                  using clean-code patterns to keep the legacy core
+                  maintainable.
+                </li>
+              </ul>
+            </li>
+
+            <li class="break-inside-avoid py-7">
+              <h3
+                class="text-xl font-black text-zinc-950 dark:text-white print:text-lg"
+              >
+                Iridescent / Technovation
+                <span class="text-zinc-500 dark:text-zinc-400">/</span> Lead Web
+                Developer
+              </h3>
+              <p
+                class="mt-1 text-xs font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400"
+              >
+                April 2016 - February 2019 &middot; Remote
+              </p>
+              <ul
+                class="mt-3 list-disc space-y-2 pl-5 leading-7 text-zinc-700 marker:text-zinc-400 dark:text-zinc-300"
+              >
+                <li>
+                  <span class="font-bold text-zinc-950 dark:text-white"
+                    >Built the global Technovation platform from scratch</span
+                  >
+                  for 30,000+ users across 120+ countries, with five distinct
+                  roles: students, mentors, judges, volunteers, and admins.
+                </li>
+                <li>
+                  <span class="font-bold text-zinc-950 dark:text-white"
+                    >Designed UI/UX with real users in mind:</span
+                  >
+                  rural and remote internet, low-income communities, children,
+                  and very different levels of technical comfort.
+                </li>
+                <li>
+                  <span class="font-bold text-zinc-950 dark:text-white"
+                    >Partnered with non-technical staff</span
+                  >
+                  at a small nonprofit to keep engineering aligned with the
+                  mission.
+                </li>
+              </ul>
+            </li>
+
+            <li class="break-inside-avoid py-6">
+              <h3
+                class="text-xl font-black text-zinc-950 dark:text-white print:text-lg"
+              >
+                Self-Employed
+                <span class="text-zinc-500 dark:text-zinc-400">/</span>
+                Freelance Developer
+              </h3>
+              <p
+                class="mt-1 text-xs font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400"
+              >
+                February 2014 - April 2016 &middot; October 2008 - October 2009
+                &middot; Remote
+              </p>
+              <p class="mt-3 leading-7 text-zinc-700 dark:text-zinc-300">
+                Contract Ruby, Rails, and React work for product teams; project
+                management, pairing, and TDD.
+              </p>
+            </li>
+
+            <li class="break-inside-avoid py-6">
+              <h3
+                class="text-xl font-black text-zinc-950 dark:text-white print:text-lg"
+              >
+                InfoActive
+                <span class="text-zinc-500 dark:text-zinc-400">/</span> Lead Web
+                Developer
+              </h3>
+              <p
+                class="mt-1 text-xs font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400"
+              >
+                June 2013 - February 2014 &middot; Montreal, QC
+              </p>
+              <p class="mt-3 leading-7 text-zinc-700 dark:text-zinc-300">
+                Introduced the codebase's first test suite and led a refactoring
+                and clean-code initiative across the application.
+              </p>
+            </li>
+
+            <li class="break-inside-avoid py-7">
+              <h3
+                class="text-xl font-black text-zinc-950 dark:text-white print:text-lg"
+              >
+                Neoteric Design
+                <span class="text-zinc-500 dark:text-zinc-400">/</span> Senior
+                Web Developer
+              </h3>
+              <p
+                class="mt-1 text-xs font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400"
+              >
+                October 2009 - June 2013 &middot; Chicago, IL
+              </p>
+              <ul
+                class="mt-3 list-disc space-y-2 pl-5 leading-7 text-zinc-700 marker:text-zinc-400 dark:text-zinc-300"
+              >
+                <li>
+                  <span class="font-bold text-zinc-950 dark:text-white"
+                    >Built reusable Rails engines for a custom CMS</span
+                  >
+                  that served the agency and its clients for seven years with
+                  minimal change.
+                </li>
+                <li>
+                  <span class="font-bold text-zinc-950 dark:text-white"
+                    >Led the company's transition from Perl/Movable Type to a
+                    modern Rails stack</span
+                  >
+                  and contributed to Refinery CMS.
+                </li>
+              </ul>
+            </li>
+
+            <li class="break-inside-avoid py-6 last:pb-0">
+              <h3
+                class="text-xl font-black text-zinc-950 dark:text-white print:text-lg"
+              >
+                Artemis Solutions Group
+                <span class="text-zinc-500 dark:text-zinc-400">/</span>
+                Promoted to Senior Developer
+              </h3>
+              <p
+                class="mt-1 text-xs font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400"
+              >
+                August 2005 - October 2008 &middot; East Lansing, MI
+              </p>
+              <p class="mt-3 leading-7 text-zinc-700 dark:text-zinc-300">
+                Helped build the agency's web team and engineering culture, led
+                technical sales demos and customer training, and contributed to
+                DotNetNuke and HTML5 Boilerplate.
+              </p>
+            </li>
+          </ol>
+        </section>
+
+        <section
+          class="grid gap-6 border-b border-zinc-300/80 py-10 dark:border-zinc-800 print:py-5 sm:grid-cols-[170px_1fr] sm:gap-10"
+        >
+          <p
+            class="text-sm font-black uppercase tracking-[0.18em] text-lime-700 dark:text-lime-300"
+          >
+            Education
+          </p>
+          <div>
+            <h3
+              class="text-xl font-black text-zinc-950 dark:text-white print:text-lg"
+            >
+              Michigan State University
+              <span class="text-zinc-500 dark:text-zinc-400">/</span> B.A.
+              Telecommunications, Information &amp; Media Studies
+            </h3>
+            <p
+              class="mt-1 text-xs font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400"
+            >
+              September 2001 - December 2005 &middot; East Lansing, MI
+            </p>
+            <ul
+              class="mt-3 list-disc space-y-2 pl-5 leading-7 text-zinc-700 marker:text-zinc-400 dark:text-zinc-300"
+            >
+              <li>
+                Web Director and Treasurer for ASCOT, the college's student
+                association for the Telecom department.
+              </li>
+              <li>
+                Study abroad with the European Commission program in Paris,
+                Geneva, and Brussels.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section
+          class="grid gap-6 py-10 dark:border-zinc-800 print:py-5 sm:grid-cols-[170px_1fr] sm:gap-10"
+        >
+          <p
+            class="text-sm font-black uppercase tracking-[0.18em] text-fuchsia-700 dark:text-fuchsia-300"
+          >
+            Community
+          </p>
+          <p class="leading-7 text-zinc-700 dark:text-zinc-300">
+            <span class="font-bold text-zinc-950 dark:text-white"
+              >Chair, Denver Mayor's Bicycle Advisory Committee.</span
+            >
+            Volunteer with Denver Streets Partnership and helped restart Denver
+            Critical Mass.
+          </p>
+        </section>
+      </main>
+
+      <footer
+        class="border-t border-zinc-300/80 py-8 text-sm text-zinc-500 dark:border-zinc-800 dark:text-zinc-400 print:hidden"
+      >
+        <p>
+          <a class="animated-link" href="/">Back to joesak.com</a>
+        </p>
+      </footer>
+    </div>
+
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>
