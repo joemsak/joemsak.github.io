@@ -1,394 +1,439 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Joe Sak &bull; Backend Engineer</title>
+    <title>🐈 Joe Sak - Senior Rails Engineer</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Joe Sak is a backend engineer in Denver specializing in developer productivity for Rails product engineers.">
-    <meta property="og:title" content="Joe Sak - Backend Engineer">
-    <meta property="og:description" content="Backend engineer in Denver. Developer productivity for Rails product engineers.">
-    <meta property="og:image" content="https://joesak.com/snowboard-selfy.jpeg">
+    <meta name="description" content="Joe Sak is a Senior Rails Engineer in Denver focused on maintainability, developer productivity, Rails modernization, platform stewardship, mentorship, and practical technical leadership.">
+    <meta property="og:title" content="Joe Sak - Senior Rails Engineer">
+    <meta property="og:description" content="Developer productivity, Rails modernization, and practical technical leadership for long-lived product systems.">
+    <meta property="og:image" content="https://joesak.com/headshot.jpg">
     <meta property="og:url" content="https://joesak.com">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="preconnect" href="https://api.open-meteo.com">
     <link href="./style.css" rel="stylesheet">
     <script>
       (function(){var t=localStorage.getItem("theme");if(t==="dark"||(t!=="light"&&matchMedia("(prefers-color-scheme:dark)").matches))document.documentElement.classList.add("dark")})();
     </script>
   </head>
 
-  <body class="min-h-svh bg-white dark:bg-gray-950 dark:text-gray-400">
-    <div
-      id="app"
-      class="container sm:px-16 sm:py-8 px-6 py-4 max-w-[72ch] mx-auto relative"
-    >
-      <button
-        id="dark-toggle"
-        class="absolute top-4 right-4 sm:top-8 sm:right-0 cursor-pointer bg-transparent border-none p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-        aria-label="Toggle dark mode"
-      >
-        <svg class="size-6" viewBox="0 0 24 24" fill="currentColor" style="transform-origin: center">
-          <defs>
-            <mask id="moon-mask">
-              <rect x="0" y="0" width="24" height="24" fill="white"/>
-              <circle class="toggle-mask" cx="30" cy="0" r="8" fill="black"/>
-            </mask>
-          </defs>
-          <circle class="toggle-circle" cx="12" cy="12" r="5" mask="url(#moon-mask)"/>
-          <g class="toggle-rays" style="transform-origin: center">
-            <line x1="12" y1="1" x2="12" y2="3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            <line x1="12" y1="21" x2="12" y2="23" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            <line x1="1" y1="12" x2="3" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            <line x1="21" y1="12" x2="23" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-          </g>
-        </svg>
-      </button>
-      <div
-        class="
-          flex
-          items-center
-          size-44
-          sm:size-50
-          rounded-full
-          overflow-hidden
-          mt-8
-          mb-6
-          dark:opacity-99
-          border-4
-        "
-      >
-        <img
-          src="/snowboard-selfy.jpeg"
-          alt="Joe Sak snowboarding selfie"
-          class="object-cover dark:mix-blend-hard-light"
-        />
-      </div>
-
-      <div id="intro" class="leading-normal text-3xl mb-10">
-        <span class="animate-reveal animate-delay-300 font-bold">
-          Hi,
-        </span>
-        <span class="animate-reveal animate-delay-500 font-bold">
-          I'm Joe.
-        </span>
-        <span class="animate-reveal animate-delay-1600">
-          I'm a backend engineer
-        </span>
-        <span class="animate-reveal animate-delay-2000">
-          located in Denver.
-        </span>
-        <span class="animate-reveal animate-delay-2800">
-          I write clean
-        </span>
-        <span class="animate-reveal animate-delay-3200">
-          and maintainable code
-        </span>
-        <span class="animate-reveal animate-delay-3600">
-          that improves productivity.
-        </span>
-      </div>
-
-      <div id="about" class="leading-normal mb-8 flex flex-col gap-4 text-lg">
-        <span class="animate-reveal animate-delay-3900">
-          &#129489;&#8205;&#128187; Developer Productivity for Rails Product Engineers
-        </span>
-
-        <span class="animate-reveal animate-delay-4050">
-          &#127938; I enjoy snowboarding, hiking, &amp; Avs hockey
-        </span>
-
-        <span class="animate-reveal animate-delay-4200">
-          <svg class="size-5 inline -mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18.5" cy="17.5" r="3.5"/><circle cx="5.5" cy="17.5" r="3.5"/><path d="M15 6a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-3 11.5V14l-3-3 4-3 2 3h2"/></svg>
-          Dedicated advocate for safe streets and mode shift, as the chair of the <a
-            class="
-              border-b-2
-              transition-all
-              text-blue-600
-              border-blue-300
-              dark:text-sky-400
-              dark:border-sky-800
-              hover:border-blue-500
-              dark:hover:text-sky-300
-              dark:hover:border-sky-500
-            "
-            href="https://denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Department-of-Transportation-and-Infrastructure/Vision/MBAC"
-          >Denver Mayor's Bicycle Advisory Committee</a> and a volunteer partner with <a
-            class="
-              border-b-2
-              transition-all
-              text-blue-600
-              border-blue-300
-              dark:text-sky-400
-              dark:border-sky-800
-              hover:border-blue-500
-              dark:hover:text-sky-300
-              dark:hover:border-sky-500
-            "
-            href="https://denverstreetspartnership.org/"
-          >Denver Streets Partnership</a>
-        </span>
-
-        <span class="animate-reveal animate-delay-4400">
-          &#9994; Re-started <a
-            class="
-              border-b-2
-              transition-all
-              text-blue-600
-              border-blue-300
-              dark:text-sky-400
-              dark:border-sky-800
-              hover:border-blue-500
-              dark:hover:text-sky-300
-              dark:hover:border-sky-500
-            "
-            href="https://denvercriticalmass.org"
-          >Denver Critical Mass</a> &middot;
-          <a
-            class="
-              border-b-2
-              transition-all
-              text-blue-600
-              border-blue-300
-              dark:text-sky-400
-              dark:border-sky-800
-              hover:border-blue-500
-              dark:hover:text-sky-300
-              dark:hover:border-sky-500
-            "
-            href="https://instagram.com/criticalmassdenver"
-          >@criticalmassdenver</a>
-        </span>
-
-        <span class="animate-reveal animate-delay-4550">
-          <svg class="size-5 inline -mt-0.5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-          <a
-            class="
-              border-b-2
-              transition-all
-              text-blue-600
-              border-blue-300
-              dark:text-sky-400
-              dark:border-sky-800
-              hover:border-blue-500
-              dark:hover:text-sky-300
-              dark:hover:border-sky-500
-            "
-            href="https://instagram.com/joesakthatsme"
+  <body class="min-h-svh bg-[#f7f3ea] text-zinc-950 antialiased dark:bg-zinc-950 dark:text-zinc-100">
+    <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-10">
+      <header class="flex items-center justify-between border-b border-zinc-300/80 py-5 dark:border-zinc-800">
+        <a class="whitespace-nowrap text-base font-black text-zinc-950 dark:text-white" href="/">Joe Sak</a>
+        <nav class="flex items-center gap-3 text-xs font-semibold text-zinc-600 dark:text-zinc-300 sm:gap-6 sm:text-sm">
+          <a class="hover:text-zinc-950 dark:hover:text-white" href="#work">Work</a>
+          <a class="hover:text-zinc-950 dark:hover:text-white" href="#experience">Experience</a>
+          <a class="hover:text-zinc-950 dark:hover:text-white" href="#contact">Contact</a>
+          <button
+            id="dark-toggle"
+            class="flex size-9 cursor-pointer items-center justify-center rounded-lg border border-zinc-300 bg-white/70 p-2 text-zinc-900 transition-colors hover:bg-white dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 dark:hover:bg-zinc-800 sm:size-10"
+            aria-label="Toggle dark mode"
           >
-            @joesakthatsme
-          </a>
-        </span>
+            <svg class="size-5" viewBox="0 0 24 24" fill="currentColor" style="transform-origin: center">
+              <defs>
+                <mask id="moon-mask">
+                  <rect x="0" y="0" width="24" height="24" fill="white"/>
+                  <circle class="toggle-mask" cx="30" cy="0" r="8" fill="black"/>
+                </mask>
+              </defs>
+              <circle class="toggle-circle" cx="12" cy="12" r="5" mask="url(#moon-mask)"/>
+              <g class="toggle-rays" style="transform-origin: center">
+                <line x1="12" y1="1" x2="12" y2="3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <line x1="12" y1="21" x2="12" y2="23" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <line x1="1" y1="12" x2="3" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <line x1="21" y1="12" x2="23" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </g>
+            </svg>
+          </button>
+        </nav>
+      </header>
 
-        <span class="animate-reveal animate-delay-4700">
-          <svg class="size-5 inline -mt-0.5" viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
-          Say hey at
-          <a
-            class="
-              border-b-2
-              transition-all
-              text-blue-600
-              border-blue-300
-              dark:text-sky-400
-              dark:border-sky-800
-              hover:border-blue-500
-              dark:hover:text-sky-300
-              dark:hover:border-sky-500
-            "
-            href="mailto:joe@joesak.com"
-          >
-            joe@joesak.com
-          </a>
-        </span>
-      </div>
+      <main>
+        <section class="grid gap-10 border-b border-zinc-300/80 py-14 dark:border-zinc-800 sm:py-20 lg:grid-cols-[1fr_280px] lg:items-end">
+          <div>
+            <p class="text-sm font-black uppercase tracking-[0.18em] text-rose-700 dark:text-rose-300">
+              Senior Rails Engineer in Denver
+            </p>
+            <h1 class="mt-6 max-w-4xl text-5xl font-black leading-[0.98] text-zinc-950 dark:text-white sm:text-7xl lg:text-8xl">
+              I make hard-to-change software maintainable.
+            </h1>
+            <p class="mt-8 max-w-3xl text-xl leading-8 text-zinc-700 dark:text-zinc-300 sm:text-2xl sm:leading-9">
+              Full-stack by history, Rails by habitat. I care about elegant, readable
+              code that is easy to understand, test, and change. I am especially useful
+              when an AI-built or vibe-coded prototype needs to become a real product
+              that future engineers can trust.
+            </p>
+          </div>
 
-      <div
-        id="weather-widget"
-        class="flex flex-col gap-2 mb-8 animate-reveal animate-delay-4700 opacity-0 transition-opacity duration-500"
-      ></div>
+          <figure class="max-w-[260px]">
+            <img
+              src="./headshot.jpg"
+              alt="Portrait of Joe Sak"
+              class="aspect-square w-full rounded-lg object-cover shadow-xl shadow-zinc-950/15 dark:shadow-black/40"
+            />
+            <figcaption class="mt-3 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
+              Senior Rails engineer, platform caretaker, and software craftsmanship mentor.
+            </figcaption>
+          </figure>
+        </section>
 
-      <div id="projects" class="leading-normal mb-8 flex flex-col gap-2 text-base">
-        <span class="animate-reveal animate-delay-4900 font-semibold text-lg mb-1">Projects</span>
-        <a
-          class="
-            animate-reveal animate-delay-5000
-            flex items-center gap-3
-            px-4 py-3
-            bg-gray-50 dark:bg-gray-900/60
-            border border-gray-200 dark:border-gray-700/50
-            rounded-xl
-            hover:bg-gray-100 dark:hover:bg-gray-800/60
-            transition-colors
-            no-underline
-          "
-          href="https://github.com/joemsak/claude-code-desktop"
-        >
-          <span class="text-xl">&#128421;&#65039;</span>
-          <span class="flex flex-col">
-            <span class="font-medium dark:text-gray-200">Claude Code Desktop</span>
-            <span class="text-xs text-gray-600 dark:text-gray-400">Native macOS terminal multiplexer for Claude Code</span>
-          </span>
-        </a>
-        <a
-          class="
-            animate-reveal animate-delay-5100
-            flex items-center gap-3
-            px-4 py-3
-            bg-gray-50 dark:bg-gray-900/60
-            border border-gray-200 dark:border-gray-700/50
-            rounded-xl
-            hover:bg-gray-100 dark:hover:bg-gray-800/60
-            transition-colors
-            no-underline
-          "
-          href="https://github.com/joemsak/weather"
-        >
-          <span class="text-xl">&#9748;&#65039;</span>
-          <span class="flex flex-col">
-            <span class="font-medium dark:text-gray-200">Weather</span>
-            <span class="text-xs text-gray-600 dark:text-gray-400">Vanilla JS weather app using Open-Meteo APIs</span>
-          </span>
-        </a>
-        <a
-          class="
-            animate-reveal animate-delay-5200
-            flex items-center gap-3
-            px-4 py-3
-            bg-gray-50 dark:bg-gray-900/60
-            border border-gray-200 dark:border-gray-700/50
-            rounded-xl
-            hover:bg-gray-100 dark:hover:bg-gray-800/60
-            transition-colors
-            no-underline
-          "
-          href="https://github.com/joemsak/codecrafters-shell-typescript"
-        >
-          <span class="text-xl">&#128187;</span>
-          <span class="flex flex-col">
-            <span class="font-medium dark:text-gray-200">Build Your Own Shell</span>
-            <span class="text-xs text-gray-600 dark:text-gray-400">Shell implementation in TypeScript</span>
-          </span>
-        </a>
-        <a
-          class="
-            animate-reveal animate-delay-5300
-            flex items-center gap-3
-            px-4 py-3
-            bg-gray-50 dark:bg-gray-900/60
-            border border-gray-200 dark:border-gray-700/50
-            rounded-xl
-            hover:bg-gray-100 dark:hover:bg-gray-800/60
-            transition-colors
-            no-underline
-          "
-          href="https://github.com/joemsak/hello_world_asm"
-        >
-          <span class="text-xl">&#9881;&#65039;</span>
-          <span class="flex flex-col">
-            <span class="font-medium dark:text-gray-200">Hello World in ARM Assembly</span>
-            <span class="text-xs text-gray-600 dark:text-gray-400">Low-level exploration on Apple Silicon</span>
-          </span>
-        </a>
-        <a
-          class="
-            animate-reveal animate-delay-5400
-            flex items-center gap-3
-            px-4 py-3
-            bg-gray-50 dark:bg-gray-900/60
-            border border-gray-200 dark:border-gray-700/50
-            rounded-xl
-            hover:bg-gray-100 dark:hover:bg-gray-800/60
-            transition-colors
-            no-underline
-          "
-          href="https://github.com/joemsak/journal"
-        >
-          <span class="text-xl">&#128221;</span>
-          <span class="flex flex-col">
-            <span class="font-medium dark:text-gray-200">Technical Journal</span>
-            <span class="text-xs text-gray-600 dark:text-gray-400">Daily engineering notes and learnings</span>
-          </span>
-        </a>
-      </div>
+        <section class="grid gap-8 border-b border-zinc-300/80 py-10 dark:border-zinc-800 md:grid-cols-3">
+          <div>
+            <p class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400">Now</p>
+            <p class="mt-3 text-lg font-semibold leading-7">Developer Productivity Rails L3 Staff Engineer at Gusto.</p>
+          </div>
+          <div>
+            <p class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400">Useful For</p>
+            <p class="mt-3 text-lg font-semibold leading-7">Maintainability, Rails modernization, repository health, technical debt strategy, AI prototype rescue, user-minded product work, and mentorship.</p>
+          </div>
+          <div>
+            <p class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400">Contact</p>
+            <p class="mt-3 text-lg font-semibold leading-7">
+              <a class="animated-link js-email" href="#contact" data-email-name="eoj" data-email-host="moc.kaseoj">Email me</a><br>
+              <a class="animated-link" href="https://www.linkedin.com/in/joemsak">LinkedIn</a><br>
+              <a class="animated-link" href="./resume.pdf">Resume</a>
+            </p>
+          </div>
+        </section>
 
-      <div id="oss" class="leading-normal mb-8 flex flex-col gap-2 text-base">
-        <span class="animate-reveal animate-delay-5500 font-semibold text-lg mb-1">Open Source Contributions</span>
-        <a
-          class="
-            animate-reveal animate-delay-5600
-            flex items-center gap-3
-            px-4 py-3
-            bg-emerald-50 dark:bg-emerald-950/30
-            border border-emerald-200 dark:border-emerald-800/40
-            rounded-xl
-            hover:bg-emerald-100 dark:hover:bg-emerald-900/30
-            transition-colors
-            no-underline
-          "
-          href="https://github.com/rubyatscale/code_teams"
-        >
-          <span class="text-xl">&#128101;</span>
-          <span class="flex flex-col">
-            <span class="font-medium dark:text-gray-200">code_teams</span>
-            <span class="text-xs text-emerald-700 dark:text-emerald-400">Ruby at Scale team ownership &middot; 3 merged PRs</span>
-          </span>
-        </a>
-        <a
-          class="
-            animate-reveal animate-delay-5700
-            flex items-center gap-3
-            px-4 py-3
-            bg-emerald-50 dark:bg-emerald-950/30
-            border border-emerald-200 dark:border-emerald-800/40
-            rounded-xl
-            hover:bg-emerald-100 dark:hover:bg-emerald-900/30
-            transition-colors
-            no-underline
-          "
-          href="https://github.com/norman/friendly_id"
-        >
-          <span class="text-xl">&#128279;</span>
-          <span class="flex flex-col">
-            <span class="font-medium dark:text-gray-200">friendly_id</span>
-            <span class="text-xs text-emerald-700 dark:text-emerald-400">Slugging and permalinks for ActiveRecord &middot; 2 merged PRs</span>
-          </span>
-        </a>
-        <a
-          class="
-            animate-reveal animate-delay-5800
-            flex items-center gap-3
-            px-4 py-3
-            bg-emerald-50 dark:bg-emerald-950/30
-            border border-emerald-200 dark:border-emerald-800/40
-            rounded-xl
-            hover:bg-emerald-100 dark:hover:bg-emerald-900/30
-            transition-colors
-            no-underline
-          "
-          href="https://github.com/refinery/refinerycms"
-        >
-          <span class="text-xl">&#128142;</span>
-          <span class="flex flex-col">
-            <span class="font-medium dark:text-gray-200">Refinery CMS</span>
-            <span class="text-xs text-emerald-700 dark:text-emerald-400">Rails CMS engine &middot; 14 merged PRs</span>
-          </span>
-        </a>
-      </div>
+        <section id="work" class="grid gap-10 border-b border-zinc-300/80 py-14 dark:border-zinc-800 sm:py-20 lg:grid-cols-[0.58fr_1.42fr]">
+          <div>
+            <p class="text-sm font-black uppercase tracking-[0.18em] text-teal-700 dark:text-teal-300">Selected Work</p>
+            <h2 class="mt-4 text-4xl font-black leading-tight text-zinc-950 dark:text-white">
+              Maintainability at scale.
+            </h2>
+          </div>
 
-      <footer class="animate-reveal animate-delay-5900 border-t border-gray-200 dark:border-gray-800 pt-6 pb-8 mt-4">
-        <a
-          class="text-sm text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
-          href="https://github.com/joemsak"
-        >
-          github.com/joemsak
-        </a>
+          <div class="divide-y divide-zinc-300/80 border-y border-zinc-300/80 dark:divide-zinc-800 dark:border-zinc-800">
+            <article class="grid items-start gap-4 py-7 sm:grid-cols-[150px_1fr]">
+              <p class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400 sm:leading-8">Maintainability</p>
+              <div>
+                <h3 class="text-2xl font-black text-zinc-950 dark:text-white">Turning prototypes into code teams can own</h3>
+                <p class="mt-3 leading-7 text-zinc-700 dark:text-zinc-300">
+                  Vibe-coded projects can prove an idea quickly. I help turn them into
+                  understandable systems with clear names, tests, boundaries, dependency
+                  cleanup, and simple paths for future change.
+                </p>
+              </div>
+            </article>
+
+            <article class="grid items-start gap-4 py-7 sm:grid-cols-[150px_1fr]">
+              <p class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400 sm:leading-8">Gusto</p>
+              <div>
+                <h3 class="text-2xl font-black text-zinc-950 dark:text-white">Rails upgrades across monolith and services</h3>
+                <p class="mt-3 leading-7 text-zinc-700 dark:text-zinc-300">
+                  Helped lead core Rails upgrades from 7.2 to 8.0, and raised Gusto's
+                  extracted Rails services to a 7.2 minimum after the oldest app was
+                  still on Rails 6.0 in 2026.
+                </p>
+              </div>
+            </article>
+
+            <article class="grid items-start gap-4 py-7 sm:grid-cols-[150px_1fr]">
+              <p class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400 sm:leading-8">Productivity</p>
+              <div>
+                <h3 class="text-2xl font-black text-zinc-950 dark:text-white">A maturity model for technical debt</h3>
+                <p class="mt-3 leading-7 text-zinc-700 dark:text-zinc-300">
+                  Built scorecard tooling to campaign and track essential repository
+                  upgrades across Ruby, Rails, Rubocop, Sorbet, Appraisal, and related
+                  standards, with an automation plan for Ruby and Rails EOL windows.
+                </p>
+              </div>
+            </article>
+
+            <article class="grid items-start gap-4 py-7 sm:grid-cols-[150px_1fr]">
+              <p class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400 sm:leading-8">Architecture</p>
+              <div>
+                <h3 class="text-2xl font-black text-zinc-950 dark:text-white">Service separation and safer rollouts</h3>
+                <p class="mt-3 leading-7 text-zinc-700 dark:text-zinc-300">
+                  Contributed to monolith extraction efforts and GraphQL federation work
+                  for centralized feature flags, service decoupling, and progressive delivery.
+                </p>
+              </div>
+            </article>
+
+            <article class="grid items-start gap-4 py-7 sm:grid-cols-[150px_1fr]">
+              <p class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400 sm:leading-8">Mentorship</p>
+              <div>
+                <h3 class="text-2xl font-black text-zinc-950 dark:text-white">Software craftsmanship without mystique</h3>
+                <p class="mt-3 leading-7 text-zinc-700 dark:text-zinc-300">
+                  Mentor small cohorts of apprentices through code review, pairing,
+                  fundamentals, and honest guidance for building a durable engineering career.
+                </p>
+              </div>
+            </article>
+
+            <article class="grid items-start gap-4 py-7 sm:grid-cols-[150px_1fr]">
+              <p class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400 sm:leading-8">Legacy Apps</p>
+              <div>
+                <h3 class="text-2xl font-black text-zinc-950 dark:text-white">Big upgrades on systems people depend on</h3>
+                <p class="mt-3 leading-7 text-zinc-700 dark:text-zinc-300">
+                  In 2021, migrated Kadenze from Rails 4.2 and Ruby 2.3 to Rails 6.1
+                  and Ruby 2.7. In 2024, led MemberSpace's Rails 6 and Ruby 2.x
+                  modernization toward Rails 8 and Ruby 3.4.
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="grid gap-10 border-b border-zinc-300/80 py-14 dark:border-zinc-800 sm:py-20 lg:grid-cols-[0.58fr_1.42fr]">
+          <div>
+            <p class="text-sm font-black uppercase tracking-[0.18em] text-lime-700 dark:text-lime-300">From Teammates</p>
+            <h2 class="mt-4 text-4xl font-black leading-tight text-zinc-950 dark:text-white">
+              Strong signals from people who have relied on the work.
+            </h2>
+          </div>
+
+          <div class="divide-y divide-zinc-300/80 border-y border-zinc-300/80 dark:divide-zinc-800 dark:border-zinc-800">
+            <article class="grid items-start gap-4 py-7 sm:grid-cols-[150px_1fr]">
+              <p class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400">Judgment</p>
+              <div>
+                <blockquote class="text-2xl font-black leading-8 text-zinc-950 dark:text-white">
+                  "Joe has a real talent for diving into complex challenges and finding effective solutions."
+                </blockquote>
+                <p class="mt-3 leading-7 text-zinc-700 dark:text-zinc-300">
+                  I am at my best when the problem is tangled, important, and in need
+                  of careful judgment instead of a quick patch.
+                </p>
+              </div>
+            </article>
+
+            <article class="grid items-start gap-4 py-7 sm:grid-cols-[150px_1fr]">
+              <p class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400">Reliability</p>
+              <div>
+                <blockquote class="text-2xl font-black leading-8 text-zinc-950 dark:text-white">
+                  "His reliability and drive made him a key part of our team."
+                </blockquote>
+                <p class="mt-3 leading-7 text-zinc-700 dark:text-zinc-300">
+                  People have trusted me with production infrastructure, data security,
+                  upgrade paths, team protocols, and systems that need to keep paying off.
+                </p>
+              </div>
+            </article>
+
+            <article class="grid items-start gap-4 py-7 sm:grid-cols-[150px_1fr]">
+              <p class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400">Product</p>
+              <div>
+                <blockquote class="text-2xl font-black leading-8 text-zinc-950 dark:text-white">
+                  "He built our custom web app from scratch."
+                </blockquote>
+                <p class="mt-3 leading-7 text-zinc-700 dark:text-zinc-300">
+                  That product served tens of thousands of users across more than 100
+                  countries, with separate paths for students, mentors, judges, volunteers,
+                  and administrators.
+                </p>
+              </div>
+            </article>
+
+            <article class="grid items-start gap-4 py-7 sm:grid-cols-[150px_1fr]">
+              <p class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400">Users</p>
+              <div>
+                <blockquote class="text-2xl font-black leading-8 text-zinc-950 dark:text-white">
+                  "Joe always had the needs of our users in mind."
+                </blockquote>
+                <p class="mt-3 leading-7 text-zinc-700 dark:text-zinc-300">
+                  That included rural and remote access, low-income communities, children,
+                  and users working with very different levels of technical comfort.
+                </p>
+              </div>
+            </article>
+
+            <article class="grid items-start gap-4 py-7 sm:grid-cols-[150px_1fr]">
+              <p class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400">Rollouts</p>
+              <div>
+                <blockquote class="text-2xl font-black leading-8 text-zinc-950 dark:text-white">
+                  "Standby revert PRs being open and ready before each deploy was a small but high value choice."
+                </blockquote>
+                <p class="mt-3 leading-7 text-zinc-700 dark:text-zinc-300">
+                  My upgrade work comes with rollback planning, timing updates, and
+                  calm real-time triage when production changes touch multiple services.
+                </p>
+              </div>
+            </article>
+
+            <article class="grid items-start gap-4 py-7 sm:grid-cols-[150px_1fr]">
+              <p class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400">Ownership</p>
+              <div>
+                <blockquote class="text-2xl font-black leading-8 text-zinc-950 dark:text-white">
+                  "He took the reins and drove the project forward."
+                </blockquote>
+                <p class="mt-3 leading-7 text-zinc-700 dark:text-zinc-300">
+                  Peers highlighted initiative on feature flag GraphQL work, generator tooling,
+                  service extraction, incident response, and tricky codebase problems.
+                </p>
+              </div>
+            </article>
+
+            <article class="grid items-start gap-4 py-7 sm:grid-cols-[150px_1fr]">
+              <p class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400">Support</p>
+              <div>
+                <blockquote class="text-2xl font-black leading-8 text-zinc-950 dark:text-white">
+                  "I consistently learn from you in our interactions."
+                </blockquote>
+                <p class="mt-3 leading-7 text-zinc-700 dark:text-zinc-300">
+                  Feedback repeatedly mentions patience, helpfulness, pairing, documentation,
+                  and making Ruby and Rails work easier for product engineers.
+                </p>
+              </div>
+            </article>
+
+            <article class="grid items-start gap-4 py-7 sm:grid-cols-[150px_1fr]">
+              <p class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400">Craft</p>
+              <div>
+                <blockquote class="text-2xl font-black leading-8 text-zinc-950 dark:text-white">
+                  "Joe is an asset to any team."
+                </blockquote>
+                <p class="mt-3 leading-7 text-zinc-700 dark:text-zinc-300">
+                  The pattern behind the praise is maintainable work: readable code,
+                  practical architecture, thoughtful refactoring, and systems that other
+                  people can understand and change.
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="grid gap-10 border-b border-zinc-300/80 py-14 dark:border-zinc-800 sm:py-20 lg:grid-cols-[0.58fr_1.42fr]">
+          <div>
+            <p class="text-sm font-black uppercase tracking-[0.18em] text-sky-700 dark:text-sky-300">What I Know</p>
+            <h2 class="mt-4 text-4xl font-black leading-tight text-zinc-950 dark:text-white">
+              Tools I use to keep code easy to change.
+            </h2>
+          </div>
+
+          <div class="grid gap-8 sm:grid-cols-2">
+            <div>
+              <h3 class="text-base font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400">Application</h3>
+              <p class="mt-4 text-lg leading-8 text-zinc-700 dark:text-zinc-300">
+                Ruby, Rails, Phlex, Hotwire, GraphQL, JavaScript, HTML, CSS, SEO,
+                accessibility, RSpec, clean code, SOLID object design, patient refactoring,
+                and product-minded UI work.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-base font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400">Platform</h3>
+              <p class="mt-4 text-lg leading-8 text-zinc-700 dark:text-zinc-300">
+                PostgreSQL, Redis, Sidekiq, AWS, Heroku, Docker, Linux, OAuth, APIs,
+                service integrations, infrastructure ownership, data security, technical planning, and mentorship.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="experience" class="grid gap-10 border-b border-zinc-300/80 py-14 dark:border-zinc-800 sm:py-20 lg:grid-cols-[0.58fr_1.42fr]">
+          <div>
+            <p class="text-sm font-black uppercase tracking-[0.18em] text-amber-700 dark:text-amber-300">Experience</p>
+            <h2 class="mt-4 text-4xl font-black leading-tight text-zinc-950 dark:text-white">
+              Places I have kept systems moving.
+            </h2>
+          </div>
+
+          <ol class="divide-y divide-zinc-300/80 border-y border-zinc-300/80 dark:divide-zinc-800 dark:border-zinc-800">
+            <li class="grid gap-3 py-6 sm:grid-cols-[130px_1fr]">
+              <p class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400">2024 - Now</p>
+              <div>
+                <h3 class="text-xl font-black text-zinc-950 dark:text-white">Gusto - Developer Productivity Rails L3 Staff Engineer</h3>
+                <p class="mt-2 leading-7 text-zinc-700 dark:text-zinc-300">Direct support, tooling, Rails upgrades, repository harmonization, feature flags, and technical debt strategy.</p>
+              </div>
+            </li>
+            <li class="grid gap-3 py-6 sm:grid-cols-[130px_1fr]">
+              <p class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400">2021 - 2024</p>
+              <div>
+                <h3 class="text-xl font-black text-zinc-950 dark:text-white">MemberSpace - Senior Rails Developer</h3>
+                <p class="mt-2 leading-7 text-zinc-700 dark:text-zinc-300">Full-stack legacy migration, production infrastructure, uptime stewardship, and clean-code refactoring.</p>
+              </div>
+            </li>
+            <li class="grid gap-3 py-6 sm:grid-cols-[130px_1fr]">
+              <p class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400">2019 - 2021</p>
+              <div>
+                <h3 class="text-xl font-black text-zinc-950 dark:text-white">Kadenze - Lead Applications and DevOps Engineer</h3>
+                <p class="mt-2 leading-7 text-zinc-700 dark:text-zinc-300">Rails and Ruby upgrades, AWS and Docker operations, multi-tenancy, and education-platform portals.</p>
+              </div>
+            </li>
+            <li class="grid gap-3 py-6 sm:grid-cols-[130px_1fr]">
+              <p class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400">2016 - 2019</p>
+              <div>
+                <h3 class="text-xl font-black text-zinc-950 dark:text-white">Iridescent / Technovation - Lead Web Developer</h3>
+                <p class="mt-2 leading-7 text-zinc-700 dark:text-zinc-300">Built a global product for 30,000+ users, five user types, and 120+ countries; shaped UI/UX around varied access needs and worked closely with non-technical teams.</p>
+              </div>
+            </li>
+            <li class="grid gap-3 py-6 sm:grid-cols-[130px_1fr]">
+              <p class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400">2005 - 2016</p>
+              <div>
+                <h3 class="text-xl font-black text-zinc-950 dark:text-white">Freelance, InfoActive, Neoteric, Artemis</h3>
+                <p class="mt-2 leading-7 text-zinc-700 dark:text-zinc-300">Agency leadership, reusable Rails engines, test suites, sales demos, apprentice programs, team development, and client-facing delivery.</p>
+              </div>
+            </li>
+          </ol>
+        </section>
+
+        <section class="grid gap-10 border-b border-zinc-300/80 py-14 dark:border-zinc-800 sm:py-20 lg:grid-cols-[0.58fr_1.42fr]">
+          <div>
+            <p class="text-sm font-black uppercase tracking-[0.18em] text-fuchsia-700 dark:text-fuchsia-300">Elsewhere</p>
+            <h2 class="mt-4 text-4xl font-black leading-tight text-zinc-950 dark:text-white">
+              Denver, streets, snow, and the rest of life.
+            </h2>
+          </div>
+
+          <div class="space-y-5 text-lg leading-8 text-zinc-700 dark:text-zinc-300">
+            <p>
+              I chair Denver's Mayor's Bicycle Advisory Committee, volunteer with
+              Denver Streets Partnership, and helped restart Denver Critical Mass.
+              I also like snowboarding, hiking, and Avalanche hockey.
+            </p>
+            <div class="flex flex-wrap gap-x-6 gap-y-2 text-base font-bold text-zinc-950 dark:text-zinc-100">
+              <a class="animated-link" href="https://denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Department-of-Transportation-and-Infrastructure/Vision/MBAC">Denver MBAC</a>
+              <a class="animated-link" href="https://denverstreetspartnership.org/">Denver Streets Partnership</a>
+              <a class="animated-link" href="https://denvercriticalmass.org">Denver Critical Mass</a>
+              <a class="animated-link" href="https://instagram.com/joesakthatsme">@joesakthatsme</a>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" class="py-14 sm:py-20">
+          <div class="max-w-3xl">
+            <p class="text-sm font-black uppercase tracking-[0.18em] text-rose-700 dark:text-rose-300">Contact</p>
+            <h2 class="mt-4 text-4xl font-black leading-tight text-zinc-950 dark:text-white">
+              Want to make a hard-to-change codebase easier to own?
+            </h2>
+            <p class="mt-6 text-lg leading-8 text-zinc-700 dark:text-zinc-300">
+              Email is best: <a class="animated-link js-email font-bold text-zinc-950 dark:text-zinc-100" href="#contact" data-email-name="eoj" data-email-host="moc.kaseoj">Email me</a>.
+              I am good at taking messy, rushed, AI-assisted, or long-lived software
+              and making it readable enough to maintain with confidence.
+              You can also find me on <a class="animated-link font-bold text-zinc-950 dark:text-zinc-100" href="https://www.linkedin.com/in/joemsak">LinkedIn</a>
+              and <a class="animated-link font-bold text-zinc-950 dark:text-zinc-100" href="https://github.com/joemsak">GitHub</a>.
+              Here is my <a class="animated-link font-bold text-zinc-950 dark:text-zinc-100" href="./resume.pdf">resume</a>.
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <footer class="border-t border-zinc-300/80 py-8 text-sm text-zinc-500 dark:border-zinc-800 dark:text-zinc-400">
+        <p>Joe Sak - Senior Rails Engineer - Denver, CO</p>
       </footer>
     </div>
+
+    <script>
+      document
+        .querySelectorAll("[data-email-name][data-email-host]")
+        .forEach(function(link) {
+          var name = link.getAttribute("data-email-name").split("").reverse().join("");
+          var host = link.getAttribute("data-email-host").split("").reverse().join("");
+          var address = name + "@" + host;
+
+          link.href = "mailto:" + address;
+          link.textContent = address;
+          link.setAttribute("aria-label", "Email " + address);
+        });
+    </script>
     <script type="module" src="./main.ts"></script>
   </body>
 </html>

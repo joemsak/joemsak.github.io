@@ -2,23 +2,6 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-@theme {
-  --font-sans: "DM Sans", serif;
-
-  --animate-reveal: reveal-text 1.2s cubic-bezier(0.2, 0.6, 0.2, 1) forwards;
-
-  @keyframes reveal-text {
-    0% {
-      opacity: 0;
-      top: 6px;
-    }
-    100% {
-      opacity: 1;
-      top: 0;
-    }
-  }
-}
-
 @layer base {
   body {
     font-family: "Inter var", 'Helvetica Neue', Helvetica, sans-serif;
@@ -31,26 +14,28 @@
   }
 }
 
-@utility skip-animation {
-  .animate-reveal {
-    animation-duration: 5ms;
+@layer components {
+  .animated-link {
+    text-decoration-line: underline;
+    text-decoration-color: color-mix(in oklab, var(--color-rose-600) 55%, transparent);
+    text-decoration-thickness: 0.12em;
+    text-underline-offset: 0.18em;
+    transition:
+      color 160ms ease,
+      text-decoration-color 160ms ease;
+  }
+
+  .animated-link:hover {
+    color: var(--color-rose-700);
+    text-decoration-color: var(--color-rose-700);
+  }
+
+  html.dark .animated-link {
+    text-decoration-color: color-mix(in oklab, var(--color-rose-300) 60%, transparent);
+  }
+
+  html.dark .animated-link:hover {
+    color: var(--color-rose-300);
+    text-decoration-color: var(--color-rose-300);
   }
 }
-
-@utility skip-delay {
-  .animate-reveal {
-    animation-delay: 50ms;
-  }
-}
-
-@utility animate-reveal {
-  position: relative;
-  top: 0;
-  opacity: 0;
-}
-
-@utility animate-delay-* {
-  animation-delay: --value([ *]);
-  animation-delay: calc(--value(integer) * 1ms);
-}
-

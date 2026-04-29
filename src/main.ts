@@ -1,5 +1,3 @@
-import { initWeatherWidget } from "./weather-widget.ts";
-
 function initDarkModeToggle() {
   const toggle = document.getElementById("dark-toggle");
   if (!toggle) return;
@@ -61,4 +59,3 @@ function initDarkModeToggle() {
 }
 
 initDarkModeToggle();
-initWeatherWidget();
