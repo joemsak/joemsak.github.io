@@ -1,0 +1,197 @@
+/* Print styles for /resume.html
+ * Loaded via <link rel="stylesheet" media="print" href="./print.css" />
+ *
+ * Goals:
+ *   - Always render as a clean light document, even when the page is in dark mode
+ *   - Tighten the screen layout into a paper-friendly density (10.5pt body)
+ *   - Keep job entries and headings together on the page
+ *   - Strip noisy hyperlink underlines
+ */
+
+@page {
+  size: letter;
+  margin: 0.5in 0.55in;
+}
+
+@media print {
+  /* ----- Reset to a light, paper-friendly base ----- */
+
+  html,
+  html.dark,
+  body {
+    background: #ffffff !important;
+    color: #18181b !important;
+    color-scheme: light !important;
+  }
+
+  body {
+    font-size: 10.5pt !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Honor accent text colors (rose/sky/amber/lime/fuchsia) */
+  *,
+  *::before,
+  *::after {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Cancel any dark variants when print is initiated from dark mode */
+  html.dark .dark\:text-white,
+  html.dark .dark\:text-zinc-100,
+  html.dark .dark\:text-zinc-200,
+  html.dark .dark\:text-zinc-300,
+  html.dark .dark\:text-zinc-400 {
+    color: #18181b !important;
+  }
+
+  html.dark .dark\:bg-zinc-800,
+  html.dark .dark\:bg-zinc-900,
+  html.dark .dark\:bg-zinc-950 {
+    background-color: transparent !important;
+  }
+
+  html.dark .dark\:border-zinc-800,
+  html.dark .dark\:divide-zinc-800,
+  html.dark .dark\:divide-zinc-800 > * + * {
+    border-color: #d4d4d8 !important;
+  }
+
+  /* Belt-and-suspenders: hide chrome the inline print:hidden also hides */
+  body > div > header,
+  body > div > footer {
+    display: none !important;
+  }
+
+  /* ----- Layout ----- */
+
+  /* @page already provides margins; let the document fill the printable area */
+  body > div {
+    max-width: none !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  main section {
+    padding-top: 0.55rem !important;
+    padding-bottom: 0.55rem !important;
+    gap: 0.85rem !important;
+  }
+
+  /* Identity header sits a touch tighter than other sections */
+  main > section:first-child {
+    padding-top: 0 !important;
+    padding-bottom: 0.65rem !important;
+  }
+
+  /* ----- Typography scale ----- */
+
+  h1 {
+    font-size: 1.875rem !important; /* 30px */
+    line-height: 1 !important;
+  }
+
+  /* Tagline directly under the H1 (Senior Rails Engineer) */
+  h1 + p {
+    margin-top: 0.3rem !important;
+    font-size: 0.65rem !important;
+  }
+
+  /* Section labels in the left column (Summary, Skills, Experience, ...) */
+  section > p:first-child {
+    font-size: 0.65rem !important;
+  }
+
+  /* Summary thesis line */
+  section p[class*="text-xl"] {
+    font-size: 1rem !important;
+    line-height: 1.25 !important;
+  }
+
+  /* Role and education titles */
+  h3 {
+    font-size: 0.95rem !important;
+    line-height: 1.25 !important;
+  }
+
+  /* Date / location metadata under each role */
+  h3 + p {
+    font-size: 0.6rem !important;
+    margin-top: 0.15rem !important;
+    letter-spacing: 0.12em !important;
+  }
+
+  /* Body paragraphs */
+  p {
+    line-height: 1.4 !important;
+  }
+
+  /* Skills group sub-labels (Application / Platform / Practice) */
+  dt {
+    font-size: 0.6rem !important;
+    margin-top: 0.5rem !important;
+  }
+
+  dt:first-child {
+    margin-top: 0 !important;
+  }
+
+  dd {
+    margin-top: 0.15rem !important;
+    line-height: 1.4 !important;
+  }
+
+  /* ----- Bullets ----- */
+
+  ul {
+    margin-top: 0.4rem !important;
+  }
+
+  ul li {
+    margin-top: 0.2rem !important;
+    line-height: 1.4 !important;
+  }
+
+  ul li:first-child {
+    margin-top: 0 !important;
+  }
+
+  /* ----- Page-break behavior ----- */
+
+  /* Keep each role together; if it can't fit, push the whole entry to the next page */
+  ol > li,
+  section dl > div {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Don't strand a heading at the bottom of a page */
+  h1,
+  h2,
+  h3 {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  /* No orphaned single lines */
+  p,
+  li,
+  dd {
+    widows: 3;
+    orphans: 3;
+  }
+
+  /* ----- Links ----- */
+
+  /* Strip the rose underline on paper - reads as visual noise */
+  .animated-link {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+
+  /* Compact contact column line-height */
+  address p {
+    line-height: 1.45 !important;
+  }
+}

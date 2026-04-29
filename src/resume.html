@@ -22,6 +22,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link href="./style.css" rel="stylesheet" />
+    <link href="./print.css" rel="stylesheet" media="print" />
     <script>
       (function () {
         var t = localStorage.getItem("theme");
@@ -35,7 +36,7 @@
   </head>
 
   <body
-    class="min-h-svh bg-[#f7f3ea] text-zinc-950 antialiased dark:bg-zinc-950 dark:text-zinc-100 print:bg-white print:text-zinc-950"
+    class="min-h-svh bg-[#f7f3ea] text-zinc-950 antialiased dark:bg-zinc-950 dark:text-zinc-100"
   >
     <div class="mx-auto max-w-5xl px-5 sm:px-8 lg:px-10">
       <header
@@ -167,11 +168,11 @@
 
       <main>
         <section
-          class="grid gap-8 border-b border-zinc-300/80 py-10 dark:border-zinc-800 print:py-5 sm:grid-cols-[1fr_auto] sm:items-end sm:py-14"
+          class="grid gap-8 border-b border-zinc-300/80 py-10 dark:border-zinc-800 sm:grid-cols-[1fr_auto] sm:items-end sm:py-14"
         >
           <div>
             <h1
-              class="text-5xl font-black leading-[0.98] text-zinc-950 dark:text-white sm:text-6xl print:text-5xl"
+              class="text-5xl font-black leading-[0.98] text-zinc-950 dark:text-white sm:text-6xl"
             >
               Joe Sak
             </h1>
@@ -214,7 +215,7 @@
         </section>
 
         <section
-          class="grid gap-6 border-b border-zinc-300/80 py-10 dark:border-zinc-800 print:py-5 sm:grid-cols-[170px_1fr] sm:gap-10"
+          class="grid gap-6 border-b border-zinc-300/80 py-10 dark:border-zinc-800 sm:grid-cols-[170px_1fr] sm:gap-10"
         >
           <p
             class="text-sm font-black uppercase tracking-[0.18em] text-rose-700 dark:text-rose-300"
@@ -241,7 +242,7 @@
         </section>
 
         <section
-          class="grid gap-6 border-b border-zinc-300/80 py-10 dark:border-zinc-800 print:py-5 sm:grid-cols-[170px_1fr] sm:gap-10"
+          class="grid gap-6 border-b border-zinc-300/80 py-10 dark:border-zinc-800 sm:grid-cols-[170px_1fr] sm:gap-10"
         >
           <p
             class="text-sm font-black uppercase tracking-[0.18em] text-sky-700 dark:text-sky-300"
@@ -290,20 +291,16 @@
         </section>
 
         <section
-          class="grid gap-6 border-b border-zinc-300/80 py-10 dark:border-zinc-800 print:py-5 sm:grid-cols-[170px_1fr] sm:gap-10"
+          class="grid gap-6 border-b border-zinc-300/80 py-10 dark:border-zinc-800 sm:grid-cols-[170px_1fr] sm:gap-10"
         >
           <p
             class="text-sm font-black uppercase tracking-[0.18em] text-amber-700 dark:text-amber-300"
           >
             Experience
           </p>
-          <ol
-            class="divide-y divide-zinc-300/80 dark:divide-zinc-800 print:divide-zinc-300"
-          >
+          <ol class="divide-y divide-zinc-300/80 dark:divide-zinc-800">
             <li class="break-inside-avoid pb-7 first:pt-0">
-              <h3
-                class="text-xl font-black text-zinc-950 dark:text-white print:text-lg"
-              >
+              <h3 class="text-xl font-black text-zinc-950 dark:text-white">
                 Gusto
                 <span class="text-zinc-500 dark:text-zinc-400">/</span> Staff
                 Engineer, Developer Productivity
@@ -360,9 +357,7 @@
             </li>
 
             <li class="break-inside-avoid py-7">
-              <h3
-                class="text-xl font-black text-zinc-950 dark:text-white print:text-lg"
-              >
+              <h3 class="text-xl font-black text-zinc-950 dark:text-white">
                 MemberSpace
                 <span class="text-zinc-500 dark:text-zinc-400">/</span> Senior
                 Rails Developer
@@ -408,9 +403,7 @@
             </li>
 
             <li class="break-inside-avoid py-7">
-              <h3
-                class="text-xl font-black text-zinc-950 dark:text-white print:text-lg"
-              >
+              <h3 class="text-xl font-black text-zinc-950 dark:text-white">
                 Kadenze
                 <span class="text-zinc-500 dark:text-zinc-400">/</span> Lead
                 Applications &amp; DevOps Engineer
@@ -455,9 +448,7 @@
             </li>
 
             <li class="break-inside-avoid py-7">
-              <h3
-                class="text-xl font-black text-zinc-950 dark:text-white print:text-lg"
-              >
+              <h3 class="text-xl font-black text-zinc-950 dark:text-white">
                 Iridescent / Technovation
                 <span class="text-zinc-500 dark:text-zinc-400">/</span> Lead Web
                 Developer
@@ -495,9 +486,7 @@
             </li>
 
             <li class="break-inside-avoid py-6">
-              <h3
-                class="text-xl font-black text-zinc-950 dark:text-white print:text-lg"
-              >
+              <h3 class="text-xl font-black text-zinc-950 dark:text-white">
                 Self-Employed
                 <span class="text-zinc-500 dark:text-zinc-400">/</span>
                 Freelance Developer
@@ -515,9 +504,7 @@
             </li>
 
             <li class="break-inside-avoid py-6">
-              <h3
-                class="text-xl font-black text-zinc-950 dark:text-white print:text-lg"
-              >
+              <h3 class="text-xl font-black text-zinc-950 dark:text-white">
                 InfoActive
                 <span class="text-zinc-500 dark:text-zinc-400">/</span> Lead Web
                 Developer
@@ -534,9 +521,7 @@
             </li>
 
             <li class="break-inside-avoid py-7">
-              <h3
-                class="text-xl font-black text-zinc-950 dark:text-white print:text-lg"
-              >
+              <h3 class="text-xl font-black text-zinc-950 dark:text-white">
                 Neoteric Design
                 <span class="text-zinc-500 dark:text-zinc-400">/</span> Senior
                 Web Developer
@@ -567,9 +552,7 @@
             </li>
 
             <li class="break-inside-avoid py-6 last:pb-0">
-              <h3
-                class="text-xl font-black text-zinc-950 dark:text-white print:text-lg"
-              >
+              <h3 class="text-xl font-black text-zinc-950 dark:text-white">
                 Artemis Solutions Group
                 <span class="text-zinc-500 dark:text-zinc-400">/</span>
                 Promoted to Senior Developer
@@ -589,7 +572,7 @@
         </section>
 
         <section
-          class="grid gap-6 border-b border-zinc-300/80 py-10 dark:border-zinc-800 print:py-5 sm:grid-cols-[170px_1fr] sm:gap-10"
+          class="grid gap-6 border-b border-zinc-300/80 py-10 dark:border-zinc-800 sm:grid-cols-[170px_1fr] sm:gap-10"
         >
           <p
             class="text-sm font-black uppercase tracking-[0.18em] text-lime-700 dark:text-lime-300"
@@ -597,9 +580,7 @@
             Education
           </p>
           <div>
-            <h3
-              class="text-xl font-black text-zinc-950 dark:text-white print:text-lg"
-            >
+            <h3 class="text-xl font-black text-zinc-950 dark:text-white">
               Michigan State University
               <span class="text-zinc-500 dark:text-zinc-400">/</span> B.A.
               Telecommunications, Information &amp; Media Studies
@@ -625,7 +606,7 @@
         </section>
 
         <section
-          class="grid gap-6 py-10 dark:border-zinc-800 print:py-5 sm:grid-cols-[170px_1fr] sm:gap-10"
+          class="grid gap-6 py-10 dark:border-zinc-800 sm:grid-cols-[170px_1fr] sm:gap-10"
         >
           <p
             class="text-sm font-black uppercase tracking-[0.18em] text-fuchsia-700 dark:text-fuchsia-300"
