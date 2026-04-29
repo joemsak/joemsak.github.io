@@ -1,53 +1,165 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>Joe Sak - Senior Rails Engineer</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Joe Sak is a Senior Rails Engineer in Denver focused on maintainability, developer productivity, Rails modernization, platform stewardship, mentorship, and practical technical leadership.">
-    <meta property="og:title" content="Joe Sak - Senior Rails Engineer">
-    <meta property="og:description" content="Developer productivity, Rails modernization, and practical technical leadership for long-lived product systems.">
-    <meta property="og:image" content="https://joesak.com/headshot.jpg">
-    <meta property="og:url" content="https://joesak.com">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link href="./style.css" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Joe Sak is a Senior Rails Engineer in Denver. Maintainability, developer productivity, Rails modernization, and mentorship for long-lived product systems."
+    />
+    <meta property="og:title" content="Joe Sak - Senior Rails Engineer" />
+    <meta
+      property="og:description"
+      content="Developer productivity, Rails modernization, and practical technical leadership for long-lived product systems."
+    />
+    <meta property="og:image" content="https://joesak.com/headshot.jpg" />
+    <meta property="og:url" content="https://joesak.com" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link href="./style.css" rel="stylesheet" />
     <script>
-      (function(){var t=localStorage.getItem("theme");if(t==="dark"||(t!=="light"&&matchMedia("(prefers-color-scheme:dark)").matches))document.documentElement.classList.add("dark")})();
+      (function () {
+        var t = localStorage.getItem("theme");
+        if (
+          t === "dark" ||
+          (t !== "light" && matchMedia("(prefers-color-scheme:dark)").matches)
+        )
+          document.documentElement.classList.add("dark");
+      })();
     </script>
   </head>
 
-  <body class="min-h-svh bg-[#f7f3ea] text-zinc-950 antialiased dark:bg-zinc-950 dark:text-zinc-100">
+  <body
+    class="min-h-svh bg-[#f7f3ea] text-zinc-950 antialiased dark:bg-zinc-950 dark:text-zinc-100"
+  >
     <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-10">
-      <header class="flex items-center justify-between border-b border-zinc-300/80 py-5 dark:border-zinc-800">
-        <a class="whitespace-nowrap text-base font-black text-zinc-950 dark:text-white" href="/">Joe Sak</a>
-        <nav class="flex items-center gap-3 text-xs font-semibold text-zinc-600 dark:text-zinc-300 sm:gap-6 sm:text-sm">
-          <a class="hover:text-zinc-950 dark:hover:text-white" href="#work">Work</a>
-          <a class="hover:text-zinc-950 dark:hover:text-white" href="#experience">Experience</a>
-          <a class="hover:text-zinc-950 dark:hover:text-white" href="#contact">Contact</a>
+      <header
+        class="flex items-center justify-between border-b border-zinc-300/80 py-5 dark:border-zinc-800"
+      >
+        <a
+          class="whitespace-nowrap text-base font-black text-zinc-950 dark:text-white"
+          href="/"
+          >Joe Sak</a
+        >
+        <nav
+          class="flex items-center gap-3 text-xs font-semibold text-zinc-600 dark:text-zinc-300 sm:gap-6 sm:text-sm"
+        >
+          <a class="hover:text-zinc-950 dark:hover:text-white" href="#work"
+            >Work</a
+          >
+          <a
+            class="hover:text-zinc-950 dark:hover:text-white"
+            href="#experience"
+            >Experience</a
+          >
+          <a class="hover:text-zinc-950 dark:hover:text-white" href="#contact"
+            >Contact</a
+          >
           <button
             id="dark-toggle"
             class="flex size-9 cursor-pointer items-center justify-center rounded-lg border border-zinc-300 bg-white/70 p-2 text-zinc-900 transition-colors hover:bg-white dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 dark:hover:bg-zinc-800 sm:size-10"
             aria-label="Toggle dark mode"
           >
-            <svg class="size-5" viewBox="0 0 24 24" fill="currentColor" style="transform-origin: center">
+            <svg
+              class="size-5"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              style="transform-origin: center"
+            >
               <defs>
                 <mask id="moon-mask">
-                  <rect x="0" y="0" width="24" height="24" fill="white"/>
-                  <circle class="toggle-mask" cx="30" cy="0" r="8" fill="black"/>
+                  <rect x="0" y="0" width="24" height="24" fill="white" />
+                  <circle
+                    class="toggle-mask"
+                    cx="30"
+                    cy="0"
+                    r="8"
+                    fill="black"
+                  />
                 </mask>
               </defs>
-              <circle class="toggle-circle" cx="12" cy="12" r="5" mask="url(#moon-mask)"/>
+              <circle
+                class="toggle-circle"
+                cx="12"
+                cy="12"
+                r="5"
+                mask="url(#moon-mask)"
+              />
               <g class="toggle-rays" style="transform-origin: center">
-                <line x1="12" y1="1" x2="12" y2="3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <line x1="12" y1="21" x2="12" y2="23" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <line x1="1" y1="12" x2="3" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <line x1="21" y1="12" x2="23" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <line
+                  x1="12"
+                  y1="1"
+                  x2="12"
+                  y2="3"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <line
+                  x1="12"
+                  y1="21"
+                  x2="12"
+                  y2="23"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <line
+                  x1="4.22"
+                  y1="4.22"
+                  x2="5.64"
+                  y2="5.64"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <line
+                  x1="18.36"
+                  y1="18.36"
+                  x2="19.78"
+                  y2="19.78"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <line
+                  x1="1"
+                  y1="12"
+                  x2="3"
+                  y2="12"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <line
+                  x1="21"
+                  y1="12"
+                  x2="23"
+                  y2="12"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <line
+                  x1="4.22"
+                  y1="19.78"
+                  x2="5.64"
+                  y2="18.36"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <line
+                  x1="18.36"
+                  y1="5.64"
+                  x2="19.78"
+                  y2="4.22"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
               </g>
             </svg>
           </button>
@@ -55,244 +167,427 @@
       </header>
 
       <main>
-        <section class="grid gap-10 border-b border-zinc-300/80 py-14 dark:border-zinc-800 sm:py-20 lg:grid-cols-[1fr_280px] lg:items-end">
+        <section
+          class="grid gap-10 border-b border-zinc-300/80 py-14 dark:border-zinc-800 sm:py-20 lg:grid-cols-[1fr_280px] lg:items-end"
+        >
           <div>
-            <p class="text-sm font-black uppercase tracking-[0.18em] text-rose-700 dark:text-rose-300">
+            <p
+              class="text-sm font-black uppercase tracking-[0.18em] text-rose-700 dark:text-rose-300"
+            >
               Senior Rails Engineer in Denver
             </p>
-            <h1 class="mt-6 max-w-4xl text-5xl font-black leading-[0.98] text-zinc-950 dark:text-white sm:text-7xl lg:text-8xl">
+            <h1
+              class="mt-6 max-w-4xl text-5xl font-black leading-[0.98] text-zinc-950 dark:text-white sm:text-7xl lg:text-8xl"
+            >
               I make hard-to-change software maintainable.
             </h1>
-            <p class="mt-8 max-w-3xl text-xl leading-8 text-zinc-700 dark:text-zinc-300 sm:text-2xl sm:leading-9">
-              Full-stack by history, Rails by habitat. I care about elegant, readable
-              code that is easy to understand, test, and change. I am especially useful
-              when an AI-built or vibe-coded prototype needs to become a real product
-              that future engineers can trust.
+            <p
+              class="mt-8 max-w-3xl text-xl leading-8 text-zinc-700 dark:text-zinc-300 sm:text-2xl sm:leading-9"
+            >
+              Full-stack by history, Rails by habitat. I care about readable
+              code that is easy to test and change. I'm most useful when an
+              AI-built or vibe-coded prototype needs to become a real product
+              the next engineer can trust.
             </p>
           </div>
 
           <figure class="max-w-[260px]">
             <img
-              src="./headshot.jpg"
+              src="/headshot.jpg"
               alt="Portrait of Joe Sak"
               class="aspect-square w-full rounded-lg object-cover shadow-xl shadow-zinc-950/15 dark:shadow-black/40"
             />
-            <figcaption class="mt-3 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
-              Senior Rails engineer, platform caretaker, and software craftsmanship mentor.
+            <figcaption
+              class="mt-3 text-sm leading-6 text-zinc-600 dark:text-zinc-400"
+            >
+              Senior Rails engineer, platform caretaker, and software
+              craftsmanship mentor.
             </figcaption>
           </figure>
         </section>
 
-        <section class="grid gap-8 border-b border-zinc-300/80 py-10 dark:border-zinc-800 md:grid-cols-3">
+        <section
+          class="grid gap-8 border-b border-zinc-300/80 py-10 dark:border-zinc-800 md:grid-cols-3"
+        >
           <div>
-            <p class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400">Now</p>
-            <p class="mt-3 text-lg font-semibold leading-7">Developer Productivity Rails L3 Staff Engineer at Gusto.</p>
-          </div>
-          <div>
-            <p class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400">Useful For</p>
-            <p class="mt-3 text-lg font-semibold leading-7">Maintainability, Rails modernization, repository health, technical debt strategy, AI prototype rescue, user-minded product work, and mentorship.</p>
-          </div>
-          <div>
-            <p class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400">Contact</p>
+            <p
+              class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400"
+            >
+              Now
+            </p>
             <p class="mt-3 text-lg font-semibold leading-7">
-              <a class="animated-link js-email" href="#contact" data-email-name="eoj" data-email-host="moc.kaseoj">Email me</a><br>
-              <a class="animated-link" href="https://www.linkedin.com/in/joemsak">LinkedIn</a><br>
-              <a class="animated-link" href="./resume.pdf">Resume</a>
+              Developer Productivity Rails L3 Staff Engineer at Gusto.
+            </p>
+          </div>
+          <div>
+            <p
+              class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400"
+            >
+              Useful For
+            </p>
+            <p class="mt-3 text-lg font-semibold leading-7">
+              Maintainability, Rails modernization, repository health, technical
+              debt strategy, AI prototype rescue, user-minded product work, and
+              mentorship.
+            </p>
+          </div>
+          <div>
+            <p
+              class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400"
+            >
+              Contact
+            </p>
+            <p class="mt-3 text-lg font-semibold leading-7">
+              <a
+                class="animated-link js-email"
+                href="#contact"
+                data-email-name="eoj"
+                data-email-host="moc.kaseoj"
+                >Email me</a
+              ><br />
+              <a
+                class="animated-link"
+                href="https://www.linkedin.com/in/joemsak"
+                >LinkedIn</a
+              ><br />
+              <a class="animated-link" href="/resume.pdf">Resume</a>
             </p>
           </div>
         </section>
 
-        <section id="work" class="grid gap-10 border-b border-zinc-300/80 py-14 dark:border-zinc-800 sm:py-20 lg:grid-cols-[0.58fr_1.42fr]">
+        <section
+          id="work"
+          class="grid gap-10 border-b border-zinc-300/80 py-14 dark:border-zinc-800 sm:py-20 lg:grid-cols-[0.58fr_1.42fr]"
+        >
           <div>
-            <p class="text-sm font-black uppercase tracking-[0.18em] text-teal-700 dark:text-teal-300">Selected Work</p>
-            <h2 class="mt-4 text-4xl font-black leading-tight text-zinc-950 dark:text-white">
+            <p
+              class="text-sm font-black uppercase tracking-[0.18em] text-teal-700 dark:text-teal-300"
+            >
+              Selected Work
+            </p>
+            <h2
+              class="mt-4 text-4xl font-black leading-tight text-zinc-950 dark:text-white"
+            >
               Maintainability at scale.
             </h2>
           </div>
 
-          <div class="divide-y divide-zinc-300/80 border-y border-zinc-300/80 dark:divide-zinc-800 dark:border-zinc-800">
-            <article class="grid items-start gap-4 py-7 sm:grid-cols-[150px_1fr]">
-              <p class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400 sm:leading-8">Maintainability</p>
+          <div
+            class="divide-y divide-zinc-300/80 border-y border-zinc-300/80 dark:divide-zinc-800 dark:border-zinc-800"
+          >
+            <article
+              class="grid items-start gap-4 py-7 sm:grid-cols-[150px_1fr]"
+            >
+              <p
+                class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400 sm:leading-8"
+              >
+                Maintainability
+              </p>
               <div>
-                <h3 class="text-2xl font-black text-zinc-950 dark:text-white">Turning prototypes into code teams can own</h3>
+                <h3 class="text-2xl font-black text-zinc-950 dark:text-white">
+                  Turning prototypes into code teams can own
+                </h3>
                 <p class="mt-3 leading-7 text-zinc-700 dark:text-zinc-300">
-                  Vibe-coded projects can prove an idea quickly. I help turn them into
-                  understandable systems with clear names, tests, boundaries, dependency
-                  cleanup, and simple paths for future change.
+                  Vibe-coded projects prove an idea quickly. I turn them into
+                  systems people can read, test, and change: clear names, real
+                  boundaries, dependencies under control.
                 </p>
               </div>
             </article>
 
-            <article class="grid items-start gap-4 py-7 sm:grid-cols-[150px_1fr]">
-              <p class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400 sm:leading-8">Gusto</p>
+            <article
+              class="grid items-start gap-4 py-7 sm:grid-cols-[150px_1fr]"
+            >
+              <p
+                class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400 sm:leading-8"
+              >
+                Gusto
+              </p>
               <div>
-                <h3 class="text-2xl font-black text-zinc-950 dark:text-white">Rails upgrades across monolith and services</h3>
+                <h3 class="text-2xl font-black text-zinc-950 dark:text-white">
+                  Rails upgrades across monolith and services
+                </h3>
                 <p class="mt-3 leading-7 text-zinc-700 dark:text-zinc-300">
-                  Helped lead core Rails upgrades from 7.2 to 8.0, and raised Gusto's
-                  extracted Rails services to a 7.2 minimum after the oldest app was
-                  still on Rails 6.0 in 2026.
+                  Helped lead core Rails upgrades from 7.2 to 8.0, and raised
+                  Gusto's extracted services to a 7.2 minimum. The oldest had
+                  been sitting on Rails 6.0.
                 </p>
               </div>
             </article>
 
-            <article class="grid items-start gap-4 py-7 sm:grid-cols-[150px_1fr]">
-              <p class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400 sm:leading-8">Productivity</p>
+            <article
+              class="grid items-start gap-4 py-7 sm:grid-cols-[150px_1fr]"
+            >
+              <p
+                class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400 sm:leading-8"
+              >
+                Productivity
+              </p>
               <div>
-                <h3 class="text-2xl font-black text-zinc-950 dark:text-white">A maturity model for technical debt</h3>
+                <h3 class="text-2xl font-black text-zinc-950 dark:text-white">
+                  A maturity model for technical debt
+                </h3>
                 <p class="mt-3 leading-7 text-zinc-700 dark:text-zinc-300">
-                  Built scorecard tooling to campaign and track essential repository
-                  upgrades across Ruby, Rails, Rubocop, Sorbet, Appraisal, and related
-                  standards, with an automation plan for Ruby and Rails EOL windows.
+                  Built scorecard tooling to campaign and track repo upgrades
+                  across Ruby, Rails, Rubocop, Sorbet, Appraisal, and related
+                  standards, with an automation plan for Ruby and Rails EOL
+                  windows.
                 </p>
               </div>
             </article>
 
-            <article class="grid items-start gap-4 py-7 sm:grid-cols-[150px_1fr]">
-              <p class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400 sm:leading-8">Architecture</p>
+            <article
+              class="grid items-start gap-4 py-7 sm:grid-cols-[150px_1fr]"
+            >
+              <p
+                class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400 sm:leading-8"
+              >
+                Architecture
+              </p>
               <div>
-                <h3 class="text-2xl font-black text-zinc-950 dark:text-white">Service separation and safer rollouts</h3>
+                <h3 class="text-2xl font-black text-zinc-950 dark:text-white">
+                  Service separation and safer rollouts
+                </h3>
                 <p class="mt-3 leading-7 text-zinc-700 dark:text-zinc-300">
-                  Contributed to monolith extraction efforts and GraphQL federation work
-                  for centralized feature flags, service decoupling, and progressive delivery.
+                  Contributed to monolith extraction and GraphQL federation for
+                  centralized feature flags, service decoupling, and progressive
+                  delivery.
                 </p>
               </div>
             </article>
 
-            <article class="grid items-start gap-4 py-7 sm:grid-cols-[150px_1fr]">
-              <p class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400 sm:leading-8">Mentorship</p>
+            <article
+              class="grid items-start gap-4 py-7 sm:grid-cols-[150px_1fr]"
+            >
+              <p
+                class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400 sm:leading-8"
+              >
+                Mentorship
+              </p>
               <div>
-                <h3 class="text-2xl font-black text-zinc-950 dark:text-white">Software craftsmanship without mystique</h3>
+                <h3 class="text-2xl font-black text-zinc-950 dark:text-white">
+                  Software craftsmanship without mystique
+                </h3>
                 <p class="mt-3 leading-7 text-zinc-700 dark:text-zinc-300">
-                  Mentor small cohorts of apprentices through code review, pairing,
-                  fundamentals, and honest guidance for building a durable engineering career.
+                  Mentor small cohorts of apprentices through code review,
+                  pairing, fundamentals, and honest career advice.
                 </p>
               </div>
             </article>
 
-            <article class="grid items-start gap-4 py-7 sm:grid-cols-[150px_1fr]">
-              <p class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400 sm:leading-8">Legacy Apps</p>
+            <article
+              class="grid items-start gap-4 py-7 sm:grid-cols-[150px_1fr]"
+            >
+              <p
+                class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400 sm:leading-8"
+              >
+                Legacy Apps
+              </p>
               <div>
-                <h3 class="text-2xl font-black text-zinc-950 dark:text-white">Big upgrades on systems people depend on</h3>
+                <h3 class="text-2xl font-black text-zinc-950 dark:text-white">
+                  Big upgrades on systems people depend on
+                </h3>
                 <p class="mt-3 leading-7 text-zinc-700 dark:text-zinc-300">
-                  In 2021, migrated Kadenze from Rails 4.2 and Ruby 2.3 to Rails 6.1
-                  and Ruby 2.7. In 2024, led MemberSpace's Rails 6 and Ruby 2.x
-                  modernization toward Rails 8 and Ruby 3.4.
+                  In 2021, migrated Kadenze from Rails 4.2 and Ruby 2.3 to Rails
+                  6.1 and Ruby 2.7. In 2024, led MemberSpace's Rails 6 and Ruby
+                  2.x modernization toward Rails 8 and Ruby 3.4.
                 </p>
               </div>
             </article>
           </div>
         </section>
 
-        <section class="grid gap-10 border-b border-zinc-300/80 py-14 dark:border-zinc-800 sm:py-20 lg:grid-cols-[0.58fr_1.42fr]">
+        <section
+          class="grid gap-10 border-b border-zinc-300/80 py-14 dark:border-zinc-800 sm:py-20 lg:grid-cols-[0.58fr_1.42fr]"
+        >
           <div>
-            <p class="text-sm font-black uppercase tracking-[0.18em] text-lime-700 dark:text-lime-300">From Teammates</p>
-            <h2 class="mt-4 text-4xl font-black leading-tight text-zinc-950 dark:text-white">
-              Strong signals from people who have relied on the work.
+            <p
+              class="text-sm font-black uppercase tracking-[0.18em] text-lime-700 dark:text-lime-300"
+            >
+              From Teammates
+            </p>
+            <h2
+              class="mt-4 text-4xl font-black leading-tight text-zinc-950 dark:text-white"
+            >
+              What teammates say.
             </h2>
           </div>
 
-          <div class="divide-y divide-zinc-300/80 border-y border-zinc-300/80 dark:divide-zinc-800 dark:border-zinc-800">
-            <article class="grid items-start gap-4 py-7 sm:grid-cols-[150px_1fr]">
-              <p class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400 sm:leading-8">Judgment</p>
+          <div
+            class="divide-y divide-zinc-300/80 border-y border-zinc-300/80 dark:divide-zinc-800 dark:border-zinc-800"
+          >
+            <article
+              class="grid items-start gap-4 py-7 sm:grid-cols-[150px_1fr]"
+            >
+              <p
+                class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400 sm:leading-8"
+              >
+                Judgment
+              </p>
               <div>
-                <blockquote class="text-2xl font-black leading-8 text-zinc-950 dark:text-white">
-                  "Joe has a real talent for diving into complex challenges and finding effective solutions."
+                <blockquote
+                  class="text-2xl font-black leading-8 text-zinc-950 dark:text-white"
+                >
+                  "Joe has a real talent for diving into complex challenges and
+                  finding effective solutions."
                 </blockquote>
                 <p class="mt-3 leading-7 text-zinc-700 dark:text-zinc-300">
-                  I am at my best when the problem is tangled, important, and in need
-                  of careful judgment instead of a quick patch.
+                  I'm at my best on tangled, important problems that need real
+                  judgment, not a quick patch.
                 </p>
               </div>
             </article>
 
-            <article class="grid items-start gap-4 py-7 sm:grid-cols-[150px_1fr]">
-              <p class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400 sm:leading-8">Reliability</p>
+            <article
+              class="grid items-start gap-4 py-7 sm:grid-cols-[150px_1fr]"
+            >
+              <p
+                class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400 sm:leading-8"
+              >
+                Reliability
+              </p>
               <div>
-                <blockquote class="text-2xl font-black leading-8 text-zinc-950 dark:text-white">
+                <blockquote
+                  class="text-2xl font-black leading-8 text-zinc-950 dark:text-white"
+                >
                   "His reliability and drive made him a key part of our team."
                 </blockquote>
                 <p class="mt-3 leading-7 text-zinc-700 dark:text-zinc-300">
-                  People have trusted me with production infrastructure, data security,
-                  upgrade paths, team protocols, and systems that need to keep paying off.
+                  People have trusted me with production infrastructure, data
+                  security, upgrade paths, team protocols, and systems that need
+                  to keep working.
                 </p>
               </div>
             </article>
 
-            <article class="grid items-start gap-4 py-7 sm:grid-cols-[150px_1fr]">
-              <p class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400 sm:leading-8">Product</p>
+            <article
+              class="grid items-start gap-4 py-7 sm:grid-cols-[150px_1fr]"
+            >
+              <p
+                class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400 sm:leading-8"
+              >
+                Product
+              </p>
               <div>
-                <blockquote class="text-2xl font-black leading-8 text-zinc-950 dark:text-white">
+                <blockquote
+                  class="text-2xl font-black leading-8 text-zinc-950 dark:text-white"
+                >
                   "He built our custom web app from scratch."
                 </blockquote>
                 <p class="mt-3 leading-7 text-zinc-700 dark:text-zinc-300">
-                  That product served tens of thousands of users across more than 100
-                  countries, with separate paths for students, mentors, judges, volunteers,
-                  and administrators.
+                  That product served tens of thousands of users across more
+                  than 100 countries, with separate paths for students, mentors,
+                  judges, volunteers, and administrators.
                 </p>
               </div>
             </article>
 
-            <article class="grid items-start gap-4 py-7 sm:grid-cols-[150px_1fr]">
-              <p class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400 sm:leading-8">Users</p>
+            <article
+              class="grid items-start gap-4 py-7 sm:grid-cols-[150px_1fr]"
+            >
+              <p
+                class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400 sm:leading-8"
+              >
+                Users
+              </p>
               <div>
-                <blockquote class="text-2xl font-black leading-8 text-zinc-950 dark:text-white">
+                <blockquote
+                  class="text-2xl font-black leading-8 text-zinc-950 dark:text-white"
+                >
                   "Joe always had the needs of our users in mind."
                 </blockquote>
                 <p class="mt-3 leading-7 text-zinc-700 dark:text-zinc-300">
-                  That included rural and remote access, low-income communities, children,
-                  and users working with very different levels of technical comfort.
+                  That meant rural and remote access, low-income communities,
+                  children, and users at very different levels of technical
+                  comfort.
                 </p>
               </div>
             </article>
 
-            <article class="grid items-start gap-4 py-7 sm:grid-cols-[150px_1fr]">
-              <p class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400 sm:leading-8">Rollouts</p>
+            <article
+              class="grid items-start gap-4 py-7 sm:grid-cols-[150px_1fr]"
+            >
+              <p
+                class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400 sm:leading-8"
+              >
+                Rollouts
+              </p>
               <div>
-                <blockquote class="text-2xl font-black leading-8 text-zinc-950 dark:text-white">
-                  "Standby revert PRs being open and ready before each deploy was a small but high value choice."
+                <blockquote
+                  class="text-2xl font-black leading-8 text-zinc-950 dark:text-white"
+                >
+                  "Standby revert PRs being open and ready before each deploy
+                  was a small but high value choice."
                 </blockquote>
                 <p class="mt-3 leading-7 text-zinc-700 dark:text-zinc-300">
-                  My upgrade work comes with rollback planning, timing updates, and
-                  calm real-time triage when production changes touch multiple services.
+                  My upgrade work comes with rollback planning, timing updates,
+                  and real-time triage when production changes ripple across
+                  services.
                 </p>
               </div>
             </article>
 
-            <article class="grid items-start gap-4 py-7 sm:grid-cols-[150px_1fr]">
-              <p class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400 sm:leading-8">Ownership</p>
+            <article
+              class="grid items-start gap-4 py-7 sm:grid-cols-[150px_1fr]"
+            >
+              <p
+                class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400 sm:leading-8"
+              >
+                Ownership
+              </p>
               <div>
-                <blockquote class="text-2xl font-black leading-8 text-zinc-950 dark:text-white">
+                <blockquote
+                  class="text-2xl font-black leading-8 text-zinc-950 dark:text-white"
+                >
                   "He took the reins and drove the project forward."
                 </blockquote>
                 <p class="mt-3 leading-7 text-zinc-700 dark:text-zinc-300">
-                  Peers highlighted initiative on feature flag GraphQL work, generator tooling,
-                  service extraction, incident response, and tricky codebase problems.
+                  Peers highlighted initiative on feature flag GraphQL work,
+                  generator tooling, service extraction, incident response, and
+                  tricky codebase problems.
                 </p>
               </div>
             </article>
 
-            <article class="grid items-start gap-4 py-7 sm:grid-cols-[150px_1fr]">
-              <p class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400 sm:leading-8">Support</p>
+            <article
+              class="grid items-start gap-4 py-7 sm:grid-cols-[150px_1fr]"
+            >
+              <p
+                class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400 sm:leading-8"
+              >
+                Support
+              </p>
               <div>
-                <blockquote class="text-2xl font-black leading-8 text-zinc-950 dark:text-white">
+                <blockquote
+                  class="text-2xl font-black leading-8 text-zinc-950 dark:text-white"
+                >
                   "I consistently learn from you in our interactions."
                 </blockquote>
                 <p class="mt-3 leading-7 text-zinc-700 dark:text-zinc-300">
-                  Feedback repeatedly mentions patience, helpfulness, pairing, documentation,
-                  and making Ruby and Rails work easier for product engineers.
+                  Feedback repeatedly mentions patience, helpfulness, pairing,
+                  documentation, and making Ruby and Rails work easier for
+                  product engineers.
                 </p>
               </div>
             </article>
 
-            <article class="grid items-start gap-4 py-7 sm:grid-cols-[150px_1fr]">
-              <p class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400 sm:leading-8">Craft</p>
+            <article
+              class="grid items-start gap-4 py-7 sm:grid-cols-[150px_1fr]"
+            >
+              <p
+                class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400 sm:leading-8"
+              >
+                Craft
+              </p>
               <div>
-                <blockquote class="text-2xl font-black leading-8 text-zinc-950 dark:text-white">
+                <blockquote
+                  class="text-2xl font-black leading-8 text-zinc-950 dark:text-white"
+                >
                   "Joe is an asset to any team."
                 </blockquote>
                 <p class="mt-3 leading-7 text-zinc-700 dark:text-zinc-300">
-                  The pattern behind the praise is maintainable work: readable code,
-                  practical architecture, thoughtful refactoring, and systems that other
+                  What it adds up to is maintainable work: readable code,
+                  practical architecture, careful refactoring, and systems other
                   people can understand and change.
                 </p>
               </div>
@@ -300,140 +595,260 @@
           </div>
         </section>
 
-        <section class="grid gap-10 border-b border-zinc-300/80 py-14 dark:border-zinc-800 sm:py-20 lg:grid-cols-[0.58fr_1.42fr]">
+        <section
+          class="grid gap-10 border-b border-zinc-300/80 py-14 dark:border-zinc-800 sm:py-20 lg:grid-cols-[0.58fr_1.42fr]"
+        >
           <div>
-            <p class="text-sm font-black uppercase tracking-[0.18em] text-sky-700 dark:text-sky-300">What I Know</p>
-            <h2 class="mt-4 text-4xl font-black leading-tight text-zinc-950 dark:text-white">
+            <p
+              class="text-sm font-black uppercase tracking-[0.18em] text-sky-700 dark:text-sky-300"
+            >
+              What I Know
+            </p>
+            <h2
+              class="mt-4 text-4xl font-black leading-tight text-zinc-950 dark:text-white"
+            >
               Tools I use to keep code easy to change.
             </h2>
           </div>
 
           <div class="grid gap-8 sm:grid-cols-2">
             <div>
-              <h3 class="text-base font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400">Application</h3>
-              <p class="mt-4 text-lg leading-8 text-zinc-700 dark:text-zinc-300">
-                Ruby, Rails, Phlex, Hotwire, GraphQL, JavaScript, HTML, CSS, SEO,
-                accessibility, RSpec, clean code, SOLID object design, patient refactoring,
-                and product-minded UI work.
+              <h3
+                class="text-base font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400"
+              >
+                Application
+              </h3>
+              <p
+                class="mt-4 text-lg leading-8 text-zinc-700 dark:text-zinc-300"
+              >
+                Ruby, Rails, Phlex, Hotwire, GraphQL, JavaScript, HTML, CSS,
+                SEO, accessibility, RSpec, clean code, SOLID object design,
+                patient refactoring, and product-minded UI work.
               </p>
             </div>
 
             <div>
-              <h3 class="text-base font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400">Platform</h3>
-              <p class="mt-4 text-lg leading-8 text-zinc-700 dark:text-zinc-300">
-                PostgreSQL, Redis, Sidekiq, AWS, Heroku, Docker, Linux, OAuth, APIs,
-                service integrations, infrastructure ownership, data security, technical planning, and mentorship.
+              <h3
+                class="text-base font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400"
+              >
+                Platform
+              </h3>
+              <p
+                class="mt-4 text-lg leading-8 text-zinc-700 dark:text-zinc-300"
+              >
+                PostgreSQL, Redis, Sidekiq, AWS, Heroku, Docker, Linux, OAuth,
+                APIs, service integrations, infrastructure ownership, data
+                security, technical planning, and mentorship.
               </p>
             </div>
           </div>
         </section>
 
-        <section id="experience" class="grid gap-10 border-b border-zinc-300/80 py-14 dark:border-zinc-800 sm:py-20 lg:grid-cols-[0.58fr_1.42fr]">
+        <section
+          id="experience"
+          class="grid gap-10 border-b border-zinc-300/80 py-14 dark:border-zinc-800 sm:py-20 lg:grid-cols-[0.58fr_1.42fr]"
+        >
           <div>
-            <p class="text-sm font-black uppercase tracking-[0.18em] text-amber-700 dark:text-amber-300">Experience</p>
-            <h2 class="mt-4 text-4xl font-black leading-tight text-zinc-950 dark:text-white">
-              Places I have kept systems moving.
+            <p
+              class="text-sm font-black uppercase tracking-[0.18em] text-amber-700 dark:text-amber-300"
+            >
+              Experience
+            </p>
+            <h2
+              class="mt-4 text-4xl font-black leading-tight text-zinc-950 dark:text-white"
+            >
+              Places I've kept systems moving.
             </h2>
           </div>
 
-          <ol class="divide-y divide-zinc-300/80 border-y border-zinc-300/80 dark:divide-zinc-800 dark:border-zinc-800">
+          <ol
+            class="divide-y divide-zinc-300/80 border-y border-zinc-300/80 dark:divide-zinc-800 dark:border-zinc-800"
+          >
             <li class="grid items-start gap-3 py-6 sm:grid-cols-[130px_1fr]">
-              <p class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400 sm:leading-7">2024 - Now</p>
+              <p
+                class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400 sm:leading-7"
+              >
+                2024 - Now
+              </p>
               <div>
-                <h3 class="text-xl font-black text-zinc-950 dark:text-white">Gusto - Developer Productivity Rails L3 Staff Engineer</h3>
-                <p class="mt-2 leading-7 text-zinc-700 dark:text-zinc-300">Direct support, tooling, Rails upgrades, repository harmonization, feature flags, and technical debt strategy.</p>
+                <h3 class="text-xl font-black text-zinc-950 dark:text-white">
+                  Gusto - Developer Productivity Rails L3 Staff Engineer
+                </h3>
+                <p class="mt-2 leading-7 text-zinc-700 dark:text-zinc-300">
+                  Direct support, tooling, Rails upgrades, repo standards,
+                  feature flags, and technical debt strategy.
+                </p>
               </div>
             </li>
             <li class="grid items-start gap-3 py-6 sm:grid-cols-[130px_1fr]">
-              <p class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400 sm:leading-7">2021 - 2024</p>
+              <p
+                class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400 sm:leading-7"
+              >
+                2021 - 2024
+              </p>
               <div>
-                <h3 class="text-xl font-black text-zinc-950 dark:text-white">MemberSpace - Senior Rails Developer</h3>
-                <p class="mt-2 leading-7 text-zinc-700 dark:text-zinc-300">Full-stack legacy migration, production infrastructure, uptime stewardship, and clean-code refactoring.</p>
+                <h3 class="text-xl font-black text-zinc-950 dark:text-white">
+                  MemberSpace - Senior Rails Developer
+                </h3>
+                <p class="mt-2 leading-7 text-zinc-700 dark:text-zinc-300">
+                  Full-stack legacy migration, production infrastructure, uptime
+                  ownership, and clean-code refactoring.
+                </p>
               </div>
             </li>
             <li class="grid items-start gap-3 py-6 sm:grid-cols-[130px_1fr]">
-              <p class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400 sm:leading-7">2019 - 2021</p>
+              <p
+                class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400 sm:leading-7"
+              >
+                2019 - 2021
+              </p>
               <div>
-                <h3 class="text-xl font-black text-zinc-950 dark:text-white">Kadenze - Lead Applications and DevOps Engineer</h3>
-                <p class="mt-2 leading-7 text-zinc-700 dark:text-zinc-300">Rails and Ruby upgrades, AWS and Docker operations, multi-tenancy, and education-platform portals.</p>
+                <h3 class="text-xl font-black text-zinc-950 dark:text-white">
+                  Kadenze - Lead Applications and DevOps Engineer
+                </h3>
+                <p class="mt-2 leading-7 text-zinc-700 dark:text-zinc-300">
+                  Rails and Ruby upgrades, AWS and Docker operations,
+                  multi-tenancy, and education-platform portals.
+                </p>
               </div>
             </li>
             <li class="grid items-start gap-3 py-6 sm:grid-cols-[130px_1fr]">
-              <p class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400 sm:leading-7">2016 - 2019</p>
+              <p
+                class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400 sm:leading-7"
+              >
+                2016 - 2019
+              </p>
               <div>
-                <h3 class="text-xl font-black text-zinc-950 dark:text-white">Iridescent / Technovation - Lead Web Developer</h3>
-                <p class="mt-2 leading-7 text-zinc-700 dark:text-zinc-300">Built a global product for 30,000+ users, five user types, and 120+ countries; shaped UI/UX around varied access needs and worked closely with non-technical teams.</p>
+                <h3 class="text-xl font-black text-zinc-950 dark:text-white">
+                  Iridescent / Technovation - Lead Web Developer
+                </h3>
+                <p class="mt-2 leading-7 text-zinc-700 dark:text-zinc-300">
+                  Built a global product for 30,000+ users, five user types, and
+                  120+ countries; shaped UI/UX around varied access needs and
+                  worked closely with non-technical teams.
+                </p>
               </div>
             </li>
             <li class="grid items-start gap-3 py-6 sm:grid-cols-[130px_1fr]">
-              <p class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400 sm:leading-7">2005 - 2016</p>
+              <p
+                class="text-sm font-black uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400 sm:leading-7"
+              >
+                2005 - 2016
+              </p>
               <div>
-                <h3 class="text-xl font-black text-zinc-950 dark:text-white">Freelance, InfoActive, Neoteric, Artemis</h3>
-                <p class="mt-2 leading-7 text-zinc-700 dark:text-zinc-300">Agency leadership, reusable Rails engines, test suites, sales demos, apprentice programs, team development, and client-facing delivery.</p>
+                <h3 class="text-xl font-black text-zinc-950 dark:text-white">
+                  Freelance, InfoActive, Neoteric, Artemis
+                </h3>
+                <p class="mt-2 leading-7 text-zinc-700 dark:text-zinc-300">
+                  Agency leadership, reusable Rails engines, test suites, sales
+                  demos, apprentice programs, team development, and
+                  client-facing delivery.
+                </p>
               </div>
             </li>
           </ol>
         </section>
 
-        <section class="grid gap-10 border-b border-zinc-300/80 py-14 dark:border-zinc-800 sm:py-20 lg:grid-cols-[0.58fr_1.42fr]">
+        <section
+          class="grid gap-10 border-b border-zinc-300/80 py-14 dark:border-zinc-800 sm:py-20 lg:grid-cols-[0.58fr_1.42fr]"
+        >
           <div>
-            <p class="text-sm font-black uppercase tracking-[0.18em] text-fuchsia-700 dark:text-fuchsia-300">Elsewhere</p>
-            <h2 class="mt-4 text-4xl font-black leading-tight text-zinc-950 dark:text-white">
+            <p
+              class="text-sm font-black uppercase tracking-[0.18em] text-fuchsia-700 dark:text-fuchsia-300"
+            >
+              Elsewhere
+            </p>
+            <h2
+              class="mt-4 text-4xl font-black leading-tight text-zinc-950 dark:text-white"
+            >
               Denver, streets, snow, and the rest of life.
             </h2>
           </div>
 
-          <div class="space-y-5 text-lg leading-8 text-zinc-700 dark:text-zinc-300">
+          <div
+            class="space-y-5 text-lg leading-8 text-zinc-700 dark:text-zinc-300"
+          >
             <p>
-              I chair Denver's Mayor's Bicycle Advisory Committee, volunteer with
-              Denver Streets Partnership, and helped restart Denver Critical Mass.
-              I also like snowboarding, hiking, and Avalanche hockey.
+              I chair Denver's Mayor's Bicycle Advisory Committee, volunteer
+              with Denver Streets Partnership, and helped restart Denver
+              Critical Mass. I also like snowboarding, hiking, and Avalanche
+              hockey.
             </p>
-            <div class="flex flex-wrap gap-x-6 gap-y-2 text-base font-bold text-zinc-950 dark:text-zinc-100">
-              <a class="animated-link" href="https://denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Department-of-Transportation-and-Infrastructure/Vision/MBAC">Denver MBAC</a>
-              <a class="animated-link" href="https://denverstreetspartnership.org/">Denver Streets Partnership</a>
-              <a class="animated-link" href="https://denvercriticalmass.org">Denver Critical Mass</a>
-              <a class="animated-link" href="https://instagram.com/joesakthatsme">@joesakthatsme</a>
+            <div
+              class="flex flex-wrap gap-x-6 gap-y-2 text-base font-bold text-zinc-950 dark:text-zinc-100"
+            >
+              <a
+                class="animated-link"
+                href="https://denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Department-of-Transportation-and-Infrastructure/Vision/MBAC"
+                >Denver MBAC</a
+              >
+              <a
+                class="animated-link"
+                href="https://denverstreetspartnership.org/"
+                >Denver Streets Partnership</a
+              >
+              <a class="animated-link" href="https://denvercriticalmass.org"
+                >Denver Critical Mass</a
+              >
+              <a
+                class="animated-link"
+                href="https://instagram.com/joesakthatsme"
+                >@joesakthatsme</a
+              >
             </div>
           </div>
         </section>
 
         <section id="contact" class="py-14 sm:py-20">
           <div class="max-w-3xl">
-            <p class="text-sm font-black uppercase tracking-[0.18em] text-rose-700 dark:text-rose-300">Contact</p>
-            <h2 class="mt-4 text-4xl font-black leading-tight text-zinc-950 dark:text-white">
+            <p
+              class="text-sm font-black uppercase tracking-[0.18em] text-rose-700 dark:text-rose-300"
+            >
+              Contact
+            </p>
+            <h2
+              class="mt-4 text-4xl font-black leading-tight text-zinc-950 dark:text-white"
+            >
               Want to make a hard-to-change codebase easier to own?
             </h2>
             <p class="mt-6 text-lg leading-8 text-zinc-700 dark:text-zinc-300">
-              Email is best: <a class="animated-link js-email font-bold text-zinc-950 dark:text-zinc-100" href="#contact" data-email-name="eoj" data-email-host="moc.kaseoj">Email me</a>.
-              I am good at taking messy, rushed, AI-assisted, or long-lived software
-              and making it readable enough to maintain with confidence.
-              You can also find me on <a class="animated-link font-bold text-zinc-950 dark:text-zinc-100" href="https://www.linkedin.com/in/joemsak">LinkedIn</a>
-              and <a class="animated-link font-bold text-zinc-950 dark:text-zinc-100" href="https://github.com/joemsak">GitHub</a>.
-              Here is my <a class="animated-link font-bold text-zinc-950 dark:text-zinc-100" href="./resume.pdf">resume</a>.
+              Email is best:
+              <a
+                class="animated-link js-email font-bold text-zinc-950 dark:text-zinc-100"
+                href="#contact"
+                data-email-name="eoj"
+                data-email-host="moc.kaseoj"
+                >Email me</a
+              >. I'm good at taking messy, rushed, AI-assisted, or long-lived
+              software and making it maintainable. You can also find me on
+              <a
+                class="animated-link font-bold text-zinc-950 dark:text-zinc-100"
+                href="https://www.linkedin.com/in/joemsak"
+                >LinkedIn</a
+              >
+              and
+              <a
+                class="animated-link font-bold text-zinc-950 dark:text-zinc-100"
+                href="https://github.com/joemsak"
+                >GitHub</a
+              >. Here's my
+              <a
+                class="animated-link font-bold text-zinc-950 dark:text-zinc-100"
+                href="/resume.pdf"
+                >resume</a
+              >.
             </p>
           </div>
         </section>
       </main>
 
-      <footer class="border-t border-zinc-300/80 py-8 text-sm text-zinc-500 dark:border-zinc-800 dark:text-zinc-400">
+      <footer
+        class="border-t border-zinc-300/80 py-8 text-sm text-zinc-500 dark:border-zinc-800 dark:text-zinc-400"
+      >
         <p>Joe Sak - Senior Rails Engineer - Denver, CO</p>
       </footer>
     </div>
 
-    <script>
-      document
-        .querySelectorAll("[data-email-name][data-email-host]")
-        .forEach(function(link) {
-          var name = link.getAttribute("data-email-name").split("").reverse().join("");
-          var host = link.getAttribute("data-email-host").split("").reverse().join("");
-          var address = name + "@" + host;
-
-          link.href = "mailto:" + address;
-          link.textContent = address;
-          link.setAttribute("aria-label", "Email " + address);
-        });
-    </script>
     <script type="module" src="./main.ts"></script>
   </body>
 </html>

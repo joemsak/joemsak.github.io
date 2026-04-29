@@ -22,6 +22,9 @@ Thumbs.db
 # NPM packages folder.
 node_modules/
 
+# Claude Code local settings
+.claude/
+
 tmp/
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
