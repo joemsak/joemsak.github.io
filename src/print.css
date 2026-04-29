@@ -102,10 +102,11 @@
     align-items: end !important;
   }
 
-  /* Every other section collapses to one column with the label as a heading row */
+  /* Every other section collapses to one column with the label as a heading row.
+   * Use display: block instead of grid so gaps don't create page-break opportunities;
+   * Firefox treats grid track gaps as legal break locations. */
   main > section:not(:first-child) {
-    grid-template-columns: 1fr !important;
-    gap: 0.3rem !important;
+    display: block !important;
     padding-top: 0.55rem !important;
     padding-bottom: 0.5rem !important;
     border: 0 !important;
