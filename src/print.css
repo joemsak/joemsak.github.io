@@ -119,6 +119,19 @@
     padding-bottom: 0.2rem !important;
     border-bottom: 1px solid currentColor !important;
     letter-spacing: 0.16em !important;
+    /* Never let a label sit alone at the bottom of a page when its
+     * content gets pushed to the next page (Experience was doing this) */
+    break-after: avoid !important;
+    page-break-after: avoid !important;
+  }
+
+  /* Belt-and-suspenders: keep the label glued to the first content row
+   * within each section by avoiding breaks inside the section's first
+   * 2-element grouping. The whole section can still split across pages
+   * after the first entry. */
+  main > section:not(:first-child) > p:first-child + * {
+    break-before: avoid !important;
+    page-break-before: avoid !important;
   }
 
   /* ----- Typography ----- */
